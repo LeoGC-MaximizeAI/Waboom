@@ -5,54 +5,60 @@ import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
+<BaseLayout title="About | Waboom" description="Learn about Waboom's mission to transform businesses through AI-powered automation">
 	<div class="stack gap-20">
 		<main class="wrapper about">
 			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+				title="About Waboom"
+				tagline="Transforming businesses through intelligent automation and AI-driven solutions."
 			>
 				<img
 					width="1553"
 					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
+					src="/assets/about.webp"
+					alt="Waboom team working on AI solutions"
 				/>
 			</Hero>
 
 			<section>
-				<h2 class="section-title">Background</h2>
+				<h2 class="section-title">Our Mission</h2>
 				<div class="content">
 					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
+						At Waboom, we're on a mission to revolutionize how businesses operate through intelligent automation. We specialize in building end-to-end AI-powered solutions that streamline processes, reduce errors, and free up valuable human resources for strategic tasks.
 					</p>
 					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
+						Our journey began with a simple realization: many businesses are held back by manual, time-consuming processes that could be automated through AI. We've proven this with our successful implementation of purchase order and invoice automation systems that have transformed operations for our clients.
 					</p>
 					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
+						Today, we're expanding our vision to help more businesses embrace the power of AI automation, offering both consulting services and custom-built solutions that deliver measurable results.
 					</p>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Education</h2>
+				<h2 class="section-title">Our Expertise</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<ul>
+						<li>AI-Powered Process Automation</li>
+						<li>Custom AI Module Development</li>
+						<li>ERP System Integration</li>
+						<li>Workflow Optimization</li>
+						<li>Strategic AI Consulting</li>
+						<li>Implementation & Support</li>
+					</ul>
 				</div>
 			</section>
 			<section>
-				<h2 class="section-title">Skills</h2>
+				<h2 class="section-title">Why Choose Waboom</h2>
 				<div class="content">
-					<p>officia unde omnis</p>
+					<p>
+						<strong>Proven Track Record:</strong> We've successfully implemented AI solutions that have reduced manual processing times consistently and essentially eliminated errors.
+					</p>
+					<p>
+						<strong>End-to-End Partnership:</strong> From initial consultation to implementation and ongoing support, we're with you every step of the way.
+					</p>
+					<p>
+						<strong>Custom Solutions:</strong> We build modular, scalable solutions that adapt to your specific business needs and integrate seamlessly with your existing systems.
+					</p>
 				</div>
 			</section>
 		</main>
@@ -91,6 +97,10 @@ import Hero from '../components/Hero.astro';
 		grid-column: 2 / 4;
 	}
 
+	p {
+		margin-bottom: 1.5rem;
+	}
+
 	.content :global(a) {
 		text-decoration: 1px solid underline transparent;
 		text-underline-offset: 0.25em;
@@ -100,6 +110,21 @@ import Hero from '../components/Hero.astro';
 	.content :global(a:hover),
 	.content :global(a:focus) {
 		text-decoration-color: currentColor;
+	}
+
+	.content ul {
+		list-style-type: none;
+		padding: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+
+	.content ul li {
+		background: var(--gradient-subtle);
+		padding: 1rem;
+		border-radius: 0.75rem;
+		border: 1px solid var(--gray-800);
 	}
 
 	@media (min-width: 50em) {

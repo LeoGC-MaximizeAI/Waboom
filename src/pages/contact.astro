@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="Contact | Waboom" description="Apply for your free AI strategy session with Waboom">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Free AI Strategy Session"
+				tagline="Apply for your complimentary consultation valued at NZD 2,000"
+			/>
+
+			<section class="section with-background">
+				<div class="consultation-form">
+					<form action="/submit-application" method="POST" class="form">
+						<div class="form-group">
+							<label for="name">Full Name *</label>
+							<input type="text" id="name" name="name" required />
+						</div>
+
+						<div class="form-group">
+							<label for="company">Company Name *</label>
+							<input type="text" id="company" name="company" required />
+						</div>
+
+						<div class="form-group">
+							<label for="position">Your Position *</label>
+							<input type="text" id="position" name="position" required />
+						</div>
+
+						<div class="form-group">
+							<label for="email">Business Email *</label>
+							<input type="email" id="email" name="email" required />
+						</div>
+
+						<div class="form-group">
+							<label for="phone">Phone Number *</label>
+							<input type="tel" id="phone" name="phone" required />
+						</div>
+
+						<div class="form-group">
+							<label for="employees">Number of Employees *</label>
+							<select id="employees" name="employees" required>
+								<option value="">Select...</option>
+								<option value="1-9">1-9</option>
+								<option value="10-49">10-49</option>
+								<option value="50-199">50-199</option>
+								<option value="200+">200+</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="revenue">Annual Revenue (NZD) *</label>
+							<select id="revenue" name="revenue" required>
+								<option value="">Select...</option>
+								<option value="<5M">Less than 5M</option>
+								<option value="5M-20M">5M - 20M</option>
+								<option value="20M-50M">20M - 50M</option>
+								<option value="50M+">50M+</option>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label for="challenges">What are your main business process challenges? *</label>
+							<textarea id="challenges" name="challenges" rows="4" required></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="automation">Which processes are you looking to automate? *</label>
+							<textarea id="automation" name="automation" rows="4" required></textarea>
+						</div>
+
+						<button type="submit" class="submit-button">Submit Application</button>
+					</form>
+				</div>
+			</section>
+		</main>
+	</div>
+</BaseLayout>
+
+<style>
+	.consultation-form {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 2rem;
+	}
+
+	.form {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	label {
+		color: var(--gray-200);
+		font-size: var(--text-base);
+	}
+
+	input,
+	select,
+	textarea {
+		padding: 0.75rem;
+		border-radius: 0.5rem;
+		border: 1px solid var(--gray-800);
+		background-color: var(--gray-999);
+		color: var(--gray-200);
+		font-size: var(--text-base);
+		width: 100%;
+	}
+
+	input:focus,
+	select:focus,
+	textarea:focus {
+		outline: none;
+		border-color: var(--accent-regular);
+	}
+
+	.submit-button {
+		background-color: var(--accent-regular);
+		color: var(--accent-text-over);
+		padding: 1rem 2rem;
+		border: none;
+		border-radius: 0.5rem;
+		font-size: var(--text-lg);
+		font-weight: 600;
+		cursor: pointer;
+		transition: background-color 150ms;
+	}
+
+	.submit-button:hover {
+		background-color: var(--accent-dark);
+	}
+
+	.section {
+		margin: 2rem 0;
+	}
+
+	.with-background {
+		position: relative;
+		isolation: isolate;
+	}
+
+	.with-background::before {
+		--hero-bg: var(--bg-image-subtle-2);
+		content: '';
+		position: absolute;
+		pointer-events: none;
+		left: 50%;
+		width: 100vw;
+		aspect-ratio: calc(2.25 / var(--bg-scale));
+		top: 0;
+		transform: translateY(-75%) translateX(-50%);
+		background: url('/assets/backgrounds/noise.png') top center/220px repeat,
+			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat, var(--gray-999);
+		background-blend-mode: overlay, normal, normal, normal;
+		mix-blend-mode: var(--bg-blend-mode);
+		z-index: -1;
+	}
+
+	@media (min-width: 50em) {
+		.consultation-form {
+			padding: 3rem;
+		}
+	}
+</style> 

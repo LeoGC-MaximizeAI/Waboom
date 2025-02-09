@@ -1,0 +1,291 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Icon from '../components/Icon.astro';
+import Pill from '../components/Pill.astro';
+import Grid from '../components/Grid.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+---
+
+<BaseLayout title="Voice Agents | Waboom" description="Transform your customer service with AI-powered voice agents">
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="AI Voice Agents"
+				tagline="Intelligent, scalable, and human-like voice interactions for your business"
+				align="start"
+			>
+				<div class="roles">
+					<Pill><Icon icon="microphone-stage" size="1.33em" /> Natural Language</Pill>
+					<Pill><Icon icon="strategy" size="1.33em" /> Context Aware</Pill>
+					<Pill><Icon icon="code" size="1.33em" /> System Integration</Pill>
+				</div>
+			</Hero>
+
+			<section class="section with-background">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Transform Your Customer Service</h3>
+					<p>
+						Our AI voice agents provide natural, context-aware conversations that seamlessly handle customer inquiries 24/7.
+					</p>
+				</header>
+
+				<div class="gallery">
+					<Grid variant="small">
+						{
+							[
+								{
+									title: 'Natural Conversations',
+									description: 'Advanced language models enable human-like interactions with context awareness and emotional intelligence.'
+								},
+								{
+									title: 'Multilingual Support',
+									description: 'Support customers in multiple languages with natural accent handling and cultural awareness.'
+								},
+								{
+									title: 'System Integration',
+									description: 'Seamlessly connect with your CRM, scheduling, and payment systems for end-to-end automation.'
+								},
+								{
+									title: 'Smart Analytics',
+									description: 'Gain insights from every interaction with detailed analytics and continuous improvement.'
+								}
+							].map((feature) => (
+								<li class="feature-card">
+									<h4>{feature.title}</h4>
+									<p>{feature.description}</p>
+								</li>
+							))
+						}
+					</Grid>
+				</div>
+			</section>
+
+			<section class="section with-background bg-variant">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Key Benefits</h3>
+				</header>
+
+				<div class="content">
+					<div class="benefit-grid">
+						<div class="benefit">
+							<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
+							<h4>70% Cost Reduction</h4>
+							<p>Significantly reduce operational costs while maintaining service quality</p>
+						</div>
+						<div class="benefit">
+							<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
+							<h4>24/7 Availability</h4>
+							<p>Provide consistent support around the clock without additional staffing</p>
+						</div>
+						<div class="benefit">
+							<Icon icon="rocket-launch" color="var(--accent-regular)" size="2.5rem" gradient />
+							<h4>Instant Scalability</h4>
+							<p>Handle peak demand effortlessly without compromising service quality</p>
+						</div>
+						<div class="benefit">
+							<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
+							<h4>Smart Learning</h4>
+							<p>Continuously improve through machine learning and conversation analysis</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section with-background">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Try It Out</h3>
+					<p>Experience our voice agent technology with a live demo</p>
+				</header>
+
+				<div class="content">
+					<div class="demo-container">
+						<div class="demo-box">
+							<h4>Interactive Demo</h4>
+							<p>Click to start a conversation with our demo voice agent</p>
+							<button class="demo-button">
+								<Icon icon="microphone-stage" size="1.5em" /> Start Demo
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.roles {
+		display: flex;
+		gap: 0.5rem;
+		margin-top: 0.5rem;
+	}
+
+	.feature-card {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding: 2rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+	}
+
+	.feature-card h4 {
+		font-size: var(--text-lg);
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+
+	.feature-card p {
+		color: var(--gray-300);
+	}
+
+	.section {
+		display: grid;
+		gap: 2rem;
+	}
+
+	.with-background {
+		position: relative;
+	}
+
+	.with-background::before {
+		--hero-bg: var(--bg-image-subtle-2);
+		content: '';
+		position: absolute;
+		pointer-events: none;
+		left: 50%;
+		width: 100vw;
+		aspect-ratio: calc(2.25 / var(--bg-scale));
+		top: 0;
+		transform: translateY(-75%) translateX(-50%);
+		background: url('/assets/backgrounds/noise.png') top center/220px repeat,
+			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat, var(--gray-999);
+		background-blend-mode: overlay, normal, normal, normal;
+		mix-blend-mode: var(--bg-blend-mode);
+		z-index: -1;
+	}
+
+	.section-header {
+		justify-self: center;
+		text-align: center;
+		max-width: 50ch;
+		font-size: var(--text-md);
+		color: var(--gray-300);
+	}
+
+	.section-header h3 {
+		font-size: var(--text-2xl);
+	}
+
+	.benefit-grid {
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	}
+
+	.benefit {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 1rem;
+		padding: 2rem;
+		background-color: var(--gray-999_40);
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+	}
+
+	.benefit h4 {
+		font-size: var(--text-lg);
+		font-weight: 600;
+	}
+
+	.benefit p {
+		color: var(--gray-300);
+	}
+
+	.demo-container {
+		display: flex;
+		justify-content: center;
+		padding: 2rem;
+	}
+
+	.demo-box {
+		text-align: center;
+		padding: 3rem;
+		background-color: var(--gray-999_40);
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		max-width: 500px;
+	}
+
+	.demo-box h4 {
+		font-size: var(--text-xl);
+		margin-bottom: 1rem;
+	}
+
+	.demo-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		background-color: var(--accent-regular);
+		color: var(--accent-text-over);
+		padding: 0.75rem 1.5rem;
+		border-radius: 0.5rem;
+		border: none;
+		font-size: var(--text-md);
+		cursor: pointer;
+		margin-top: 1.5rem;
+		transition: background-color 150ms;
+	}
+
+	.demo-button:hover {
+		background-color: var(--accent-dark);
+	}
+
+	@media (min-width: 50em) {
+		.section {
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
+			gap: 5rem;
+		}
+
+		.section.with-cta {
+			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
+		}
+
+		.section-header {
+			grid-area: header;
+			font-size: var(--text-lg);
+		}
+
+		.section-header h3 {
+			font-size: var(--text-4xl);
+		}
+
+		.with-cta .section-header {
+			justify-self: flex-start;
+			text-align: left;
+		}
+
+		.gallery {
+			grid-area: gallery;
+		}
+
+		.cta {
+			grid-area: cta;
+		}
+	}
+</style>
+
+<script>
+	document.querySelector('.demo-button')?.addEventListener('click', () => {
+		// Add your demo functionality here
+		alert('Demo voice agent functionality coming soon!');
+	});
+</script> 
