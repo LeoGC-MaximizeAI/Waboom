@@ -11,7 +11,7 @@ tags:
   - Data Extraction
 client:
   name: Haydn Brush
-  logo: https://haydn.co.nz/cdn/shop/files/Haydn_logo_grey_2020_400x.jpg
+  logo: https://images.rapido.co.nz/clients/haydn/assets/logo.png
   url: https://haydnbrush.co.nz
   testimonial: "Waboom's AI-powered PO processing system has transformed how we handle incoming orders. What used to take hours of manual data entry is now automated with impressive accuracy. The system's ability to understand and process various PO formats from our emails has been remarkable."
   testimonial_author: Michael Fisher, Operations Manager

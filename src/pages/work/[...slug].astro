@@ -35,7 +35,7 @@ interface Props {
 // Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-	const work = await getCollection('services');
+	const work = await getCollection('work');
 	return work.map((entry) => ({
 		params: { slug: entry.id },
 		props: { entry },
@@ -74,7 +74,7 @@ console.log('Entry data:', JSON.stringify(entry.data, null, 2));
 								<img src={frontmatter.img} alt={frontmatter.img_alt || ''} />
 							</div>
 						}
-						{frontmatter.client && (
+						{frontmatter.client && frontmatter.client.testimonial && (
 							<div class="client-section">
 								<div class="client-info">
 									{frontmatter.client.logo && (

@@ -32,8 +32,7 @@ const isCurrentPage = (href: string) => {
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<!-- <Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient /> -->
-			Waboom.ai
+			<span class="kaboom-text">Waboom.ai</span>
 		</a>
 		<menu-button>
 			<template>
@@ -349,5 +348,29 @@ const isCurrentPage = (href: string) => {
 		.link[aria-current='page'] {
 			color: SelectedItem;
 		}
+	}
+
+	@keyframes kaboom {
+		0% {
+			opacity: 0;
+			transform: scale(0.1);
+		}
+		50% {
+			opacity: 1;
+			transform: scale(1.5);
+		}
+		75% {
+			transform: scale(0.85);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+
+	.kaboom-text {
+		display: inline-block;
+		animation: kaboom 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+		transform-origin: center;
+		font-weight: bold;
 	}
 </style>
