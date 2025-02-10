@@ -26,7 +26,6 @@ const animationTexts = [
 	{ text: "Agentic Automation", icon: "terminal-window" },
 	{ text: "Document Processing", icon: "pencil-line" },
 	{ text: "ERP Integration", icon: "rocket-launch" },
-	
 ];
 
 // Create the title with dynamic part
@@ -48,17 +47,58 @@ const projects = (await getCollection('work'))
 // SEO Meta Data
 const seoTitle = "AI Business Automation Solutions | Waboom";
 const seoDescription = "Transform your business with Waboom's AI-powered automation solutions. Streamline back-office tasks, reduce costs, and drive growth with intelligent automation for mid-sized and enterprise companies.";
+const keywords = "AI automation, business automation, voice agents, document processing, workflow automation, ERP integration, business efficiency, AI solutions, New Zealand";
 
 // Safe canonical URL generation
 const canonicalURL = Astro.site 
 	? new URL(Astro.url.pathname, Astro.site)
 	: new URL(`https://waboom.ai${Astro.url.pathname}`);
 
+// Social sharing image URL
+const ogImageUrl = "https://waboom.ai/assets/voice_agent.webp";
+
+// Additional SEO data
+const locale = "en-NZ";
+const siteName = "Waboom";
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
 
 <BaseLayout title={seoTitle} description={seoDescription}>
+	<!-- Basic SEO -->
+	<meta name="keywords" content={keywords} slot="head" />
+	<meta name="author" content={siteName} slot="head" />
+	<meta name="robots" content="index, follow" slot="head" />
+	<meta name="language" content="English" slot="head" />
+	<link rel="canonical" href={canonicalURL} slot="head" />
+	
+	<!-- Open Graph / Facebook Meta Tags -->
+	<meta property="og:type" content="website" slot="head" />
+	<meta property="og:site_name" content={siteName} slot="head" />
+	<meta property="og:locale" content={locale} slot="head" />
+	<meta property="og:url" content={canonicalURL} slot="head" />
+	<meta property="og:title" content={seoTitle} slot="head" />
+	<meta property="og:description" content={seoDescription} slot="head" />
+	<meta property="og:image" content={ogImageUrl} slot="head" />
+	<meta property="og:image:width" content="1200" slot="head" />
+	<meta property="og:image:height" content="630" slot="head" />
+	<meta property="og:image:alt" content="Waboom AI Business Automation Solutions" slot="head" />
+
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="summary_large_image" slot="head" />
+	<meta name="twitter:site" content="@waboom_ai" slot="head" />
+	<meta name="twitter:creator" content="@waboom_ai" slot="head" />
+	<meta name="twitter:url" content={canonicalURL} slot="head" />
+	<meta name="twitter:title" content={seoTitle} slot="head" />
+	<meta name="twitter:description" content={seoDescription} slot="head" />
+	<meta name="twitter:image" content={ogImageUrl} slot="head" />
+	<meta name="twitter:image:alt" content="Waboom AI Business Automation Solutions" slot="head" />
+
+	<!-- Additional Meta Tags -->
+	<meta name="format-detection" content="telephone=no" slot="head" />
+	<meta name="theme-color" content="#4f39fa" slot="head" />
+
 	<!-- Schema.org structured data for Organization and Service -->
 	<script type="application/ld+json" slot="head">
 		{
@@ -114,7 +154,7 @@ const canonicalURL = Astro.site
 				</div>
 			</header>
 
-			<Skills />
+			
 			
 			<!-- Add AI Agent component here -->
 			<!-- <div data-aos="fade-up">
@@ -123,6 +163,44 @@ const canonicalURL = Astro.site
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-32" role="main">
+			<section class="  founder-section" aria-labelledby="founder-heading">
+				<div class="founder-content box wrapper" data-aos="fade-up" data-aos-delay="200">
+					<div class="founder-grid">
+
+						<div class="founder-text" data-aos="fade-left">
+							<h3>Adam Holt</h3>
+							<p class="title">Founder & CEO</p>
+							<div class="story">
+								<p>
+									With over a decade of experience in system integration and software development,
+									I've witnessed firsthand the rapid evolution of technology. Every day, I've been
+									at the forefront of this transformation, seeing the incredible potential it holds
+									for businesses.
+								</p>
+								<p>
+									Then came my "kaboom moment" – a realization that while the software development
+									industry has undergone remarkable changes, many businesses haven't yet embarked on
+									this transformative journey. This insight sparked the creation of Waboom.
+								</p>
+								<p>
+									Today, I'm combining my extensive experience and network to help businesses
+									harness the power of modern automation and AI. It's an exciting time to bridge
+									the gap between cutting-edge technology and practical business solutions.
+								</p>
+							</div>
+						</div>
+						<div class="founder-image" data-aos="fade-right">
+							<img 
+								src="/assets/adam-profile.webp" 
+								alt="Adam Holt - Founder of Waboom" 
+								width="400" 
+								height="400"
+								loading="lazy"
+							/>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section id="free-strategy" class="section with-background with-cta" aria-labelledby="strategy-heading">
 				<header class="section-header stack gap-2 lg:gap-4" data-aos="fade-up">
 					<h2 id="strategy-heading" class="text-2xl">Free AI Strategy Session</h2>
@@ -157,6 +235,8 @@ const canonicalURL = Astro.site
 					</div>
 				</div>
 			</section>
+
+			<Skills />
 
 			<section class="section with-background bg-variant" aria-labelledby="services-heading">
 				<header class="section-header stack gap-2 lg:gap-4" data-aos="fade-up">
@@ -196,9 +276,11 @@ const canonicalURL = Astro.site
 				</div>
 			</section>
 
+
+
 			<section class="section with-background" aria-labelledby="stories-heading">
 				<header class="section-header stack gap-2 lg:gap-4" data-aos="fade-up">
-					<h2 id="stories-heading" class="text-2xl">Success Stories</h2>
+					<h2 id="stories-heading" class="text-2xl">Working On</h2>
 					<p>Discover how we're helping businesses transform their operations with AI-powered automation.</p>
 				</header>
 
@@ -846,6 +928,84 @@ const canonicalURL = Astro.site
 		.static-text,
 		.dynamic-text {
 			font-size: 0.7em;
+		}
+	}
+
+	/* Founder Section Styles */
+	.founder-section {
+		position: relative;
+		overflow: hidden;
+	}
+
+	.founder-content {
+		padding: 2rem;
+	}
+
+	.founder-grid {
+		display: grid;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.founder-image {
+		text-align: center;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.founder-image img {
+		border-radius: 1rem;
+		box-shadow: var(--shadow-md);
+		max-width: 100%;
+		height: auto;
+		aspect-ratio: 1;
+		object-fit: cover;
+	}
+
+	.founder-text h3 {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+		margin-bottom: 0.5rem;
+	}
+
+	.founder-text .title {
+		color: var(--accent-regular);
+		font-size: var(--text-md);
+		margin-bottom: 1.5rem;
+	}
+
+	.founder-text .story {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		color: var(--gray-300);
+	}
+
+	.founder-text .story p {
+		line-height: 1.6;
+	}
+
+	@media (min-width: 50em) {
+		.founder-grid {
+			grid-template-columns: 3fr 1fr;
+			gap: 4rem;
+		}
+
+		.founder-content {
+			padding: 3rem;
+		}
+
+		.founder-text h3 {
+			font-size: var(--text-2xl);
+		}
+
+		.founder-text .story {
+			gap: 1.5rem;
+		}
+
+		.founder-image {
+			max-width: 250px;
+			justify-self: end;
 		}
 	}
 </style>
