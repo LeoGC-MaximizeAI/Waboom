@@ -31,23 +31,18 @@ const description = "Transform your customer service with Waboom's AI voice agen
         <section class="what-are-section">
             <div class="container">
                 <h2 class="section-title slide-in-left">What Are AI Voice Agents?</h2>
-                <div class="content-grid">
-                    <div class="text-content slide-in-left-delay-1">
-                        <p>
-                            AI Voice Agents are intelligent virtual assistants that use natural language processing and machine learning to have human-like conversations with your customers over the phone or through digital channels.
-                        </p>
-                        <p>
-                            Unlike traditional chatbots or IVR systems, our voice agents understand context, respond naturally to questions, and can handle complex conversations without human intervention.
-                        </p>
-                    </div>
-                    <div class="image-content slide-in-right">
-                        <div class="voice-agent-visual">
-                            <div class="voice-wave"></div>
-                            <Icon icon="microphone-stage" size="3em" />
-                            <div class="voice-wave"></div>
-                        </div>
-                    </div>
+                
+                <!-- Text content first (full width) -->
+                <div class="text-content slide-in-left-delay-1">
+                    <p>
+                        AI Voice Agents are intelligent virtual assistants that use natural language processing and machine learning to have human-like conversations with your customers over the phone or through digital channels.
+                    </p>
+                    <p>
+                        Unlike traditional chatbots or IVR systems, our voice agents understand context, respond naturally to questions, and can handle complex conversations without human intervention.
+                    </p>
                 </div>
+                
+
             </div>
         </section>
 
@@ -102,35 +97,13 @@ const description = "Transform your customer service with Waboom's AI voice agen
 				</div>
 			</section>
 
-        <!-- Use Cases Section -->
-        <section class="use-cases-section">
-            <div class="container">
-                <h2 class="section-title slide-in-left">Common Use Cases</h2>
-                <div class="use-cases-grid">
-                    <div class="use-case slide-in-left-delay-1">
-                        <h3><Icon icon="paper-plane-tilt" size="1.2em" /> Appointment Scheduling</h3>
-                        <p>Automate the booking, rescheduling, and cancellation of appointments while integrating with your existing calendar systems.</p>
-                    </div>
-                    <div class="use-case slide-in-left-delay-2">
-                        <h3><Icon icon="list" size="1.2em" /> Customer Support</h3>
-                        <p>Answer common questions, troubleshoot issues, and escalate complex problems to human agents when necessary.</p>
-                    </div>
-                    <div class="use-case slide-in-left-delay-3">
-                        <h3><Icon icon="code" size="1.2em" /> Order Processing</h3>
-                        <p>Take orders, process payments, and provide order status updates without human intervention.</p>
-                    </div>
-                    <div class="use-case slide-in-left-delay-4">
-                        <h3><Icon icon="microphone-stage" size="1.2em" /> Lead Qualification</h3>
-                        <p>Engage with potential customers, qualify leads, and schedule follow-ups with sales representatives.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- How It Works Section -->
         <section class="how-it-works-section">
             <div class="container">
                 <h2 class="section-title fade-in">How It Works</h2>
+
                 <div class="steps-container">
                     <div class="step fade-in-delay-1">
                         <div class="step-number">1</div>
@@ -154,9 +127,282 @@ const description = "Transform your customer service with Waboom's AI voice agen
 						</div>
 						</div>
 					</div>
+									                <!-- Visualizer (full width) -->
+													<div class="visualizer-wrapper fade-in ">
+														<div class="voice-agent-visualizer">
+															<div class="simulation-header">
+																<div class="simulation-title">Voice Agent Interaction Simulation</div>
+																<div class="simulation-subtitle">Courier Tracking Example</div>
+															</div>
+															
+															<div class="voice-process-container">
+																<!-- Voice Input Section -->
+																<div class="process-section voice-input">
+																	<div class="section-label">Customer Voice Input</div>
+																	<div class="voice-waveform">
+																		<div class="waveform-container">
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																		</div>
+																		<div class="input-icon">
+																			<Icon icon="microphone-stage" size="1.5em" />
+																		</div>
+																	</div>
+																	<div class="voice-text">
+																		"Where is my package with tracking number ABC12345?"
+																	</div>
+																</div>
+																
+																<!-- Processing Pipeline -->
+																<div class="process-flow">
+																	<div class="flow-arrow">→</div>
+																	<div class="data-particle"></div>
+																</div>
+																
+																<!-- AI Processing Section -->
+																<div class="process-section ai-processing">
+																	<div class="section-label">AI Processing</div>
+																	<div class="processing-steps">
+																		<div class="process-step speech-to-text">
+																			<div class="step-label">Speech-to-Text</div>
+																			<div class="step-visual">
+																				<div class="speech-text">"Where is my package with tracking number ABC12345?"</div>
+																			</div>
+																		</div>
+																		<div class="process-step nlp">
+																			<div class="step-label">NLP</div>
+																			<div class="step-visual">
+																				<div class="entity intent">INTENT: Track Package</div>
+																				<div class="entity service">ENTITY: Package</div>
+																				<div class="entity time">ID: ABC12345</div>
+																			</div>
+																		</div>
+																		<div class="process-step reasoning">
+																			<div class="step-label">Reasoning</div>
+																			<div class="step-visual">
+																				<div class="reasoning-flow">
+																					<div class="reasoning-node">Context</div>
+																					<div class="reasoning-node">Knowledge</div>
+																					<div class="reasoning-node">Decision</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																
+																<!-- Processing Pipeline -->
+																<div class="process-flow">
+																	<div class="flow-arrow">→</div>
+																	<div class="data-particle"></div>
+																</div>
+																
+																<!-- Data Retrieval Section -->
+																<div class="process-section data-retrieval">
+																	<div class="section-label">Courier Data Retrieval</div>
+																	<div class="retrieval-visual">
+																		<div class="api-call">
+																			<div class="api-label">API REQUEST</div>
+																			<div class="api-code">GET /tracking/ABC12345</div>
+																		</div>
+																		<div class="courier-data">
+																			<div class="courier-header">
+																				<div class="courier-icon">📦</div>
+																				<div class="courier-title">Package Data</div>
+																			</div>
+																			<div class="data-item">
+																				<span class="data-key">Status:</span>
+																				<span class="data-value">In Transit</span>
+																			</div>
+																			<div class="data-item">
+																				<span class="data-key">Location:</span>
+																				<span class="data-value">Auckland Hub</span>
+																			</div>
+																			<div class="data-item">
+																				<span class="data-key">ETA:</span>
+																				<span class="data-value">Tomorrow, 2pm</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																
+																<!-- Processing Pipeline -->
+																<div class="process-flow">
+																	<div class="flow-arrow">→</div>
+																	<div class="data-particle"></div>
+																</div>
+																
+																<!-- Business Integration Section -->
+																<div class="process-section business-integration">
+																	<div class="section-label">Business Systems</div>
+																	<div class="integration-points">
+																		<div class="integration-item courier">
+																			<div class="integration-icon">🚚</div>
+																			<div class="integration-label">Courier API</div>
+																			<div class="integration-status">Connected</div>
+																		</div>
+																		<div class="integration-item crm">
+																			<div class="integration-icon">👥</div>
+																			<div class="integration-label">CRM</div>
+																			<div class="integration-status">Updated</div>
+																		</div>
+																		<div class="integration-item analytics">
+																			<div class="integration-icon">📊</div>
+																			<div class="integration-label">Analytics</div>
+																			<div class="integration-status">Recording</div>
+																		</div>
+																	</div>
+																</div>
+																
+																<!-- Processing Pipeline -->
+																<div class="process-flow">
+																	<div class="flow-arrow">→</div>
+																	<div class="data-particle"></div>
+																</div>
+																
+																<!-- Voice Response Section -->
+																<div class="process-section voice-output">
+																	<div class="section-label">AI Voice Response</div>
+																	<div class="response-waveform">
+																		<div class="response-voice-icon">
+																			<Icon icon="paper-plane-tilt" size="1.5em" />
+																		</div>
+																		<div class="response-waveform-container">
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																		</div>
+																	</div>
+																	<div class="response-text">
+																		"Your package ABC12345 is currently in transit through our Auckland Hub and is scheduled for delivery tomorrow by 2pm. Is there anything else you need help with?"
+																	</div>
+																</div>
+																
+																<!-- Processing Pipeline -->
+																<div class="process-flow">
+																	<div class="flow-arrow">→</div>
+																	<div class="data-particle"></div>
+																</div>
+																
+																<!-- Follow-up Actions Section -->
+																<div class="process-section follow-up-actions">
+																	<div class="section-label">Follow-up Actions</div>
+																	<div class="decision-tree">
+																		<div class="conversation-item ai-question">
+																			<div class="conversation-icon">
+																				<Icon icon="microphone-stage" size="1.2em" />
+																			</div>
+																			<div class="conversation-text">
+																				"Would you like to receive tracking updates via text message or email?"
+																			</div>
+																		</div>
+																		<div class="conversation-item customer-response">
+																			<div class="conversation-icon">
+																				<Icon icon="heart" size="1.2em" />
+																			</div>
+																			<div class="conversation-text">
+																				"Both, please."
+																			</div>
+																		</div>
+																		<div class="conversation-item ai-confirmation">
+																			<div class="conversation-icon">
+																				<Icon icon="microphone-stage" size="1.2em" />
+																			</div>
+																			<div class="conversation-text">
+																				"I've set up both text and email notifications for your package. You'll receive updates when your package status changes."
+																			</div>
+																		</div>
+																	</div>
+																	<div class="notifications-sent">
+																		<div class="notification-item sms">
+																			<div class="notification-icon">
+																				<Icon icon="paper-plane-tilt" size="1.2em" />
+																			</div>
+																			<div class="notification-content">
+																				<div class="notification-type">SMS Notification</div>
+																				<div class="notification-preview">Package ABC12345 is in transit. Est. delivery: Tomorrow, 2pm. Track at courier.com/track</div>
+																			</div>
+																			<div class="status-indicator">Sent</div>
+																		</div>
+																		<div class="notification-item email">
+																			<div class="notification-icon">
+																				<Icon icon="paper-plane-tilt" size="1.2em" />
+																			</div>
+																			<div class="notification-content">
+																				<div class="notification-type">Email Notification</div>
+																				<div class="notification-preview">Your package ABC12345 is on its way with detailed tracking information and delivery instructions.</div>
+																			</div>
+																			<div class="status-indicator">Sent</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="outcomes-display">
+																<div class="outcome-header">Business Outcomes</div>
+																<div class="outcomes-metrics">
+																	<div class="outcome-metric calls">
+																		<div class="metric-value">24/7</div>
+																		<div class="metric-label">Availability</div>
+																	</div>
+																	<div class="outcome-metric time">
+																		<div class="metric-value">-85%</div>
+																		<div class="metric-label">Wait Times</div>
+																	</div>
+																	<div class="outcome-metric cost">
+																		<div class="metric-value">-60%</div>
+																		<div class="metric-label">Op. Costs</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
 				</div>
+				
 			</section>
 
+			        <!-- Use Cases Section -->
+					<section class="use-cases-section">
+						<div class="container">
+							<h2 class="section-title slide-in-left">Common Use Cases</h2>
+							<div class="use-cases-grid">
+								<div class="use-case slide-in-left-delay-1">
+									<h3><Icon icon="paper-plane-tilt" size="1.2em" /> Appointment Scheduling</h3>
+									<p>Automate the booking, rescheduling, and cancellation of appointments while integrating with your existing calendar systems.</p>
+								</div>
+								<div class="use-case slide-in-left-delay-2">
+									<h3><Icon icon="list" size="1.2em" /> Customer Support</h3>
+									<p>Answer common questions, troubleshoot issues, and escalate complex problems to human agents when necessary.</p>
+								</div>
+								<div class="use-case slide-in-left-delay-3">
+									<h3><Icon icon="code" size="1.2em" /> Order Processing</h3>
+									<p>Take orders, process payments, and provide order status updates without human intervention.</p>
+								</div>
+								<div class="use-case slide-in-left-delay-4">
+									<h3><Icon icon="microphone-stage" size="1.2em" /> Lead Qualification</h3>
+									<p>Engage with potential customers, qualify leads, and schedule follow-ups with sales representatives.</p>
+								</div>
+							</div>
+						</div>
+					</section>
         <!-- Demo Section -->
         <section class="demo-section">
             <div class="container">
@@ -233,15 +479,13 @@ const description = "Transform your customer service with Waboom's AI voice agen
 
     /* What Are Voice Agents Section */
     .what-are-section {
-        padding: 6rem 0;
+        padding: 2rem 0;
         background-color: var(--gray-999_40);
         backdrop-filter: blur(8px);
     }
 
-    .content-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 3rem;
+    .text-content {
+        margin-bottom: 3rem;
     }
 
     .text-content p {
@@ -249,19 +493,368 @@ const description = "Transform your customer service with Waboom's AI voice agen
         font-size: var(--text-lg);
         line-height: 1.6;
         margin-bottom: 1.5rem;
+        max-width: 70ch;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .voice-agent-visual {
-		display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        padding: 2rem;
-        background: var(--gradient-subtle);
+    .visualizer-wrapper {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .voice-agent-visualizer {
+        background: rgba(10, 10, 30, 0.8);
         border-radius: 1rem;
         box-shadow: var(--shadow-md);
-		height: 100%;
-        min-height: 200px;
+        overflow: hidden;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        border: 1px solid rgba(100, 100, 255, 0.1);
+        box-shadow: inset 0 0 15px rgba(100, 100, 255, 0.1), var(--shadow-md);
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .simulation-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .simulation-title {
+        font-size: var(--text-lg);
+        font-weight: bold;
+        color: white;
+        margin-bottom: 0.25rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .simulation-subtitle {
+        font-size: var(--text-sm);
+        color: var(--gray-300);
+    }
+
+    .voice-process-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        flex-grow: 1;
+    }
+
+    .process-section {
+        background-color: rgba(30, 30, 50, 0.6);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .section-label {
+        font-size: var(--text-sm);
+        font-weight: bold;
+        color: white;
+        margin-bottom: 0.75rem;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Voice Input Styles */
+    .voice-input {
+        height: auto;
+    }
+
+    .voice-waveform {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .voice-text {
+        font-size: var(--text-sm);
+        color: white;
+        font-style: italic;
+        text-align: center;
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+
+    .waveform-container {
+        flex-grow: 1;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.25rem;
+    }
+
+    .wave-bar {
+        width: 3px;
+        background: linear-gradient(to top, rgba(46, 204, 113, 0.3), rgba(46, 204, 113, 1));
+        border-radius: 1px;
+        height: 10px;
+    }
+
+    .input-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background: var(--gradient-accent-orange);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: 0 0 10px rgba(255, 150, 50, 0.5);
+    }
+
+    /* Process Flow Styles */
+    .process-flow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.5rem;
+        position: relative;
+    }
+
+    .flow-arrow {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1.5rem;
+        animation: pulseArrow 2s infinite;
+    }
+
+    .data-particle {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: #ffaa44;
+        border-radius: 50%;
+        box-shadow: 0 0 8px rgba(255, 170, 68, 0.8);
+        animation: moveParticle 2s linear infinite;
+    }
+
+    @keyframes moveParticle {
+        0% { 
+            left: 20%; 
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% { 
+            left: 80%; 
+            opacity: 0;
+        }
+    }
+
+    @keyframes pulseArrow {
+        0%, 100% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    /* AI Processing Styles */
+    .ai-processing {
+        height: auto;
+    }
+
+    /* Data Retrieval Styles */
+    .data-retrieval {
+        height: auto;
+    }
+
+    .retrieval-visual {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .api-call {
+        background-color: rgba(20, 20, 40, 0.6);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .api-label {
+        font-size: var(--text-xs);
+        color: white;
+        margin-bottom: 0.25rem;
+        font-weight: bold;
+    }
+
+    .api-code {
+        font-family: monospace;
+        font-size: var(--text-sm);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+    .courier-data {
+        background-color: rgba(20, 20, 40, 0.6);
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .courier-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .courier-icon {
+        font-size: 1.25rem;
+    }
+
+    .courier-title {
+        font-size: var(--text-sm);
+        font-weight: bold;
+        color: white;
+    }
+
+    .data-item {
+        font-size: var(--text-xs);
+        margin-bottom: 0.25rem;
+        display: flex;
+    }
+
+    .data-key {
+        color: white;
+        width: 80px;
+    }
+
+    .data-value {
+        color: #5dade2;
+        font-weight: bold;
+    }
+
+    /* Business Integration Styles */
+    .business-integration {
+        height: auto;
+    }
+
+    /* Voice Output Styles */
+    .voice-output {
+        height: auto;
+    }
+
+    .response-waveform {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+        flex-direction: row-reverse;
+    }
+
+    .response-voice-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    }
+
+    .response-waveform-container {
+        flex-grow: 1;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.25rem;
+    }
+
+    .response-bar {
+        width: 3px;
+        background: linear-gradient(to top, rgba(52, 152, 219, 0.3), rgba(52, 152, 219, 1));
+        border-radius: 1px;
+        height: 10px;
+    }
+
+    .response-text {
+        font-size: var(--text-sm);
+        color: white;
+        font-style: italic;
+        text-align: center;
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+
+    /* Outcomes Display Styles */
+    .outcomes-display {
+        background-color: rgba(30, 30, 50, 0.6);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .outcome-header {
+        font-size: var(--text-sm);
+        font-weight: bold;
+        color: white;
+        margin-bottom: 0.75rem;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .outcomes-metrics {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .outcome-metric {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .outcome-metric:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 20%;
+        height: 60%;
+        width: 1px;
+        background-color: rgba(46, 204, 113, 0.5);
+    }
+
+    .metric-value {
+        font-size: var(--text-lg);
+        font-weight: bold;
+        margin-bottom: 0.25rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .calls .metric-value {
+        color: #f39c12;
+    }
+
+    .time .metric-value {
+        color: #3498db;
+    }
+
+    .cost .metric-value {
+        color: #2ecc71;
+    }
+
+    .metric-label {
+        font-size: var(--text-xs);
+        color: rgba(255, 255, 255, 0.8);
     }
 
     .voice-wave {
@@ -290,7 +883,7 @@ const description = "Transform your customer service with Waboom's AI voice agen
 
     /* Benefits Section */
     .benefits-section {
-        padding: 6rem 0;
+        padding: 1rem 0;
     }
 
     .benefits-grid {
@@ -589,22 +1182,379 @@ const description = "Transform your customer service with Waboom's AI voice agen
             font-size: var(--text-2xl);
         }
 
-        .content-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+        .voice-process-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+        
+        .process-section {
+            flex: 1 1 30%;
+            min-width: 250px;
+        }
+        
+        .voice-input, .voice-output, .follow-up-actions {
+            flex: 1 1 45%;
+        }
+        
+        .ai-processing {
+            flex: 2 1 45%;
+        }
+        
+        .data-retrieval, .business-integration {
+            flex: 1 1 45%;
+        }
+        
+        .process-flow {
+            width: 3rem;
+            height: auto;
+            flex: 0 0 auto;
+        }
+        
+        .flow-arrow {
+            transform: rotate(0);
+        }
+        
+        .speech-text, .response-text, .conversation-text {
+            font-size: var(--text-md);
+        }
+        
+        .metric-value {
+            font-size: var(--text-xl);
         }
 
-        .use-cases-grid {
-            grid-template-columns: repeat(2, 1fr);
+        .outcomes-display {
+            padding: 1.5rem;
+        }
+        
+        .outcomes-metrics {
             gap: 2rem;
         }
+        
+        .courier-data {
+            padding: 1rem;
+        }
+        
+        .decision-tree {
+            padding: 1rem;
+        }
+        
+        .notifications-sent {
+            flex-direction: row;
+            align-items: stretch;
+        }
+        
+        .notification-item {
+            flex: 1;
+        }
+    }
 
-        .demo-content {
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-		}
-	}
+    /* Process Steps Styling */
+    .process-step {
+        margin-bottom: 0.75rem;
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+    
+    .step-label {
+        color: white;
+        font-weight: bold;
+        font-size: var(--text-xs);
+        margin-bottom: 0.5rem;
+    }
+    
+    .entity {
+        color: white;
+        margin-bottom: 0.25rem;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .intent {
+        border-left: 3px solid #f39c12;
+    }
+    
+    .service {
+        border-left: 3px solid #3498db;
+    }
+    
+    .time {
+        border-left: 3px solid #2ecc71;
+    }
+    
+    .reasoning-flow {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+    }
+    
+    .reasoning-node {
+        color: white;
+        padding: 0.25rem 0.5rem;
+        margin: 0 0.25rem;
+        border-radius: 0.25rem;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .speech-text {
+        color: white;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .integration-label {
+        font-size: var(--text-sm);
+        color: white;
+        margin: 0.25rem 0;
+    }
+
+    .integration-status {
+        font-size: var(--text-xs);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Follow-up Actions Styles */
+    .follow-up-actions {
+        height: auto;
+    }
+    
+    .decision-tree {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+    
+    .conversation-item {
+        display: flex;
+        gap: 0.75rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .ai-question, .ai-confirmation {
+        align-self: flex-start;
+        margin-right: 15%;
+        border-left: 3px solid #3498db;
+    }
+    
+    .customer-response {
+        align-self: flex-end;
+        margin-left: 15%;
+        border-left: 3px solid #f39c12;
+    }
+    
+    .conversation-icon {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    
+    .ai-question .conversation-icon, .ai-confirmation .conversation-icon {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+    }
+    
+    .customer-response .conversation-icon {
+        background: var(--gradient-accent-orange);
+        color: white;
+    }
+    
+    .conversation-text {
+        color: white;
+        font-size: var(--text-sm);
+    }
+    
+    .notifications-sent {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .notification-item {
+        display: flex;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .notification-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.05);
+        z-index: 0;
+        transition: width 0.5s ease-in-out;
+    }
+    
+    .notification-item.active::before {
+        width: 100%;
+    }
+    
+    .notification-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        z-index: 1;
+    }
+    
+    .sms .notification-icon {
+        background: linear-gradient(135deg, #27ae60, #2ecc71);
+        color: white;
+    }
+    
+    .email .notification-icon {
+        background: linear-gradient(135deg, #8e44ad, #9b59b6);
+        color: white;
+    }
+    
+    .notification-content {
+        flex-grow: 1;
+        z-index: 1;
+    }
+    
+    .notification-type {
+        font-size: var(--text-sm);
+        font-weight: bold;
+        color: white;
+        margin-bottom: 0.25rem;
+    }
+    
+    .notification-preview {
+        font-size: var(--text-xs);
+        color: white;
+    }
+    
+    .status-indicator {
+        background-color: rgba(46, 204, 113, 0.2);
+        color: #2ecc71;
+        font-size: var(--text-xs);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid rgba(46, 204, 113, 0.3);
+        z-index: 1;
+    }
+
+    .fade-in-active {
+        animation: fadeIn 0.3s ease-in-out forwards;
+    }
+    
+    .notification-item {
+        opacity: 0.8;
+        transform: translateY(5px);
+    }
+    
+    .notification-item.active {
+        animation: slideUpFade 0.4s ease-in-out forwards;
+    }
+    
+    @keyframes slideUpFade {
+        0% {
+            opacity: 0.8;
+            transform: translateY(5px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Additional Animation Styles */
+    .pulse-node {
+        animation: pulseNode 1s ease-in-out;
+    }
+    
+    @keyframes pulseNode {
+        0%, 100% { background-color: rgba(0, 0, 0, 0.3); }
+        50% { background-color: rgba(46, 204, 113, 0.7); }
+    }
+    
+    .highlight-integration {
+        animation: highlightItem 1s ease-in-out;
+    }
+    
+    @keyframes highlightItem {
+        0%, 100% { background-color: rgba(50, 50, 70, 0.4); }
+        50% { background-color: rgba(52, 152, 219, 0.7); }
+    }
+    
+    .highlight-data {
+        animation: glowEffect 1.5s ease-in-out;
+    }
+    
+    @keyframes glowEffect {
+        0%, 100% { box-shadow: 0 0 0 rgba(52, 152, 219, 0); }
+        50% { box-shadow: 0 0 15px rgba(52, 152, 219, 0.8); }
+    }
+    
+    .flash-api {
+        animation: apiFlash 0.8s ease-in-out;
+    }
+    
+    @keyframes apiFlash {
+        0%, 100% { background-color: rgba(0, 0, 0, 0.3); }
+        50% { background-color: rgba(255, 170, 68, 0.4); }
+    }
+    
+    .typing-effect {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 4s steps(60, end);
+        width: 100%;
+    }
+    
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    
+    .active-particle {
+        animation: moveParticle 2s linear;
+    }
+    
+    @keyframes moveParticle {
+        0% {
+            opacity: 0;
+            transform: translateX(0);
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+
 </style>
 
 <script>
@@ -616,11 +1566,18 @@ const description = "Transform your customer service with Waboom's AI voice agen
             '.slide-in-right'
         );
 
+        // Add special handling for notification items
+        const notificationItems = document.querySelectorAll('.notification-item');
+        
         // Initial check for elements in viewport
         checkElementsInViewport();
+        checkNotificationsInViewport();
 
         // Check elements on scroll
-        window.addEventListener('scroll', checkElementsInViewport, { passive: true });
+        window.addEventListener('scroll', () => {
+            checkElementsInViewport();
+            checkNotificationsInViewport();
+        }, { passive: true });
 
         function checkElementsInViewport() {
             animatedElements.forEach((element: Element) => {
@@ -633,6 +1590,20 @@ const description = "Transform your customer service with Waboom's AI voice agen
                 }
             });
         }
+        
+        // Special function to handle notifications visibility and animation
+        function checkNotificationsInViewport() {
+            notificationItems.forEach((item: Element) => {
+                if (isElementInViewport(item)) {
+                    // Make notification visible immediately
+                    (item as HTMLElement).style.visibility = 'visible';
+                    // Add active class with minimal delay
+                    setTimeout(() => {
+                        item.classList.add('active');
+                    }, 50);
+                }
+            });
+        }
 
         function isElementInViewport(el: Element): boolean {
             const rect = el.getBoundingClientRect();
@@ -641,5 +1612,210 @@ const description = "Transform your customer service with Waboom's AI voice agen
                 rect.bottom >= 0
             );
         }
+        
+        // Voice agent visualizer animations
+        const initVoiceAgentVisualizer = () => {
+            // Animation timing variables
+            const timings = {
+                initialDelay: 1000,
+                processingDelay: 2000,
+                responseDelay: 3000,
+                notificationDelay: 500
+            };
+            
+            // Reuse the isElementInViewport function from the outer scope
+            const checkIfInViewport = (el: Element | null): boolean => {
+                if (!el) return false;
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.bottom >= 0
+                );
+            };
+            
+            const animateVoiceInput = () => {
+                // Animate input waveform bars 
+                const waveBars = document.querySelectorAll('.wave-bar');
+                waveBars.forEach((bar) => {
+                    const height = Math.random() * 30 + 5; // Random height between 5px and 35px
+                    (bar as HTMLElement).style.height = `${height}px`;
+                    
+                    // Set up continuous animation
+                    setInterval(() => {
+                        const newHeight = Math.random() * 30 + 5;
+                        (bar as HTMLElement).style.height = `${newHeight}px`;
+                    }, 200);
+                });
+            };
+            
+            const animateProcessing = () => {
+                // Animate the reasoning nodes
+                const reasoningNodes = document.querySelectorAll('.reasoning-node');
+                reasoningNodes.forEach((node, index) => {
+                    // Add a delay for each node to create a sequential effect
+                    setTimeout(() => {
+                        node.classList.add('pulse-node');
+                        setTimeout(() => node.classList.remove('pulse-node'), 1000);
+                    }, index * 1000);
+                    
+                    // Repeat the animation
+                    setInterval(() => {
+                        node.classList.add('pulse-node');
+                        setTimeout(() => node.classList.remove('pulse-node'), 1000);
+                    }, 3000);
+                });
+                
+                // Simulate API call with a flash effect
+                const apiCode = document.querySelector('.api-code');
+                setTimeout(() => {
+                    apiCode?.classList.add('flash-api');
+                    setTimeout(() => apiCode?.classList.remove('flash-api'), 800);
+                }, timings.processingDelay);
+            };
+            
+            const animateDataRetrieval = () => {
+                // Animate the courier data retrieval
+                const courierData = document.querySelector('.courier-data');
+                setTimeout(() => {
+                    courierData?.classList.add('highlight-data');
+                    setTimeout(() => courierData?.classList.remove('highlight-data'), 1500);
+                }, timings.processingDelay + 1000);
+            };
+            
+            const animateIntegrations = () => {
+                // Animate integration items
+                const integrationItems = document.querySelectorAll('.integration-item');
+                integrationItems.forEach((item, index) => {
+                    // Staggered animation
+                    setTimeout(() => {
+                        item.classList.add('highlight-integration');
+                        setTimeout(() => item.classList.remove('highlight-integration'), 1000);
+                    }, timings.processingDelay + index * 800);
+                    
+                    // Repeat 
+                    setInterval(() => {
+                        item.classList.add('highlight-integration');
+                        setTimeout(() => item.classList.remove('highlight-integration'), 1000);
+                    }, 4000 + index * 500);
+                });
+                
+                // Cycle through integration statuses
+                const statuses = ['Connected', 'Updated', 'Processing', 'Active'];
+                const integrationStatuses = document.querySelectorAll('.integration-status');
+                
+                integrationStatuses.forEach((status, index) => {
+                    let currentStatus = 0;
+                    
+                    // Start the status cycling after some delay
+                    setTimeout(() => {
+                        setInterval(() => {
+                            currentStatus = (currentStatus + 1) % statuses.length;
+                            status.textContent = statuses[currentStatus];
+                        }, 3000 + index * 500);
+                    }, timings.processingDelay + 1000);
+                });
+            };
+            
+            const animateVoiceOutput = () => {
+                // Animate output waveform bars with slight delay
+                const responseBars = document.querySelectorAll('.response-bar');
+                responseBars.forEach((bar) => {
+                    // Initial inactive state
+                    (bar as HTMLElement).style.height = "2px";
+                    (bar as HTMLElement).style.opacity = "0.3";
+                    
+                    // Start animation after a delay to simulate processing time
+                    setTimeout(() => {
+                        setInterval(() => {
+                            const newHeight = Math.random() * 30 + 5;
+                            (bar as HTMLElement).style.height = `${newHeight}px`;
+                            (bar as HTMLElement).style.opacity = "1";
+                        }, 200);
+                    }, timings.responseDelay);
+                });
+                
+                // Show response text with typing effect
+                const responseText = document.querySelector('.response-text');
+                setTimeout(() => {
+                    responseText?.classList.add('typing-effect');
+                }, timings.responseDelay + 1000);
+            };
+            
+            const animateDataFlow = () => {
+                // Animate data particles in flow
+                setInterval(() => {
+                    const particles = document.querySelectorAll('.data-particle');
+                    particles.forEach((particle, index) => {
+                        setTimeout(() => {
+                            particle.classList.remove('active-particle');
+                            const htmlParticle = particle as HTMLElement;
+                            void htmlParticle.offsetWidth; // Force reflow to restart animation
+                            particle.classList.add('active-particle');
+                        }, index * 2000); // Stagger the particles
+                    });
+                }, 500);
+            };
+            
+            const animateFollowUpActions = () => {
+                // Get all notification items
+                const notifications = document.querySelectorAll('.notification-item');
+                
+                // Check if the visualizer is in the viewport
+                const visualizer = document.querySelector('.voice-agent-visualizer');
+                if (visualizer && checkIfInViewport(visualizer)) {
+                    // If visualizer is in viewport, show notifications immediately
+                    notifications.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('active');
+                        }, index * 100); // Very small staggered delay
+                    });
+                } else {
+                    // If not in viewport yet, use the original animation with reduced delays
+                    setTimeout(() => {
+                        const conversations = document.querySelectorAll('.conversation-item');
+                        conversations.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('fade-in-active');
+                            }, index * 300);
+                        });
+                        
+                        // Animate the notifications immediately after the conversation
+                        setTimeout(() => {
+                            notifications.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.classList.add('active');
+                                }, index * 200);
+                            });
+                        }, 300);
+                    }, timings.notificationDelay);
+                }
+            };
+            
+            // Initialize all animations
+            animateVoiceInput();
+            animateProcessing();
+            animateDataRetrieval();
+            animateIntegrations();
+            animateVoiceOutput();
+            animateDataFlow();
+            animateFollowUpActions();
+            
+            // Add scroll event listener to check for notifications in viewport
+            window.addEventListener('scroll', () => {
+                const notifications = document.querySelectorAll('.notification-item:not(.active)');
+                const visualizer = document.querySelector('.voice-agent-visualizer');
+                
+                if (visualizer && checkIfInViewport(visualizer)) {
+                    notifications.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('active');
+                        }, index * 100);
+                    });
+                }
+            }, { passive: true });
+        };
+        
+        // Initialize visualizer when the page is loaded
+        initVoiceAgentVisualizer();
 	});
 </script> 
