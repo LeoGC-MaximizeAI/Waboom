@@ -1,0 +1,261 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section id="contact" class="contact-section" aria-labelledby="contact-heading">
+    <div class="wrapper">
+        <header class="section-header" data-aos="fade-up">
+            <h2 id="contact-heading">Ready to Transform Your Customer Experience?</h2>
+            <p>Fill out the form below and we'll get back to you within 24 hours</p>
+        </header>
+
+        <div class="contact-container">
+            <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                <h3>Why Choose Waboom.ai?</h3>
+                <ul class="benefits-list">
+                    <li>
+                        <Icon icon="trophy" size="1.2em" />
+                        <span>Reduce operational costs by up to 60%</span>
+                    </li>
+                    <li>
+                        <Icon icon="microphone-stage" size="1.2em" />
+                        <span>Handle unlimited calls simultaneously</span>
+                    </li>
+                    <li>
+                        <Icon icon="rocket-launch" size="1.2em" />
+                        <span>Boost customer satisfaction</span>
+                    </li>
+                    <li>
+                        <Icon icon="strategy" size="1.2em" />
+                        <span>Seamless integration with your systems</span>
+                    </li>
+                </ul>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <Icon icon="paper-plane-tilt" size="1.5em" />
+                        <div>
+                            <h4>Email Us</h4>
+                            <a href="mailto:info@waboom.ai">info@waboom.ai</a>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <Icon icon="microphone-stage" size="1.5em" />
+                        <div>
+                            <h4>Call Us</h4>
+                            <a href="tel:+6499999999">+64 9 999 9999</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="contact-form" data-aos="fade-left" data-aos-delay="200" action="https://formspree.io/f/your-form-id" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" required placeholder="Your company">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Your email address">
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">How can we help?</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us about your business needs"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">
+                    <span>Get Your Free Consultation</span>
+                    <Icon icon="paper-plane-tilt" size="1.2em" />
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<style>
+    .contact-section {
+        padding: 4rem 0;
+        margin: 2rem 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+        margin-bottom: 0.5rem;
+    }
+
+    .section-header p {
+        font-size: var(--text-lg);
+        color: var(--gray-300);
+    }
+
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-info {
+        background: var(--gradient-subtle);
+        border: 1px solid var(--gray-800);
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+    .contact-info h3 {
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        margin-bottom: 1.5rem;
+    }
+
+    .benefits-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .benefits-list li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--gray-200);
+    }
+
+    .benefits-list li :global(svg) {
+        color: var(--accent-regular);
+    }
+
+    .contact-methods {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .contact-method {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contact-method :global(svg) {
+        color: var(--accent-regular);
+    }
+
+    .contact-method h4 {
+        font-size: var(--text-md);
+        color: var(--gray-0);
+        margin: 0 0 0.25rem;
+    }
+
+    .contact-method a {
+        color: var(--gray-300);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .contact-method a:hover {
+        color: var(--accent-regular);
+    }
+
+    .contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        background: var(--gradient-subtle);
+        border: 1px solid var(--gray-800);
+        border-radius: 1rem;
+        padding: 2rem;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .full-width {
+        grid-column: 1 / -1;
+    }
+
+    label {
+        font-size: var(--text-sm);
+        color: var(--gray-200);
+    }
+
+    input, textarea {
+        padding: 0.75rem;
+        background-color: var(--gray-999);
+        border: 1px solid var(--gray-800);
+        border-radius: 0.5rem;
+        color: var(--gray-0);
+        font-size: var(--text-md);
+    }
+
+    input:focus, textarea:focus {
+        border-color: var(--accent-regular);
+        outline: none;
+    }
+
+    .submit-button {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 1rem;
+        background: var(--gradient-accent-orange);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: var(--text-md);
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .submit-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        filter: brightness(1.1);
+    }
+
+    @media (min-width: 50em) {
+        .section-header h2 {
+            font-size: var(--text-3xl);
+        }
+
+        .contact-container {
+            grid-template-columns: 1fr 1.5fr;
+        }
+
+        .benefits-list {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-methods {
+            flex-direction: column;
+        }
+    }
+</style> 

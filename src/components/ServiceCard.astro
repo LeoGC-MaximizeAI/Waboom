@@ -1,0 +1,81 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    icon: "terminal-window" | "trophy" | "strategy" | "paper-plane-tilt" | "arrow-right" | "arrow-left" | "code" | "microphone-stage" | "pencil-line" | "rocket-launch" | "list" | "heart" | "moon-stars" | "sun" | "twitter-logo" | "codepen-logo" | "github-logo" | "twitch-logo" | "youtube-logo" | "dribbble-logo" | "discord-logo" | "linkedin-logo" | "instagram-logo" | "tiktok-logo" | "clock" | "lightning" | "lock";
+    imageUrl?: string;
+}
+
+import Icon from './Icon.astro';
+const { title, description, icon, imageUrl } = Astro.props;
+---
+
+<div class="service-card">
+    <div class="service-icon">
+        {imageUrl ? 
+            <img src={imageUrl} alt={title} /> :
+            <Icon icon={icon} size="2.5rem" gradient />
+        }
+    </div>
+    <div class="service-content">
+        <h3>{title}</h3>
+        <p>{description}</p>
+    </div>
+</div>
+
+<style>
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        background: var(--gradient-subtle);
+        border: 1px solid var(--gray-800);
+        border-radius: 1rem;
+        padding: 2rem;
+        height: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .service-icon {
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .service-icon img {
+        max-width: 100%;
+        height: auto;
+        max-height: 150px;
+        object-fit: contain;
+        border-radius: 0.5rem;
+    }
+
+    .service-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-content h3 {
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+    }
+
+    .service-content p {
+        color: var(--gray-300);
+        font-size: var(--text-md);
+        line-height: 1.6;
+        flex-grow: 1;
+    }
+
+    @media (min-width: 50em) {
+        .service-card {
+            padding: 2.5rem;
+        }
+    }
+</style> 
