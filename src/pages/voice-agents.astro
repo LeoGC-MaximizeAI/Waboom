@@ -1,291 +1,645 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
+import CallToAction from '../components/CallToAction.astro';
 import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
-import Grid from '../components/Grid.astro';
 import ContactCTA from '../components/ContactCTA.astro';
+
+// Page metadata
+const title = "AI Voice Agents | Waboom";
+const description = "Transform your customer service with Waboom's AI voice agents. Our intelligent voice assistants handle customer inquiries, appointments, and technical support 24/7.";
 ---
 
-<BaseLayout title="Voice Agents | Waboom" description="Transform your customer service with AI-powered voice agents">
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="AI Voice Agents"
-				tagline="Intelligent, scalable, and human-like voice interactions for your business"
-				align="start"
-			>
-				<div class="roles">
-					<Pill><Icon icon="microphone-stage" size="1.33em" /> Natural Language</Pill>
-					<Pill><Icon icon="strategy" size="1.33em" /> Context Aware</Pill>
-					<Pill><Icon icon="code" size="1.33em" /> System Integration</Pill>
+<BaseLayout title={title} description={description}>
+    <div class="voice-agents-page">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="fade-in">AI Voice Agents</h1>
+                <p class="tagline fade-in-delay-1">
+                    Intelligent voice assistants that transform customer interactions
+                </p>
+                <div class="hero-cta fade-in-delay-2">
+                    <CallToAction href="https://calendly.com/waboom/30min">
+                        Book a Demo
+                        <Icon icon="arrow-right" size="1.2em" />
+                    </CallToAction>
+                </div>
 				</div>
-			</Hero>
+        </section>
 
-			<section class="section with-background">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Transform Your Customer Service</h3>
-					<p>
-						Our AI voice agents provide natural, context-aware conversations that seamlessly handle customer inquiries 24/7.
-					</p>
-				</header>
+        <!-- What Are Voice Agents Section -->
+        <section class="what-are-section">
+            <div class="container">
+                <h2 class="section-title slide-in-left">What Are AI Voice Agents?</h2>
+                <div class="content-grid">
+                    <div class="text-content slide-in-left-delay-1">
+                        <p>
+                            AI Voice Agents are intelligent virtual assistants that use natural language processing and machine learning to have human-like conversations with your customers over the phone or through digital channels.
+                        </p>
+                        <p>
+                            Unlike traditional chatbots or IVR systems, our voice agents understand context, respond naturally to questions, and can handle complex conversations without human intervention.
+                        </p>
+                    </div>
+                    <div class="image-content slide-in-right">
+                        <div class="voice-agent-visual">
+                            <div class="voice-wave"></div>
+                            <Icon icon="microphone-stage" size="3em" />
+                            <div class="voice-wave"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							[
-								{
-									title: 'Natural Conversations',
-									description: 'Advanced language models enable human-like interactions with context awareness and emotional intelligence.'
-								},
-								{
-									title: 'Multilingual Support',
-									description: 'Support customers in multiple languages with natural accent handling and cultural awareness.'
-								},
-								{
-									title: 'System Integration',
-									description: 'Seamlessly connect with your CRM, scheduling, and payment systems for end-to-end automation.'
-								},
-								{
-									title: 'Smart Analytics',
-									description: 'Gain insights from every interaction with detailed analytics and continuous improvement.'
-								}
-							].map((feature) => (
-								<li class="feature-card">
-									<h4>{feature.title}</h4>
-									<p>{feature.description}</p>
-								</li>
-							))
-						}
-					</Grid>
+        <!-- Key Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title fade-in">Key Benefits</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card fade-in-delay-1">
+                        <div class="icon-wrapper">
+                            <Icon icon="clock" size="2.5em" gradient />
+                        </div>
+                        <h3>24/7 Availability</h3>
+                        <p>Provide round-the-clock customer service without staffing concerns or overtime costs.</p>
+                    </div>
+                    <div class="benefit-card fade-in-delay-2">
+                        <div class="icon-wrapper">
+                            <Icon icon="lightning" size="2.5em" gradient />
+                        </div>
+                        <h3>Instant Response</h3>
+                        <p>Eliminate wait times with immediate responses to customer inquiries, improving satisfaction.</p>
+                    </div>
+                    <div class="benefit-card fade-in-delay-3">
+                        <div class="icon-wrapper">
+                            <Icon icon="trophy" size="2.5em" gradient />
+                        </div>
+                        <h3>Scalable Solution</h3>
+                        <p>Handle hundreds of simultaneous conversations without additional resources or costs.</p>
+                    </div>
+                    <div class="benefit-card fade-in-delay-4">
+                        <div class="icon-wrapper">
+                            <Icon icon="strategy" size="2.5em" gradient />
+                        </div>
+                        <h3>Consistent Experience</h3>
+                        <p>Deliver the same high-quality customer experience with every interaction, every time.</p>
+                    </div>
+                    <div class="benefit-card fade-in-delay-5">
+                        <div class="icon-wrapper">
+                            <Icon icon="list" size="2.5em" gradient />
+                        </div>
+                        <h3>Data Insights</h3>
+                        <p>Gain valuable insights from customer conversations to improve products and services.</p>
+                    </div>
+                    <div class="benefit-card fade-in-delay-6">
+                        <div class="icon-wrapper">
+                            <Icon icon="heart" size="2.5em" gradient />
+                        </div>
+                        <h3>Cost Reduction</h3>
+                        <p>Reduce operational costs by up to 60% compared to traditional call centers.</p>
+                    </div>
+                </div>
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Key Benefits</h3>
-				</header>
+        <!-- Use Cases Section -->
+        <section class="use-cases-section">
+            <div class="container">
+                <h2 class="section-title slide-in-left">Common Use Cases</h2>
+                <div class="use-cases-grid">
+                    <div class="use-case slide-in-left-delay-1">
+                        <h3><Icon icon="paper-plane-tilt" size="1.2em" /> Appointment Scheduling</h3>
+                        <p>Automate the booking, rescheduling, and cancellation of appointments while integrating with your existing calendar systems.</p>
+                    </div>
+                    <div class="use-case slide-in-left-delay-2">
+                        <h3><Icon icon="list" size="1.2em" /> Customer Support</h3>
+                        <p>Answer common questions, troubleshoot issues, and escalate complex problems to human agents when necessary.</p>
+                    </div>
+                    <div class="use-case slide-in-left-delay-3">
+                        <h3><Icon icon="code" size="1.2em" /> Order Processing</h3>
+                        <p>Take orders, process payments, and provide order status updates without human intervention.</p>
+                    </div>
+                    <div class="use-case slide-in-left-delay-4">
+                        <h3><Icon icon="microphone-stage" size="1.2em" /> Lead Qualification</h3>
+                        <p>Engage with potential customers, qualify leads, and schedule follow-ups with sales representatives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-				<div class="content">
-					<div class="benefit-grid">
-						<div class="benefit">
-							<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-							<h4>70% Cost Reduction</h4>
-							<p>Significantly reduce operational costs while maintaining service quality</p>
+        <!-- How It Works Section -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <h2 class="section-title fade-in">How It Works</h2>
+                <div class="steps-container">
+                    <div class="step fade-in-delay-1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>We Build Your Agent</h3>
+                            <p>We design and develop a custom AI voice agent tailored to your specific business needs and brand voice.</p>
+                        </div>
+                    </div>
+                    <div class="step fade-in-delay-2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Integration & Training</h3>
+                            <p>We integrate the voice agent with your existing systems and train it on your specific products, services, and processes.</p>
 						</div>
-						<div class="benefit">
-							<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-							<h4>24/7 Availability</h4>
-							<p>Provide consistent support around the clock without additional staffing</p>
 						</div>
-						<div class="benefit">
-							<Icon icon="rocket-launch" color="var(--accent-regular)" size="2.5rem" gradient />
-							<h4>Instant Scalability</h4>
-							<p>Handle peak demand effortlessly without compromising service quality</p>
+                    <div class="step fade-in-delay-3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Launch & Optimize</h3>
+                            <p>We deploy your voice agent and continuously optimize its performance based on real-world interactions and feedback.</p>
 						</div>
-						<div class="benefit">
-							<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
-							<h4>Smart Learning</h4>
-							<p>Continuously improve through machine learning and conversation analysis</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="section with-background">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Try It Out</h3>
-					<p>Experience our voice agent technology with a live demo</p>
-				</header>
-
-				<div class="content">
-					<div class="demo-container">
-						<div class="demo-box">
-							<h4>Interactive Demo</h4>
-							<p>Click to start a conversation with our demo voice agent</p>
-							<button class="demo-button">
-								<Icon icon="microphone-stage" size="1.5em" /> Start Demo
-							</button>
+        <!-- Demo Section -->
+        <section class="demo-section">
+            <div class="container">
+                <h2 class="section-title slide-in-left">Hear It In Action</h2>
+                <div class="demo-content">
+                    <div class="demo-text slide-in-left-delay-1">
+                        <p>Listen to our AI voice agent handling a real customer conversation. Notice the natural flow, understanding of context, and ability to provide helpful responses.</p>
+                        <div class="demo-cta">
+                            <CallToAction href="https://calendly.com/waboom/30min">
+                                Schedule Your Custom Demo
+                                <Icon icon="arrow-right" size="1.2em" />
+                            </CallToAction>
+                        </div>
+                    </div>
+                    <div class="demo-player slide-in-right">
+                        <div class="audio-player">
+                            <audio controls>
+                                <source src="/assets/demo-voice-agent.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
 						</div>
 					</div>
 				</div>
 			</section>
-		</main>
 
-		<ContactCTA />
 	</div>
 </BaseLayout>
 
 <style>
-	.roles {
-		display: flex;
-		gap: 0.5rem;
-		margin-top: 0.5rem;
-	}
+    /* Base Styles */
+    .voice-agents-page {
+        --animation-duration: 0.8s;
+        --animation-timing: cubic-bezier(0.16, 1, 0.3, 1);
+        --delay-increment: 0.15s;
+    }
 
-	.feature-card {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .section-title {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 0rem 0 4rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .hero-section h1 {
+        font-size: var(--text-4xl);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+    }
+
+    .hero-section .tagline {
+        font-size: var(--text-xl);
+        color: var(--gray-200);
+        max-width: 50ch;
+        margin: 0 auto 2.5rem;
+    }
+
+    .hero-cta {
+        margin-top: 2rem;
+    }
+
+    /* What Are Voice Agents Section */
+    .what-are-section {
+        padding: 6rem 0;
+        background-color: var(--gray-999_40);
+        backdrop-filter: blur(8px);
+    }
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .text-content p {
+        color: var(--gray-300);
+        font-size: var(--text-lg);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .voice-agent-visual {
 		display: flex;
-		flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 2rem;
+        background: var(--gradient-subtle);
+        border-radius: 1rem;
+        box-shadow: var(--shadow-md);
 		height: 100%;
+        min-height: 200px;
+    }
+
+    .voice-wave {
+        width: 60px;
+        height: 60px;
+        background: var(--gradient-accent-orange);
+        border-radius: 50%;
+        opacity: 0.2;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.8);
+            opacity: 0.2;
+        }
+        50% {
+            transform: scale(1.2);
+            opacity: 0.4;
+        }
+        100% {
+            transform: scale(0.8);
+            opacity: 0.2;
+        }
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+        padding: 6rem 0;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .benefit-card {
+        background-color: var(--gray-999_40);
+        backdrop-filter: blur(8px);
+        border-radius: 0.75rem;
 		padding: 2rem;
-		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-	}
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-	.feature-card h4 {
+    .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .icon-wrapper {
+        margin-bottom: 1rem;
+    }
+
+    .benefit-card h3 {
 		font-size: var(--text-lg);
-		font-weight: 600;
+        color: var(--gray-0);
 		margin-bottom: 1rem;
 	}
 
-	.feature-card p {
+    .benefit-card p {
 		color: var(--gray-300);
-	}
+        font-size: var(--text-md);
+        line-height: 1.6;
+    }
 
-	.section {
+    /* Use Cases Section */
+    .use-cases-section {
+        padding: 6rem 0;
+        background-color: var(--gray-999_40);
+        backdrop-filter: blur(8px);
+    }
+
+    .use-cases-grid {
 		display: grid;
+        grid-template-columns: 1fr;
 		gap: 2rem;
 	}
 
-	.with-background {
-		position: relative;
-	}
+    .use-case {
+        background-color: var(--gray-999_20);
+        border-radius: 0.75rem;
+        padding: 2rem;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-	.with-background::before {
-		--hero-bg: var(--bg-image-subtle-2);
-		content: '';
-		position: absolute;
-		pointer-events: none;
-		left: 50%;
-		width: 100vw;
-		aspect-ratio: calc(2.25 / var(--bg-scale));
-		top: 0;
-		transform: translateY(-75%) translateX(-50%);
-		background: url('/assets/backgrounds/noise.png') top center/220px repeat,
-			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat, var(--gray-999);
-		background-blend-mode: overlay, normal, normal, normal;
-		mix-blend-mode: var(--bg-blend-mode);
-		z-index: -1;
-	}
+    .use-case h3 {
+        font-size: var(--text-lg);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
 
-	.section-header {
-		justify-self: center;
-		text-align: center;
-		max-width: 50ch;
+    .use-case p {
+        color: var(--gray-300);
 		font-size: var(--text-md);
-		color: var(--gray-300);
+        line-height: 1.6;
 	}
 
-	.section-header h3 {
-		font-size: var(--text-2xl);
+    /* How It Works Section */
+    .how-it-works-section {
+        padding: 6rem 0;
 	}
 
-	.benefit-grid {
-		display: grid;
+    .steps-container {
+        display: flex;
+        flex-direction: column;
 		gap: 2rem;
-		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-	}
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
-	.benefit {
+    .step {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .step-number {
+        background: var(--gradient-accent-orange);
+        color: white;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
-		text-align: center;
-		gap: 1rem;
-		padding: 2rem;
+        justify-content: center;
+        font-weight: bold;
+        font-size: var(--text-xl);
+        flex-shrink: 0;
+    }
+
+    .step-content h3 {
+        font-size: var(--text-lg);
+        color: var(--gray-0);
+        margin-bottom: 0.5rem;
+    }
+
+    .step-content p {
+        color: var(--gray-300);
+        font-size: var(--text-md);
+        line-height: 1.6;
+    }
+
+    /* Demo Section */
+    .demo-section {
+        padding: 6rem 0;
 		background-color: var(--gray-999_40);
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-	}
+        backdrop-filter: blur(8px);
+    }
 
-	.benefit h4 {
-		font-size: var(--text-lg);
-		font-weight: 600;
-	}
+    .demo-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 
-	.benefit p {
+    .demo-text p {
 		color: var(--gray-300);
-	}
+        font-size: var(--text-lg);
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
 
-	.demo-container {
-		display: flex;
-		justify-content: center;
+    .demo-player {
+        background-color: var(--gray-999_20);
+        border-radius: 0.75rem;
 		padding: 2rem;
-	}
+        box-shadow: var(--shadow-sm);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-	.demo-box {
-		text-align: center;
-		padding: 3rem;
-		background-color: var(--gray-999_40);
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		max-width: 500px;
-	}
+    .audio-player {
+        width: 100%;
+    }
 
-	.demo-box h4 {
-		font-size: var(--text-xl);
-		margin-bottom: 1rem;
-	}
+    .audio-player audio {
+        width: 100%;
+    }
 
-	.demo-button {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		background-color: var(--accent-regular);
-		color: var(--accent-text-over);
-		padding: 0.75rem 1.5rem;
-		border-radius: 0.5rem;
-		border: none;
-		font-size: var(--text-md);
-		cursor: pointer;
-		margin-top: 1.5rem;
-		transition: background-color 150ms;
-	}
+    /* Animation Classes */
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        will-change: opacity, transform;
+    }
 
-	.demo-button:hover {
-		background-color: var(--accent-dark);
-	}
+    .fade-in-delay-1 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(1 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-	@media (min-width: 50em) {
-		.section {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-			gap: 5rem;
-		}
+    .fade-in-delay-2 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(2 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
-		}
+    .fade-in-delay-3 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(3 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-		.section-header {
-			grid-area: header;
-			font-size: var(--text-lg);
-		}
+    .fade-in-delay-4 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(4 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-		.section-header h3 {
-			font-size: var(--text-4xl);
-		}
+    .fade-in-delay-5 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(5 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-		.with-cta .section-header {
-			justify-self: flex-start;
-			text-align: left;
-		}
+    .fade-in-delay-6 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(6 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-		.gallery {
-			grid-area: gallery;
-		}
+    .slide-in-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft var(--animation-duration) var(--animation-timing) forwards;
+        will-change: opacity, transform;
+    }
 
-		.cta {
-			grid-area: cta;
+    .slide-in-left-delay-1 {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(1 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
+
+    .slide-in-left-delay-2 {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(2 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
+
+    .slide-in-left-delay-3 {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(3 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
+
+    .slide-in-left-delay-4 {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(4 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
+
+    .slide-in-right {
+        opacity: 0;
+        transform: translateX(30px);
+        animation: slideInRight var(--animation-duration) var(--animation-timing) forwards;
+        will-change: opacity, transform;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Responsive Styles */
+    @media (min-width: 50em) {
+        .section-title {
+            font-size: var(--text-3xl);
+            margin-bottom: 3rem;
+        }
+
+        .hero-section h1 {
+            font-size: var(--text-5xl);
+        }
+
+        .hero-section .tagline {
+            font-size: var(--text-2xl);
+        }
+
+        .content-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .use-cases-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .demo-content {
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
 		}
 	}
 </style>
 
 <script>
-	document.querySelector('.demo-button')?.addEventListener('click', () => {
-		// Add your demo functionality here
-		alert('Demo voice agent functionality coming soon!');
+    // This script ensures animations only play when elements are in the viewport
+    document.addEventListener('DOMContentLoaded', () => {
+        const animatedElements = document.querySelectorAll(
+            '.fade-in, .fade-in-delay-1, .fade-in-delay-2, .fade-in-delay-3, .fade-in-delay-4, .fade-in-delay-5, .fade-in-delay-6, ' +
+            '.slide-in-left, .slide-in-left-delay-1, .slide-in-left-delay-2, .slide-in-left-delay-3, .slide-in-left-delay-4, ' +
+            '.slide-in-right'
+        );
+
+        // Initial check for elements in viewport
+        checkElementsInViewport();
+
+        // Check elements on scroll
+        window.addEventListener('scroll', checkElementsInViewport, { passive: true });
+
+        function checkElementsInViewport() {
+            animatedElements.forEach((element: Element) => {
+                if (isElementInViewport(element)) {
+                    // Add a class to trigger the animation
+                    (element as HTMLElement).style.visibility = 'visible';
+                } else {
+                    // Hide elements that are not in viewport
+                    (element as HTMLElement).style.visibility = 'hidden';
+                }
+            });
+        }
+
+        function isElementInViewport(el: Element): boolean {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
 	});
 </script> 

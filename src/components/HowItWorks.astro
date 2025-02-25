@@ -1,0 +1,194 @@
+---
+import Icon from './Icon.astro';
+import CallToAction from './CallToAction.astro';
+---
+
+<section id="how-it-works" class="how-it-works" aria-labelledby="how-it-works-heading">
+    <div class="wrapper">
+        <header class="section-header" data-aos="fade-up">
+            <h2 id="how-it-works-heading">How It Works – Fast, Seamless, Impactful</h2>
+            <p>Our streamlined process ensures a smooth transition to AI-powered voice solutions</p>
+        </header>
+
+        <div class="steps-container">
+            <div class="step" data-aos="fade-right" data-aos-delay="100">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Custom Strategy</h3>
+                    <p>We analyze your operations and tailor the AI to fit your workflow, ensuring it addresses your specific business needs.</p>
+                </div>
+            </div>
+
+            <div class="step" data-aos="fade-right" data-aos-delay="200">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Seamless Setup</h3>
+                    <p>We implement, test, and refine the launch only when you're 100% confident, ensuring a smooth transition with minimal disruption.</p>
+                </div>
+            </div>
+
+            <div class="step" data-aos="fade-right" data-aos-delay="300">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Go Live & Scale</h3>
+                    <p>Enhance customer experience, boost revenue, and focus on growth while your AI voice agent handles customer interactions 24/7.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-container" data-aos="fade-up" data-aos-delay="400">
+            <div class="cta-content">
+                <h3>Ready to transform your customer experience?</h3>
+                <p>Get started with a free consultation and see how our AI voice agents can help your business.</p>
+                <div class="cta-buttons">
+                    <CallToAction href="#contact">
+                        Book a Free Consultation
+                        <Icon icon="paper-plane-tilt" size="1.2em" />
+                    </CallToAction>
+                    <a href="tel:+6499999999" class="phone-cta">
+                        <Icon icon="microphone-stage" size="1.2em" />
+                        <span>Call Us: +64 9 999 9999</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .how-it-works {
+        padding: 4rem 0;
+        background-color: var(--gray-999_40);
+        border-radius: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+        margin-bottom: 0.5rem;
+    }
+
+    .section-header p {
+        font-size: var(--text-lg);
+        color: var(--gray-300);
+    }
+
+    .steps-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .step {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .step-number {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3rem;
+        height: 3rem;
+        background: var(--gradient-accent-orange);
+        color: white;
+        border-radius: 50%;
+        font-size: var(--text-xl);
+        font-weight: bold;
+    }
+
+    .step-content {
+        flex: 1;
+    }
+
+    .step-content h3 {
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        margin-bottom: 0.5rem;
+    }
+
+    .step-content p {
+        color: var(--gray-300);
+        font-size: var(--text-md);
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .cta-container {
+        background: var(--gradient-subtle);
+        border: 1px solid var(--gray-800);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    .cta-content h3 {
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+    }
+
+    .cta-content p {
+        color: var(--gray-300);
+        font-size: var(--text-md);
+        margin-bottom: 1.5rem;
+        max-width: 50ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .phone-cta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--gray-0);
+        text-decoration: none;
+        font-size: var(--text-md);
+        transition: color 0.2s ease;
+    }
+
+    .phone-cta:hover {
+        color: var(--accent-regular);
+    }
+
+    @media (min-width: 50em) {
+        .section-header h2 {
+            font-size: var(--text-3xl);
+        }
+
+        .steps-container {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-container {
+            padding: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            flex-direction: row;
+        }
+    }
+</style> 

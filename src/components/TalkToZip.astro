@@ -1,0 +1,286 @@
+---
+import Icon from './Icon.astro';
+import CallToAction from './CallToAction.astro';
+---
+
+<section id="talk-to-zip" class="talk-to-zip" aria-labelledby="talk-to-zip-heading">
+    <div class="wrapper">
+        <header class="section-header" data-aos="fade-up">
+            <h2 id="talk-to-zip-heading">Experience AI Voice Agents in Action</h2>
+            <p>Call Zip now and see how our AI handles real conversations</p>
+        </header>
+
+        <div class="zip-container">
+            <div class="zip-info" data-aos="fade-right" data-aos-delay="100">
+                <h3>Talk to Zip <span class="highlight">right now</span></h3>
+                <p class="zip-tagline">Experience firsthand how our AI voice agent handles customer interactions:</p>
+                <ul class="zip-features">
+                    <li>
+                        <Icon icon="microphone-stage" size="1.2em" />
+                        <span>Natural conversation flow</span>
+                    </li>
+                    <li>
+                        <Icon icon="pencil-line" size="1.2em" />
+                        <span>Collects customer information</span>
+                    </li>
+                    <li>
+                        <Icon icon="rocket-launch" size="1.2em" />
+                        <span>Handles technical questions</span>
+                    </li>
+                    <li>
+                        <Icon icon="strategy" size="1.2em" />
+                        <span>Books appointments seamlessly</span>
+                    </li>
+                </ul>
+                <div class="zip-cta">
+                    <CallToAction href="#" data-zip-button>
+                        Talk to Zip Now
+                        <Icon icon="microphone-stage" size="1.2em" />
+                    </CallToAction>
+                </div>
+                <div class="secondary-actions">
+                    <a href="/voice-agents/" class="learn-more-link">
+                        <span>Learn more about our voice agents</span>
+                        <Icon icon="arrow-right" size="1em" />
+                    </a>
+                    <a href="#contact" class="schedule-demo-link">
+                        <span>Schedule a personalized demo</span>
+                        <Icon icon="pencil-line" size="1em" />
+                    </a>
+                </div>
+            </div>
+            
+            <div class="zip-visual" data-aos="fade-left" data-aos-delay="200">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="call-animation">
+                            <div class="call-icon">
+                                <Icon icon="microphone-stage" size="2em" />
+                            </div>
+                            <div class="call-waves"></div>
+                        </div>
+                        <p class="call-status">Zip is ready to talk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .talk-to-zip {
+        padding: 4rem 0;
+        background-color: var(--gray-999_40);
+        border-radius: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+    }
+
+    .section-header p {
+        font-size: var(--text-lg);
+        color: var(--gray-300);
+    }
+
+    .zip-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .zip-info h3 {
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+    }
+
+    .highlight {
+        color: var(--accent-regular);
+    }
+
+    .zip-tagline {
+        font-size: var(--text-md);
+        color: var(--gray-300);
+        margin-bottom: 1.5rem;
+    }
+
+    .zip-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .zip-features li {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: var(--gray-300);
+    }
+
+    .zip-features li :global(svg) {
+        color: var(--accent-regular);
+    }
+
+    .zip-cta {
+        margin-bottom: 1.5rem;
+    }
+
+    .phone-number {
+        font-size: var(--text-md);
+        color: var(--gray-300);
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+
+    .secondary-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .learn-more-link, .schedule-demo-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--gray-200);
+        text-decoration: none;
+        font-size: var(--text-sm);
+        transition: color 0.2s ease;
+    }
+
+    .learn-more-link:hover, .schedule-demo-link:hover {
+        color: var(--accent-regular);
+    }
+
+    .phone-mockup {
+        background-color: var(--gray-999);
+        border-radius: 2rem;
+        border: 8px solid var(--gray-800);
+        overflow: hidden;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        aspect-ratio: 9/16;
+        box-shadow: var(--shadow-md);
+    }
+
+    .phone-screen {
+        background: var(--gradient-subtle);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .call-animation {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+
+    .call-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--accent-regular);
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        animation: pulse 2s infinite;
+    }
+
+    .call-waves {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border: 2px solid var(--accent-regular);
+        border-radius: 50%;
+        opacity: 0;
+        animation: ripple 2s infinite;
+    }
+
+    .call-waves::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        border: 2px solid var(--accent-regular);
+        border-radius: 50%;
+        opacity: 0;
+        animation: ripple 2s infinite 0.5s;
+    }
+
+    .call-status {
+        font-size: var(--text-md);
+        color: var(--gray-0);
+        text-align: center;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: translate(-50%, -50%) scale(0.95);
+        }
+        70% {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(0.95);
+        }
+    }
+
+    @keyframes ripple {
+        0% {
+            transform: scale(0.8);
+            opacity: 0.8;
+        }
+        100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    @media (min-width: 50em) {
+        .section-header h2 {
+            font-size: var(--text-3xl);
+        }
+
+        .zip-container {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+
+        .zip-features {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .secondary-actions {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+</style> 

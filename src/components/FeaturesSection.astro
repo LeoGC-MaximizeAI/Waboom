@@ -1,0 +1,179 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="features-section" aria-labelledby="features-heading">
+    <div class="wrapper">
+        <header class="section-header" data-aos="fade-up">
+            <h2 id="features-heading">Scale Your Brand's Potential with AI-Driven Efficiency</h2>
+        </header>
+
+        <div class="features-grid">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-icon">
+                    <Icon icon="clock" size="2.5rem" gradient />
+                </div>
+                <h3>24/7 Availability</h3>
+                <p>Never miss a customer call, ensuring every opportunity is captured regardless of time or day.</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="feature-icon">
+                    <Icon icon="lightning" size="2.5rem" gradient />
+                </div>
+                <h3>Zero Wait Times</h3>
+                <p>Instantly enhance customer satisfaction with immediate responses to every inquiry.</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-icon">
+                    <Icon icon="microphone-stage" size="2.5rem" gradient />
+                </div>
+                <h3>High Call Volume</h3>
+                <p>Seamlessly handle 30+ simultaneous conversations without compromising quality.</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="feature-icon">
+                    <Icon icon="trophy" size="2.5rem" gradient />
+                </div>
+                <h3>Revenue Growth</h3>
+                <p>Leverage integrated upsell and cross-sell strategies to maximize every customer interaction.</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-icon">
+                    <Icon icon="code" size="2.5rem" gradient />
+                </div>
+                <h3>Endless Integrations</h3>
+                <p>Effortlessly connect with tools like HubSpot, Salesforce, Xero, and more for seamless workflows.</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="350">
+                <div class="feature-icon">
+                    <Icon icon="lock" size="2.5rem" gradient />
+                </div>
+                <h3>Enterprise Security</h3>
+                <p>SOC 2, HIPAA, and GDPR compliance—protecting your data at every level.</p>
+            </div>
+        </div>
+
+        <div class="features-highlight" data-aos="fade-up" data-aos-delay="400">
+            <h3>Waboom your AI-powered voice agent doesn't just talk, it takes action.</h3>
+            <p>
+                Effortlessly schedule appointments, update your CRM, and send follow-up texts and emails, all in one seamless workflow. 
+                Integrated with your existing tools, it eliminates bottlenecks, reduces costs, and enhances customer engagement so you can focus on scaling your business.
+            </p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .features-section {
+        padding: 4rem 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+        max-width: 30ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto 4rem;
+    }
+
+    .feature-card {
+        background: var(--gradient-subtle);
+        border: 1px solid var(--gray-800);
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .feature-icon {
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover .feature-icon {
+        transform: scale(1.1);
+    }
+
+    .feature-card h3 {
+        font-size: var(--text-lg);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+        color: var(--gray-300);
+        font-size: var(--text-sm);
+        line-height: 1.6;
+        flex-grow: 1;
+    }
+
+    .features-highlight {
+        background: var(--gradient-subtle);
+        border: 1px solid var(--gray-800);
+        border-radius: 1.5rem;
+        padding: 3rem;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .features-highlight h3 {
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        margin-bottom: 1.5rem;
+        max-width: 40ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .features-highlight p {
+        color: var(--gray-300);
+        font-size: var(--text-md);
+        line-height: 1.8;
+        max-width: 70ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (min-width: 50em) {
+        .features-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .section-header h2 {
+            font-size: var(--text-3xl);
+        }
+
+        .features-highlight h3 {
+            font-size: var(--text-2xl);
+        }
+    }
+</style> 

@@ -12,30 +12,23 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import AIAgent from '../components/AIAgent.astro';
+import TalkToZip from '../components/TalkToZip.astro';
+import FeaturesSection from '../components/FeaturesSection.astro';
+import DemoSection from '../components/DemoSection.astro';
+import BrandsSection from '../components/BrandsSection.astro';
+import IndustriesSection from '../components/IndustriesSection.astro';
+import HowItWorks from '../components/HowItWorks.astro';
+import ContactForm from '../components/ContactForm.astro';
 
-// Page section components
-import ContactCTA from '../components/ContactCTA.astro';
-import Skills from '../components/Skills.astro';
+
 
 // Add AOS CSS in the head
 import 'aos/dist/aos.css';
 
-// Add animation text options
-const animationTexts = [
-	{ text: "Voice Agents", icon: "microphone-stage" },
-	{ text: "Agentic Automation", icon: "terminal-window" },
-	{ text: "Document Processing", icon: "pencil-line" },
-	{ text: "ERP Integration", icon: "rocket-launch" },
-];
-
 // Create the title with dynamic part
 const titleHtml = `
 <div class="title-container">
-	<div class="static-text">Turbocharge Your Business</div>
-	<div class="typing-container">
-		<span class="icon-container" id="animated-icon"></span>
-		<span class="dynamic-text" id="animated-text">Intelligent Automation</span>
-	</div>
+	<div class="static-text">Your AI Employee That Sells, Supports, and Schedules Effortlessly, 24/7</div>
 </div>
 `.trim();
 
@@ -45,9 +38,9 @@ const projects = (await getCollection('work'))
 	.slice(0, 4);
 
 // SEO Meta Data
-const seoTitle = "AI Business Automation Solutions | Waboom";
-const seoDescription = "Transform your business with Waboom's AI-powered automation solutions. Streamline back-office tasks, reduce costs, and drive growth with intelligent automation for mid-sized and enterprise companies.";
-const keywords = "AI automation, business automation, voice agents, document processing, workflow automation, ERP integration, business efficiency, AI solutions, New Zealand";
+const seoTitle = "AI Voice Agents for Business | Waboom";
+const seoDescription = "Transform customer calls into real results with Waboom's AI voice agents. Boost satisfaction, drive revenue, and reduce costs through intelligent automation.";
+const keywords = "AI voice agents, business automation, customer service automation, voice AI, call automation, sales automation, appointment scheduling, New Zealand";
 
 // Safe canonical URL generation
 const canonicalURL = Astro.site 
@@ -83,7 +76,7 @@ const siteName = "Waboom";
 	<meta property="og:image" content={ogImageUrl} slot="head" />
 	<meta property="og:image:width" content="1200" slot="head" />
 	<meta property="og:image:height" content="630" slot="head" />
-	<meta property="og:image:alt" content="Waboom AI Business Automation Solutions" slot="head" />
+	<meta property="og:image:alt" content="Waboom AI Voice Agent Solutions" slot="head" />
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" slot="head" />
@@ -93,7 +86,7 @@ const siteName = "Waboom";
 	<meta name="twitter:title" content={seoTitle} slot="head" />
 	<meta name="twitter:description" content={seoDescription} slot="head" />
 	<meta name="twitter:image" content={ogImageUrl} slot="head" />
-	<meta name="twitter:image:alt" content="Waboom AI Business Automation Solutions" slot="head" />
+	<meta name="twitter:image:alt" content="Waboom AI Voice Agent Solutions" slot="head" />
 
 	<!-- Additional Meta Tags -->
 	<meta name="format-detection" content="telephone=no" slot="head" />
@@ -105,7 +98,7 @@ const siteName = "Waboom";
 			"@context": "https://schema.org",
 			"@type": "Organization",
 			"name": "Waboom",
-			"description": "AI-powered business automation solutions",
+			"description": "AI-powered voice agent solutions",
 			"url": "https://waboom.ai",
 			"sameAs": [],
 			"offers": {
@@ -117,8 +110,8 @@ const siteName = "Waboom";
 			},
 			"service": {
 				"@type": "Service",
-				"name": "Business Process Automation",
-				"description": "AI-powered automation solutions for mid-sized and enterprise companies"
+				"name": "AI Voice Agents",
+				"description": "AI-powered voice solutions for businesses that handle customer calls 24/7"
 			}
 		}
 	</script>
@@ -128,14 +121,18 @@ const siteName = "Waboom";
 			<header class="hero" role="banner">
 				<Hero
 					title={titleHtml}
-					tagline="Waboom helps mid-sized and enterprise companies streamline back-office tasks using AI—cutting costs, saving time, and unlocking new growth opportunities."
+					tagline="Waboom.ai transforms customer calls into real results boosting satisfaction, driving revenue, and seamlessly integrating with your business while reducing costs through automation."
 					align="start"
 				>
-					<div class="cta-container" data-aos="fade-up" data-aos-delay="300">
-						<CallToAction href="#free-strategy" aria-label="Learn more about our free AI strategy session">
-							Free AI Strategy Session + POC
-							<Icon icon="arrow-right" size="1.2em" />
+					<div class="hero-cta-container" data-aos="fade-up" data-aos-delay="300">
+						<CallToAction href="#" aria-label="Experience our AI voice agent" data-zip-button>
+							Try Zip Now
+							<Icon icon="microphone-stage" size="1.2em" />
 						</CallToAction>
+						<a href="/voice-agents/" class="secondary-cta">
+							Learn About Voice Agents
+							<Icon icon="arrow-right" size="1.2em" />
+						</a>
 					</div>
 				</Hero>
 
@@ -146,169 +143,39 @@ const siteName = "Waboom";
 						muted
 						playsinline
 						class="hero-video"
-						aria-label="AI automation demonstration video"
+						aria-label="AI voice agent demonstration video"
 					>
-						<source src="/assets/ai-automation-video.mp4" type="video/mp4">
-						<p>Your browser does not support the video tag. Please upgrade your browser to see our AI automation demonstration.</p>
+						<source src="/assets/ai-voice-agent-video.mp4" type="video/mp4">
+						<p>Your browser does not support the video tag. Please upgrade your browser to see our AI voice agent demonstration.</p>
 					</video>
 				</div>
 			</header>
-
-			
-			
-			<!-- Add AI Agent component here -->
-			<!-- <div data-aos="fade-up">
-				<AIAgent />
-			</div> -->
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-32" role="main">
-			<section class="  founder-section" aria-labelledby="founder-heading">
-				<div class="founder-content box wrapper" data-aos="fade-up" data-aos-delay="200">
-					<div class="founder-grid">
+			<!-- Talk to Zip Section -->
+			<TalkToZip />
 
-						<div class="founder-text" data-aos="fade-left">
-							<h3>Adam Holt</h3>
-							<p class="title">Founder & CEO</p>
-							<div class="story">
-								<p>
-									With over a decade of experience in system integration and software development,
-									I've witnessed firsthand the rapid evolution of technology. Every day, I've been
-									at the forefront of this transformation, seeing the incredible potential it holds
-									for businesses.
-								</p>
-								<p>
-									Then came my "kaboom moment" – a realization that while the software development
-									industry has undergone remarkable changes, many businesses haven't yet embarked on
-									this transformative journey. This insight sparked the creation of Waboom.
-								</p>
-								<p>
-									Today, I'm combining my extensive experience and network to help businesses
-									harness the power of modern automation and AI. It's an exciting time to bridge
-									the gap between cutting-edge technology and practical business solutions.
-								</p>
-							</div>
-						</div>
-						<div class="founder-image" data-aos="fade-right">
-							<img 
-								src="/assets/adam-profile.webp" 
-								alt="Adam Holt - Founder of Waboom" 
-								width="400" 
-								height="400"
-								loading="lazy"
-							/>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section id="free-strategy" class="section with-background with-cta" aria-labelledby="strategy-heading">
-				<header class="section-header stack gap-2 lg:gap-4" data-aos="fade-up">
-					<h2 id="strategy-heading" class="text-2xl">Free AI Strategy Session</h2>
-					<p>For a limited time, we're offering five mid-sized or larger businesses a free, one-day workshop valued at NZD 2,000.</p>
-				</header>
+			<!-- Features Section -->
+			<FeaturesSection />
 
-				<div class="cta" data-aos="fade-left">
-					<div class="qualification-pills">
-						<h5>You Qualify If:</h5>
-						<Pill><Icon icon="strategy" size="1em" /> 10+ Staff</Pill>
-						<Pill><Icon icon="trophy" size="1em" /> NZD 5M+</Pill>
-						<Pill><Icon icon="rocket-launch" size="1em" /> Ready for AI</Pill>
-					</div>
-					<div class="pulse-animation">
-						<CallToAction href="https://airtable.com/appTjQeiFglhnQMIf/pag1l7tfVKzG24wnw/form">
-							Apply Now
-							<Icon icon="arrow-right" size="1.2em" />
-						</CallToAction>
-					</div>
-				</div>
+			<!-- Demo Section -->
+			<DemoSection />
 
-				<div class="customer-logos">
-					<p class="slots-text">3 Slots Remaining</p>
-					<div class="logo-grid">
-						<div class="logo-slot filled">
-							<a href="https://haydn.co.nz" target="_blank">
-								<img src="https://images.rapido.co.nz/clients/haydn/assets/logo.png" alt="Haydn Brush" />
-							</a>
-						</div>
-						<div class="logo-slot filled">
-							<a href="https://brittainwynyard.co.nz" target="_blank">
-								<img src="https://cdn.rapido.co.nz/clients/bw-live/Logo_black.png" alt="Brittain Wynyard" />
-							</a>
-						</div>
-						<div class="logo-slot"></div>
-						<div class="logo-slot"></div>
-						<div class="logo-slot"></div>
-					</div>
-				</div>
-			</section>
+			<!-- Brands Section -->
+			<BrandsSection />
 
-			<Skills />
+			<!-- Industries Section -->
+			<IndustriesSection />
 
-			<section class="section with-background bg-variant" aria-labelledby="services-heading">
-				<header class="section-header stack gap-2 lg:gap-4" data-aos="fade-up">
-					<h2 id="services-heading" class="text-2xl">Our Core Services</h2>
-					<p>Transform your business operations with our end-to-end AI solutions.</p>
-				</header>
+			<!-- How It Works Section -->
+			<HowItWorks />
 
-				<div class="box services wrapper">
-					<div class="stack gap-2 lg:gap-4 service-card" data-aos="zoom-in" data-aos-delay="0">
-						<div class="service-icon">
-							<Icon icon="microphone-stage" color="var(--accent-regular)" size="2.5rem" gradient />
-						</div>
-						<h2>Voice Agents</h2>
-						<p>AI-powered voice assistants that handle customer inquiries and automate phone interactions 24/7.</p>
-					</div>
-					<div class="stack gap-2 lg:gap-4 service-card" data-aos="zoom-in" data-aos-delay="100">
-						<div class="service-icon">
-							<Icon icon="rocket-launch" color="var(--accent-regular)" size="2.5rem" gradient />
-						</div>
-						<h2>ERP Automation</h2>
-						<p>Streamline your business processes with intelligent automation that integrates with your existing ERP system.</p>
-					</div>
-					<div class="stack gap-2 lg:gap-4 service-card" data-aos="zoom-in" data-aos-delay="200">
-						<div class="service-icon">
-							<Icon icon="pencil-line" color="var(--accent-regular)" size="2.5rem" gradient />
-						</div>
-						<h2>Document Processing</h2>
-						<p>Automated extraction and processing of invoices, purchase orders, and other business documents.</p>
-					</div>
-					<div class="stack gap-2 lg:gap-4 service-card" data-aos="zoom-in" data-aos-delay="300">
-						<div class="service-icon">
-							<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-						</div>
-						<h2>Consulting</h2>
-						<p>Strategic guidance to identify and implement the right AI solutions for your business needs.</p>
-					</div>
-				</div>
-			</section>
-
-
-
-			<section class="section with-background" aria-labelledby="stories-heading">
-				<header class="section-header stack gap-2 lg:gap-4" data-aos="fade-up">
-					<h2 id="stories-heading" class="text-2xl">Working On</h2>
-					<p>Discover how we're helping businesses transform their operations with AI-powered automation.</p>
-				</header>
-
-				<div class="box wrapper" data-aos="fade-up" data-aos-delay="200">
-					<div class="gallery">
-						<Grid>
-							{
-								projects.map((project, index) => (
-									<li data-aos="fade-up" data-aos-delay={index * 100}>
-										<div class="portfolio-item">
-											<PortfolioPreview project={project} />
-										</div>
-									</li>
-								))
-							}
-						</Grid>
-					</div>
-				</div>
-			</section>
+			<!-- Contact Form Section -->
+			<ContactForm />
 		</main>
 
-		<ContactCTA />
+
 	</div>
 </BaseLayout>
 
@@ -325,77 +192,6 @@ const siteName = "Waboom";
 			mirror: true,
 			anchorPlacement: 'top-bottom',
 		});
-
-		// Animation text configuration
-		const animationTexts = [
-			{ text: "Intelligent Automation", icon: "terminal-window" },
-			{ text: "Voice AI Solutions", icon: "microphone-stage" },
-			{ text: "Document Processing", icon: "pencil-line" },
-			{ text: "Workflow Automation", icon: "strategy" },
-			{ text: "ERP Integration", icon: "rocket-launch" }
-		];
-
-		// Typing animation
-		const animatedText = document.getElementById('animated-text');
-		
-		// Only start animation if element exists
-		if (animatedText) {
-			const textElement = animatedText as HTMLElement;
-			const iconElement = document.getElementById('animated-icon') as HTMLElement;
-			let textIndex = 0;
-			let charIndex = 0;
-			let isDeleting = false;
-			let typingSpeed = 100;
-
-			function updateIcon(index: number) {
-				type IconType = 'terminal-window' | 'microphone-stage' | 'pencil-line' | 'strategy' | 'rocket-launch';
-				const currentIcon = animationTexts[index].icon as IconType;
-				const icons = {
-					'terminal-window': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>',
-					'microphone-stage': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>',
-					'pencil-line': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>',
-					'strategy': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>',
-					'rocket-launch': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>'
-				} as const;
-				iconElement.innerHTML = icons[currentIcon];
-			}
-
-			function typeText() {
-				const currentItem = animationTexts[textIndex];
-				
-				if (isDeleting) {
-					// Deleting text
-					textElement.textContent = currentItem.text.substring(0, charIndex - 1);
-					charIndex--;
-					typingSpeed = 50; // Faster when deleting
-				} else {
-					// Typing text
-					textElement.textContent = currentItem.text.substring(0, charIndex + 1);
-					charIndex++;
-					typingSpeed = 100; // Normal speed when typing
-				}
-
-				// Check if word is complete
-				if (!isDeleting && charIndex === currentItem.text.length) {
-					// Pause at end of word
-					typingSpeed = 2000; // Wait 2s before starting to delete
-					isDeleting = true;
-				} else if (isDeleting && charIndex === 0) {
-					// Move to next word
-					isDeleting = false;
-					textIndex = (textIndex + 1) % animationTexts.length;
-					typingSpeed = 500; // Pause before starting new word
-					updateIcon(textIndex); // Update icon when changing words
-				}
-
-				setTimeout(typeText, typingSpeed);
-			}
-
-			// Set initial icon
-			updateIcon(0);
-			// Start the animation
-			typeText();
-		}
 
 		document.querySelectorAll('a[href^="#"]').forEach((anchor: Element) => {
 			anchor.addEventListener('click', (e: Event) => {
@@ -424,8 +220,33 @@ const siteName = "Waboom";
 		gap: 2rem;
 	}
 
-	.cta-container {
+	.hero-cta-container {
 		margin-top: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		width: 100%;
+		max-width: 400px;
+	}
+
+	.secondary-cta {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		padding: 0.56em 1em;
+		color: var(--gray-0);
+		text-decoration: none;
+		font-size: var(--text-md);
+		border: 1px solid var(--gray-800);
+		border-radius: 999rem;
+		background-color: transparent;
+		transition: all 0.3s ease;
+	}
+
+	.secondary-cta:hover {
+		background-color: var(--gray-800);
+		transform: translateY(-3px);
 	}
 
 	.roles {
@@ -468,8 +289,10 @@ const siteName = "Waboom";
 			border-radius: 2.5rem;
 		}
 
-		.cta-container {
+		.hero-cta-container {
 			margin-top: 2rem;
+			flex-direction: row;
+			max-width: none;
 		}
 	}
 
@@ -528,343 +351,6 @@ const siteName = "Waboom";
 		margin: 0;
 	}
 
-	.box {
-		grid-area: content;
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
-
-	.services {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 3rem;
-		text-align: center;
-	}
-
-	.services .stack {
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.services h2 {
-		font-size: var(--text-base);
-		height: 1.5em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: 0;
-		width: 100%;
-		white-space: nowrap;
-	}
-
-	.services p {
-		color: var(--gray-400);
-		margin: 0;
-		flex-grow: 1;
-	}
-
-	.services Icon {
-		margin-bottom: 1rem;
-	}
-
-	@media (min-width: 50em) {
-		.section {
-			grid-template-areas: 'header' 'content';
-			gap: 5rem;
-		}
-
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
-
-		.services {
-			grid-template-columns: repeat(4, 1fr);
-			gap: 3rem;
-		}
-
-		.services h2 {
-			font-size: var(--text-lg);
-			height: 1.2em;
-		}
-	}
-
-	/* ====================================================== */
-
-	.mention-card {
-		display: flex;
-		height: 7rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		color: var(--gray-300);
-		background: var(--gradient-subtle);
-		box-shadow: var(--shadow-sm);
-	}
-
-	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
-		}
-	}
-
-	.cta {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		align-items: center;
-	}
-
-	.qualification-pills {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.qualification-pills h5 {
-		margin: 0;
-		font-size: var(--text-base);
-		color: var(--gray-200);
-		width: 100%;
-		text-align: center;
-		margin-bottom: 0.5rem;
-	}
-
-	@media (min-width: 50em) {
-		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'content content content content';
-		}
-
-		.with-cta .section-header {
-			justify-self: flex-start;
-			text-align: left;
-		}
-
-		.cta {
-			grid-area: cta;
-			justify-self: end;
-		}
-
-		.qualification-pills {
-			justify-content: flex-start;
-		}
-
-		.qualification-pills h5 {
-			text-align: left;
-		}
-	}
-
-	.customer-logos {
-		grid-area: content;
-		margin-top: 2rem;
-		text-align: center;
-	}
-
-	.slots-text {
-		color: var(--accent-regular);
-		font-weight: 600;
-		margin-bottom: 1rem;
-	}
-
-	.logo-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1.5rem;
-		justify-items: center;
-		max-width: 800px;
-		margin: 0 auto;
-	}
-
-	.logo-slot {
-		width: 120px;
-		height: 80px;
-		border: 2px dashed var(--gray-800);
-		border-radius: 0.75rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: var(--gray-999_40);
-		transition: all 0.2s ease;
-	}
-
-	.logo-slot.filled {
-		border-style: solid;
-		border-color: var(--accent-regular);
-		background: var(--gradient-subtle);
-	}
-
-	.logo-slot img {
-		max-width: 100%;
-		max-height: 100%;
-		padding: 0.75rem;
-		object-fit: contain;
-	}
-
-	@media (min-width: 50em) {
-		.logo-grid {
-			grid-template-columns: repeat(5, 1fr);
-			gap: 2rem;
-		}
-
-		.logo-slot {
-			width: 150px;
-			height: 100px;
-		}
-	}
-
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		gap: 3rem;
-		width: 100%;
-	}
-
-	.gallery :global(li) {
-		width: 100%;
-	}
-
-	.gallery :global(.grid) {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 3rem;
-		width: 100%;
-	}
-
-	@media (min-width: 50em) {
-		.gallery :global(.grid) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-
-	/* Add new animation styles */
-	.pulse-animation {
-		animation: pulse 2s infinite;
-	}
-
-	@keyframes pulse {
-		0% {
-			transform: scale(1);
-			box-shadow: 0 0 0 0 rgba(var(--accent-regular-rgb), 0.7);
-		}
-		
-		70% {
-			transform: scale(1.05);
-			box-shadow: 0 0 0 10px rgba(var(--accent-regular-rgb), 0);
-		}
-		
-		100% {
-			transform: scale(1);
-			box-shadow: 0 0 0 0 rgba(var(--accent-regular-rgb), 0);
-		}
-	}
-
-	.logo-slot.filled {
-		animation: borderGlow 3s infinite;
-	}
-
-	@keyframes borderGlow {
-		0% {
-			border-color: var(--accent-regular);
-		}
-		50% {
-			border-color: var(--accent-dark);
-		}
-		100% {
-			border-color: var(--accent-regular);
-		}
-	}
-
-	.qualification-pills :global(.pill) {
-		animation: fadeInUp 0.5s ease-out forwards;
-		opacity: 0;
-	}
-
-	.qualification-pills :global(.pill:nth-child(2)) {
-		animation-delay: 0.2s;
-	}
-
-	.qualification-pills :global(.pill:nth-child(3)) {
-		animation-delay: 0.4s;
-	}
-
-	.qualification-pills :global(.pill:nth-child(4)) {
-		animation-delay: 0.6s;
-	}
-
-	@keyframes fadeInUp {
-		from {
-			opacity: 0;
-			transform: translateY(20px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
-	.service-card {
-		position: relative;
-		overflow: hidden;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-
-	.service-card::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: var(--gradient-subtle);
-		opacity: 0;
-		transition: opacity 0.3s ease;
-		z-index: -1;
-		border-radius: 0.75rem;
-	}
-
-	.service-card:hover {
-		transform: translateY(-5px);
-		box-shadow: var(--shadow-md);
-	}
-
-	.service-card:hover::before {
-		opacity: 1;
-	}
-
-	.service-icon {
-		transition: transform 0.3s ease;
-	}
-
-	.service-card:hover .service-icon {
-		transform: scale(1.1) rotate(10deg);
-	}
-
-	.portfolio-item {
-		position: relative;
-		transition: transform 0.3s ease;
-	}
-
-	.portfolio-item:hover {
-		transform: translateY(-5px);
-	}
-
-	@media (min-width: 50em) {
-		.service-card {
-			border-radius: 1.5rem;
-		}
-	}
-
-	/* Updated typing animation styles */
 	.title-container {
 		display: flex;
 		flex-direction: column;
@@ -872,49 +358,12 @@ const siteName = "Waboom";
 		gap: 0.5rem;
 	}
 
-	.typing-container {
-		height: 1.6em;
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		justify-content: flex-start;
-		min-width: 220px;
-		padding: 0.2em 0;
-	}
-
-	.icon-container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 1.8em;
-		height: 1.8em;
-		background: var(--gradient-accent-orange);
-		border-radius: 0.5em;
-		color: var(--gray-0);
-	}
-
-	.icon-container svg {
-		width: 1.3em;
-		height: 1.3em;
-		stroke: currentColor;
-		stroke-width: 2;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-		fill: none;
-	}
-
 	.static-text {
 		display: block;
-		white-space: nowrap;
+		white-space: normal;
 		font-size: 0.65em;
-	}
-
-	.dynamic-text {
-		color: var(--accent-regular);
-		font-weight: 600;
-		position: relative;
-		white-space: nowrap;
-		font-size: 0.65em;
+		line-height: 1.2;
+		text-align: center;
 	}
 
 	@media (min-width: 50em) {
@@ -923,95 +372,11 @@ const siteName = "Waboom";
 			gap: 0.75rem;
 			justify-content: flex-start;
 			align-items: center;
-			height: 2em;
 		}
 
-		.typing-container {
-			min-width: 280px;
-			height: 100%;
-		}
-
-		.static-text,
-		.dynamic-text {
+		.static-text {
 			font-size: 0.7em;
-		}
-	}
-
-	/* Founder Section Styles */
-	.founder-section {
-		position: relative;
-		overflow: hidden;
-	}
-
-	.founder-content {
-		padding: 2rem;
-	}
-
-	.founder-grid {
-		display: grid;
-		gap: 2rem;
-		align-items: center;
-	}
-
-	.founder-image {
-		text-align: center;
-		max-width: 300px;
-		margin: 0 auto;
-	}
-
-	.founder-image img {
-		border-radius: 1rem;
-		box-shadow: var(--shadow-md);
-		max-width: 100%;
-		height: auto;
-		aspect-ratio: 1;
-		object-fit: cover;
-	}
-
-	.founder-text h3 {
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-		margin-bottom: 0.5rem;
-	}
-
-	.founder-text .title {
-		color: var(--accent-regular);
-		font-size: var(--text-md);
-		margin-bottom: 1.5rem;
-	}
-
-	.founder-text .story {
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		color: var(--gray-300);
-	}
-
-	.founder-text .story p {
-		line-height: 1.6;
-	}
-
-	@media (min-width: 50em) {
-		.founder-grid {
-			grid-template-columns: 3fr 1fr;
-			gap: 4rem;
-		}
-
-		.founder-content {
-			padding: 3rem;
-		}
-
-		.founder-text h3 {
-			font-size: var(--text-2xl);
-		}
-
-		.founder-text .story {
-			gap: 1.5rem;
-		}
-
-		.founder-image {
-			max-width: 250px;
-			justify-self: end;
+			text-align: left;
 		}
 	}
 </style>

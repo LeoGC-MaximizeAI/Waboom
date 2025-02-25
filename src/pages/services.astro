@@ -1,0 +1,486 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import Icon from '../components/Icon.astro';
+import CallToAction from '../components/CallToAction.astro';
+
+// Import AOS CSS for animations
+import 'aos/dist/aos.css';
+
+// SEO Meta Data
+const seoTitle = "Our Services | AI Solutions for Business | Waboom";
+const seoDescription = "Discover Waboom's AI services: voice agents, consulting, automated processing, and secure AI infrastructure for businesses across APAC and the US.";
+---
+
+<BaseLayout title={seoTitle} description={seoDescription}>
+    <div class="stack gap-20">
+        <main class="wrapper stack gap-8">
+            <Hero
+                title="Our Services"
+                tagline="Cutting-edge AI solutions for modern businesses"
+                align="start"
+            />
+
+            <div class="intro-section" data-aos="fade-up">
+                <h2 class="intro-headline">Transforming Businesses Through <span class="gradient-text">Intelligent Automation</span></h2>
+                
+                <p class="intro-text">
+                    At Waboom.ai, we've revolutionized customer engagement for enterprise brands across APAC and the United States with our AI voice agents that handle thousands of calls daily with human-like precision.
+                </p>
+                
+                <div class="intro-highlight">
+                    <div class="highlight-line"></div>
+                    <p class="highlight-text">As the AI landscape evolves, so do business challenges.</p>
+                    <div class="highlight-line"></div>
+                </div>
+                
+                <p class="intro-subtext">
+                    We don't just implement AI—we transform operations. Our solutions seamlessly integrate into your existing workflows, dramatically boosting efficiency while reducing operational costs by up to 60%. From automating complex processes to ensuring enterprise-grade data security, we create custom AI ecosystems that drive measurable growth and deliver exceptional ROI.
+                </p>
+                
+                <div class="intro-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">342%</span>
+                        <span class="stat-label">Average ROI</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Operation</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">60%</span>
+                        <span class="stat-label">Cost Reduction</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="voice-agent-showcase" data-aos="fade-up" data-aos-delay="100">
+                <div class="showcase-content">
+                    <h2>AI Voice Agents</h2>
+                    <p>Our flagship service: AI-powered voice agents that handle customer calls 24/7, boosting satisfaction and driving revenue while reducing costs.</p>
+                    <div class="cta-container">
+                        <CallToAction href="/voice-agents/">
+                            Learn More
+                            <Icon icon="arrow-right" size="1.2em" />
+                        </CallToAction>
+                    </div>
+                </div>
+                <div class="showcase-image">
+                    <div class="voice-agent-icon">
+                        <Icon icon="microphone-stage" size="5rem" gradient />
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-section">
+                <h2 class="section-title" data-aos="fade-up">What we have been working on</h2>
+                
+                <Grid variant="offset">
+                    <li data-aos="fade-up" data-aos-delay="100">
+                        <ServiceCard
+                            title="Consulting & Team Training"
+                            description="We have been involved with New Zealand's largest brands consulting AI infrastructure and how staff can commence to adapt and utilise AI."
+                            icon="strategy"
+                        />
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="200">
+                        <ServiceCard
+                            title="Automated Document Processing"
+                            description="Eliminate manual data entry with AI-driven document processing, saving time and reducing errors in your financial workflows."
+                            icon="code"
+                        />
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="400">
+                        <ServiceCard
+                            title="AI-Driven Data & Reporting"
+                            description="Get real-time insights with AI-optimized data processing that transforms raw information into actionable business intelligence."
+                            icon="trophy"
+                        />
+                    </li>
+                    <li data-aos="fade-up" data-aos-delay="500">
+                        <ServiceCard
+                            title="Zero Data Privacy AI Infrastructure"
+                            description="Secure, private AI environments for enterprises to leverage LLMs without data breach risks, ensuring compliance and protection."
+                            icon="lock"
+                        />
+                    </li>
+                </Grid>
+            </div>
+
+            <div class="use-cases-section">
+                <h2 class="section-title" data-aos="fade-up">Use Cases</h2>
+                <p class="section-intro" data-aos="fade-up">How Voice AI is being utilised in every industry. Read the use case below to find out more.</p>
+
+                <div class="use-cases-container">
+                    <div class="use-case" data-aos="fade-up" data-aos-delay="100">
+                        <div class="use-case-header">
+                            <Icon icon="heart" size="2rem" />
+                            <h3>Healthcare</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p class="scenario"><strong>Scenario:</strong> A patient calls a medical clinic to schedule an appointment. The AI voice agent verifies the caller's identity by recognizing the registered phone number or by sending a two-factor authentication (2FA) code via text, which the patient reads back for confirmation. Once authenticated, the agent accesses the patient's records, checks physician availability, and books the appointment.</p>
+                            <p class="roi"><strong>ROI Insight:</strong> Adopting AI voice agents in healthcare can lead to a 342% return on investment (ROI) over three years, primarily through reduced administrative burdens and enhanced patient engagement.</p>
+                            <p class="source">Source: DialZara</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case" data-aos="fade-up" data-aos-delay="200">
+                        <div class="use-case-header">
+                            <Icon icon="strategy" size="2rem" />
+                            <h3>Retail & E-commerce</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p class="scenario"><strong>Scenario:</strong> A customer contacts an online store to inquire about product availability. The AI voice agent identifies the caller through their account-linked phone number, provides real-time stock information, suggests related products, and assists with order placement.</p>
+                            <p class="roi"><strong>ROI Insight:</strong> Implementing AI voice agents in retail can result in a 3.6x increase in conversion rates and a 48% rise in average order value.</p>
+                            <p class="source">Source: Vogue Business</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case" data-aos="fade-up" data-aos-delay="300">
+                        <div class="use-case-header">
+                            <Icon icon="trophy" size="2rem" />
+                            <h3>Banking & Finance</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p class="scenario"><strong>Scenario:</strong> A client calls their bank to inquire about recent transactions. The AI voice agent uses voice biometrics to authenticate the caller, ensuring secure access to account details, and then provides the requested transaction information.</p>
+                            <p class="roi"><strong>ROI Insight:</strong> Financial institutions utilizing AI voice agents have observed a 30% reduction in operational costs compared to traditional call centers.</p>
+                            <p class="source">Source: solda.ai</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case" data-aos="fade-up" data-aos-delay="400">
+                        <div class="use-case-header">
+                            <Icon icon="paper-plane-tilt" size="2rem" />
+                            <h3>Hospitality</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p class="scenario"><strong>Scenario:</strong> A guest calls a hotel to book a room. The AI voice agent recognizes the returning guest's phone number, retrieves their preferences, processes the booking, and sends a confirmation email.</p>
+                            <p class="roi"><strong>ROI Insight:</strong> Hotels employing AI voice agents have experienced a 23% increase in average order value through personalized upselling.</p>
+                            <p class="source">Source: Vogue Business</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case" data-aos="fade-up" data-aos-delay="500">
+                        <div class="use-case-header">
+                            <Icon icon="microphone-stage" size="2rem" />
+                            <h3>Telecommunications</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p class="scenario"><strong>Scenario:</strong> A customer reports connectivity issues. The AI voice agent authenticates the caller using their registered phone number, conducts troubleshooting steps, and resolves the issue or schedules a technician visit if necessary.</p>
+                            <p class="roi"><strong>ROI Insight:</strong> Telecom companies implementing AI voice agents have achieved higher answer and lead conversion rates compared to traditional telesales.</p>
+                            <p class="source">Source: solda.ai</p>
+                        </div>
+                    </div>
+
+                    <div class="use-case" data-aos="fade-up" data-aos-delay="600">
+                        <div class="use-case-header">
+                            <Icon icon="rocket-launch" size="2rem" />
+                            <h3>Transportation & Logistics</h3>
+                        </div>
+                        <div class="use-case-content">
+                            <p class="scenario"><strong>Scenario:</strong> A client contacts a logistics company to track a shipment. The AI voice agent verifies the caller's identity through their account details, provides real-time tracking information, and updates on the expected delivery time.</p>
+                            <p class="roi"><strong>ROI Insight:</strong> Integrating AI voice agents in logistics can lead to a 342% ROI over three years by streamlining operations and reducing manual intervention.</p>
+                            <p class="source">Source: DialZara</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</BaseLayout>
+
+<script>
+    // Import and initialize AOS
+    import AOS from 'aos';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initialize AOS with optimized settings to prevent flickering
+        AOS.init({
+            duration: 800, // Standard duration for visible animations
+            easing: 'ease-out', // Smoother easing function
+            once: true, // Animations only happen once
+            offset: 120, // Larger offset for more noticeable animations
+            disable: window.innerWidth < 768 ? true : false, // Disable on mobile
+            mirror: false, // Prevents elements from animating out
+            anchorPlacement: 'top-bottom', // Trigger animation when top of element hits bottom of viewport
+            disableMutationObserver: false, // Improves performance
+            throttleDelay: 99, // Adds a small delay to prevent rapid firing of animations
+        });
+    });
+</script>
+
+<style>
+    .intro-section {
+        max-width: 85ch;
+        margin: 0 auto 6rem;
+        text-align: center;
+    }
+
+    .intro-headline {
+        font-size: var(--text-3xl);
+        color: var(--gray-0);
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+
+    .gradient-text {
+        background: var(--gradient-accent-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+    }
+
+    .intro-text {
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        line-height: 1.6;
+        margin-bottom: 2.5rem;
+    }
+
+    .intro-highlight {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 3rem 0;
+    }
+
+    .highlight-line {
+        height: 1px;
+        background: var(--gradient-accent-orange);
+        flex-grow: 1;
+        max-width: 100px;
+    }
+
+    .highlight-text {
+        font-size: var(--text-2xl);
+        font-weight: bold;
+        color: var(--accent-regular);
+        margin: 0;
+    }
+
+    .intro-subtext {
+        font-size: var(--text-lg);
+        color: var(--gray-300);
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
+
+    .intro-stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-number {
+        font-size: var(--text-4xl);
+        font-weight: bold;
+        background: var(--gradient-accent-orange);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .stat-label {
+        font-size: var(--text-md);
+        color: var(--gray-300);
+        margin-top: 0.5rem;
+    }
+
+    .highlight {
+        display: none;
+    }
+
+    .voice-agent-showcase {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background: var(--gradient-subtle);
+        border: 1px solid var(--gray-800);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .showcase-content {
+        flex: 1;
+    }
+
+    .showcase-content h2 {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+    }
+
+    .showcase-content p {
+        color: var(--gray-300);
+        font-size: var(--text-lg);
+        margin-bottom: 2rem;
+        max-width: 50ch;
+    }
+
+    .showcase-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .voice-agent-icon {
+        width: 150px;
+        height: 150px;
+        background: var(--gradient-subtle);
+        border: 1px solid var(--gray-800);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent-regular);
+    }
+
+    .showcase-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: var(--shadow-md);
+    }
+
+    .section-title {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .services-section {
+        margin-bottom: 4rem;
+    }
+
+    .use-cases-section {
+        margin-bottom: 4rem;
+    }
+
+    .section-intro {
+        text-align: center;
+        color: var(--gray-300);
+        font-size: var(--text-lg);
+        margin-bottom: 3rem;
+        max-width: 65ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .use-cases-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .use-case {
+        background: var(--gradient-subtle);
+        border: 1px solid var(--gray-800);
+        border-radius: 1rem;
+        padding: 2rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .use-case:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .use-case-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        color: var(--accent-regular);
+    }
+
+    .use-case-header h3 {
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        margin: 0;
+    }
+
+    .use-case-content {
+        color: var(--gray-300);
+    }
+
+    .scenario, .roi {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+
+    .source {
+        font-style: italic;
+        font-size: var(--text-sm);
+        color: var(--gray-400);
+    }
+
+    .cta-container {
+        margin-top: 1.5rem;
+    }
+
+    @media (min-width: 50em) {
+        .voice-agent-showcase {
+            flex-direction: row;
+            align-items: center;
+            padding: 3rem;
+        }
+
+        .section-title {
+            font-size: var(--text-3xl);
+        }
+
+        .use-cases-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .intro-headline {
+            font-size: var(--text-4xl);
+        }
+
+        .intro-stats {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .highlight-text {
+            font-size: var(--text-2xl);
+        }
+
+        .highlight-line {
+            max-width: 150px;
+        }
+    }
+
+    /* Ensure animated content stays visible and prevent flickering */
+    [data-aos].aos-animate {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+        will-change: auto !important; /* Reset will-change after animation completes */
+    }
+
+    /* Optimize animations for performance */
+    [data-aos] {
+        will-change: transform, opacity; /* Hint to browser for optimization */
+        backface-visibility: hidden; /* Prevent flickering in some browsers */
+        perspective: 1000px; /* Helps with 3D transforms */
+        transform: translateZ(0); /* Force GPU acceleration */
+    }
+</style> 
