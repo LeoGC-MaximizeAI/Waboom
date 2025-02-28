@@ -16,12 +16,12 @@
   --gray-999_40: hsla(var(--gray-999-basis), 0.4);
   --gray-999: #ffffff;
 
-  --accent-light: #7c3aed;
-  --accent-regular: #5b21b6;
-  --accent-dark: #4c1d95;
+  --accent-light: #9f7aea;
+  --accent-regular: #805ad5;
+  --accent-dark: #6b46c1;
   --accent-overlay: hsla(265, 89%, 67%, 0.33);
-  --accent-subtle-overlay: var(--accent-overlay);
-  --accent-text-over: var(--gray-999);
+  --accent-subtle-overlay: hsla(265, 89%, 67%, 0.14);
+  --accent-text-over: var(--gray-0);
 
   --link-color: var(--accent-regular);
 
@@ -32,7 +32,7 @@
   --gradient-subtle: linear-gradient(
     150deg,
     var(--gray-50) 19%,
-    var(--gray-999) 150%
+    var(--gray-100) 150%
   );
   --gradient-accent: linear-gradient(
     150deg,
@@ -42,9 +42,9 @@
   );
   --gradient-accent-orange: linear-gradient(
     150deg,
-    #7c3aed,
-    #5b21b6,
-    #4c1d95
+    #9f7aea,
+    #805ad5,
+    #6b46c1
   );
   --gradient-stroke: linear-gradient(180deg, var(--gray-100), var(--gray-200));
 
@@ -168,8 +168,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-color: var(--gray-50);
-  color: var(--gray-600);
+  background: linear-gradient(to bottom, var(--gray-50), var(--gray-100));
+  color: var(--gray-900);
   font-family: var(--font-body);
   line-height: 1.6;
   letter-spacing: -0.01em;
@@ -199,7 +199,7 @@ h5 {
   line-height: 1.2;
   font-family: var(--font-brand);
   font-weight: 700;
-  color: var(--gray-800);
+  color: var(--gray-900);
   letter-spacing: -0.02em;
 }
 
@@ -384,6 +384,7 @@ h5 {
   background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .section-description {
@@ -439,7 +440,9 @@ h5 {
 
 /* Hero section enhancements - Mobile First */
 .hero {
+  position: relative;
   padding: var(--space-12) 0;
+  background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
 }
 
 @media (min-width: 768px) {
@@ -456,7 +459,7 @@ h5 {
   right: 0;
   bottom: 0;
   background: var(--gradient-subtle);
-  opacity: 0.5;
+  opacity: 0.7;
   z-index: -1;
 }
 
