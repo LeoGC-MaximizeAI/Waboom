@@ -16,4 +16,17 @@
   status = 200
 
 [context.deploy-preview]
-  command = "npm run build" 
+  command = "npm run build"
+  publish = "dist"
+
+[context.branch-deploy]
+  command = "npm run build"
+  publish = "dist"
+
+# Enable deploy previews
+[context.deploy-preview.environment]
+  ENABLE_DEPLOY_PREVIEW = "true"
+
+# Enable branch deploys
+[context.branch-deploy.environment]
+  ENABLE_BRANCH_DEPLOY = "true" 
