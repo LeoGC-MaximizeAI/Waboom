@@ -1,0 +1,144 @@
+---
+import Icon from './Icon.astro';
+---
+
+<section class="industries-section" aria-labelledby="industries-heading">
+    <div class="wrapper">
+        <header class="section-header" data-aos="fade-up">
+            <h2 id="industries-heading">Industries We Serve</h2>
+            <p>Our AI-powered voice solutions are tailored to enhance customer engagement across various sectors</p>
+        </header>
+
+        <div class="industries-grid">
+            <div class="industry-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="industry-icon">
+                    <Icon icon="heart" size="2.5rem" gradient />
+                </div>
+                <h3>Healthcare</h3>
+                <p>Streamline patient interactions with 24/7 appointment scheduling and support.</p>
+            </div>
+
+            <div class="industry-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="industry-icon">
+                    <Icon icon="strategy" size="2.5rem" gradient />
+                </div>
+                <h3>Retail & E-commerce</h3>
+                <p>Boost sales through personalised shopping experiences and efficient order management.</p>
+            </div>
+
+            <div class="industry-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="industry-icon">
+                    <Icon icon="trophy" size="2.5rem" gradient />
+                </div>
+                <h3>Banking & Finance</h3>
+                <p>Enhance client services with secure, real-time account assistance and transaction support.</p>
+            </div>
+
+            <div class="industry-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="industry-icon">
+                    <Icon icon="paper-plane-tilt" size="2.5rem" gradient />
+                </div>
+                <h3>Hospitality</h3>
+                <p>Elevate guest satisfaction with seamless booking processes and personalised concierge services.</p>
+            </div>
+
+            <div class="industry-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="industry-icon">
+                    <Icon icon="microphone-stage" size="2.5rem" gradient />
+                </div>
+                <h3>Telecommunications</h3>
+                <p>Improve customer support with instant responses and efficient issue resolution.</p>
+            </div>
+
+            <div class="industry-card" data-aos="fade-up" data-aos-delay="350">
+                <div class="industry-icon">
+                    <Icon icon="rocket-launch" size="2.5rem" gradient />
+                </div>
+                <h3>Transportation & Logistics</h3>
+                <p>Optimize operations with real-time updates and intelligent scheduling assistance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .industries-section {
+        padding: 4rem 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+    }
+
+    .section-header p {
+        color: var(--gray-300);
+        font-size: var(--text-lg);
+        max-width: 60ch;
+        margin: 0 auto;
+    }
+
+    .industries-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .industry-card {
+        background: var(--gradient-subtle);
+        border: 1px solid var(--gray-800);
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .industry-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .industry-icon {
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .industry-card:hover .industry-icon {
+        transform: scale(1.1);
+    }
+
+    .industry-card h3 {
+        font-size: var(--text-lg);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+    }
+
+    .industry-card p {
+        color: var(--gray-300);
+        font-size: var(--text-sm);
+        line-height: 1.6;
+        flex-grow: 1;
+    }
+
+    @media (min-width: 50em) {
+        .industries-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .section-header h2 {
+            font-size: var(--text-3xl);
+        }
+    }
+</style> 

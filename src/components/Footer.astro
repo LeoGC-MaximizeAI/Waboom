@@ -10,8 +10,16 @@ const currentYear = new Date().getFullYear();
 	<p class="socials">
 		<a href="https://x.com/waboom_ai">X</a>
 	</p>
+	<div id="convai-arrow" class="convai-arrow hidden">
+		<span class="arrow-text">Click here to talk to Zip!</span>
+		<div class="arrow-pointer"></div>
+	</div>
+	<elevenlabs-convai agent-id="oE0wI3CBC0vJH6Q5UYVh"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 </footer>
 <style>
+	._poweredBy_me40k_322{
+		display: none;
+	}
 	footer {
 		display: flex;
 		flex-direction: column;
@@ -48,6 +56,51 @@ const currentYear = new Date().getFullYear();
 		flex-wrap: wrap;
 	}
 
+	/* Convai Arrow Styles */
+	.convai-arrow {
+		position: fixed;
+		bottom: 220px;
+		right: 100px;
+		z-index: 1000;
+		display: flex;
+		align-items: center;
+		animation: bounce 1.5s infinite;
+		pointer-events: none;
+	}
+
+	.arrow-text {
+		background-color: var(--accent-regular);
+		color: white;
+		padding: 0.5rem 1rem;
+		border-radius: 8px;
+		font-weight: bold;
+		margin-right: 10px;
+		box-shadow: var(--shadow-md);
+		font-size: var(--text-sm);
+	}
+
+	.arrow-pointer {
+		width: 0;
+		height: 0;
+		border-top: 15px solid transparent;
+		border-left: 20px solid var(--accent-regular);
+		border-bottom: 15px solid transparent;
+		transform: rotate(45deg);
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	@keyframes bounce {
+		0%, 100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-15px);
+		}
+	}
+
 	@media (min-width: 50em) {
 		footer {
 			flex-direction: row;
@@ -64,5 +117,92 @@ const currentYear = new Date().getFullYear();
 		.socials {
 			justify-content: flex-end;
 		}
+		
+		.convai-arrow {
+			bottom: 200px;
+			right: 120px;
+		}
+		
+		.arrow-text {
+			font-size: var(--text-md);
+		}
 	}
 </style>
+
+<script>
+	// Function to show the arrow pointing to the Convai widget
+	function showConvaiArrow() {
+		const arrow = document.getElementById('convai-arrow');
+		if (arrow) {
+			arrow.classList.remove('hidden');
+			
+			// Hide the arrow after 5 seconds
+			setTimeout(() => {
+				arrow.classList.add('hidden');
+			}, 5000);
+		}
+	}
+
+	// Add event listener to all Talk to Zip buttons
+	document.addEventListener('DOMContentLoaded', async () => {
+		// Use a reliable selector to find all relevant links and buttons
+		const allLinks = document.querySelectorAll('a, button');
+		allLinks.forEach((link: Element) => {
+			const href = link.getAttribute('href');
+			const textContent = link.textContent || '';
+			const hasZipAttribute = link.hasAttribute('data-zip-button');
+			
+			if (
+				(href && href.includes('#talk-to-zip')) || 
+				textContent.includes('Talk to Zip') ||
+				textContent.includes('Call Zip') ||
+				hasZipAttribute
+			) {
+				link.addEventListener('click', (e: Event) => {
+					// Prevent default action for all zip buttons
+					e.preventDefault();
+					
+					// Show the arrow pointing to the Convai widget
+					showConvaiArrow();
+					
+					// If it's a link to #talk-to-zip, also scroll to that section
+					if (href && href.includes('#talk-to-zip')) {
+						const talkToZipSection = document.getElementById('talk-to-zip');
+						if (talkToZipSection) {
+							talkToZipSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+						}
+					}
+					
+					// Try to trigger the Convai widget button after a short delay
+					setTimeout(() => {
+						const convaiButton = document.querySelector('elevenlabs-convai button') as HTMLButtonElement;
+						if (convaiButton) {
+							// Simulate a click on the Convai button
+							convaiButton.click();
+						}
+					}, 1000);
+				});
+			}
+		});
+
+		// Also handle the widget button itself to hide the arrow when clicked
+		const observer = new MutationObserver((mutations) => {
+			mutations.forEach((mutation) => {
+				if (mutation.addedNodes.length) {
+					const convaiButton = document.querySelector('elevenlabs-convai button') as HTMLButtonElement;
+					if (convaiButton) {
+						convaiButton.addEventListener('click', () => {
+							const arrow = document.getElementById('convai-arrow');
+							if (arrow) {
+								arrow.classList.add('hidden');
+							}
+						});
+						observer.disconnect();
+					}
+				}
+			});
+		});
+
+		observer.observe(document.body, { childList: true, subtree: true });
+	});
+</script>

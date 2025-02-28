@@ -1,0 +1,95 @@
+<section class="brands-section" aria-labelledby="brands-heading">
+    <div class="wrapper">
+        <header class="section-header" data-aos="fade-up">
+            <h2 id="brands-heading">Brands We Like Partnering With</h2>
+        </header>
+
+        <div class="brands-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="brand-logo">
+                <img src="/assets/brands/digital-storm.png" alt="Digital Storm" loading="lazy" />
+            </div>
+            <div class="brand-logo">
+                <img src="/assets/brands/bedsrus.png" alt="BedsRus" loading="lazy" />
+            </div>
+            <div class="brand-logo">
+                <img src="/assets/brands/mitre10.png" alt="Mitre 10" loading="lazy" />
+            </div>
+            <div class="brand-logo">
+                <img src="/assets/brands/bargain-chemist.png" alt="Bargain Chemist" loading="lazy" />
+            </div>
+            <div class="brand-logo">
+                <img src="/assets/brands/nood.png" alt="Nood" loading="lazy" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .brands-section {
+        padding: 4rem 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+    }
+
+    .brands-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .brand-logo {
+        background-color: var(--gray-999_40);
+        border: 1px solid var(--gray-800);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        width: 150px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .brand-logo:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .brand-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        filter: grayscale(100%) brightness(1.2);
+        transition: filter 0.3s ease;
+    }
+
+    .brand-logo:hover img {
+        filter: grayscale(0%) brightness(1);
+    }
+
+    @media (min-width: 50em) {
+        .section-header h2 {
+            font-size: var(--text-3xl);
+        }
+
+        .brands-container {
+            gap: 3rem;
+        }
+
+        .brand-logo {
+            width: 180px;
+            height: 120px;
+        }
+    }
+</style> 

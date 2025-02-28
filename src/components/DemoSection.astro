@@ -1,0 +1,210 @@
+---
+import Icon from './Icon.astro';
+import CallToAction from './CallToAction.astro';
+---
+
+<section id="demos" class="demo-section" aria-labelledby="demo-heading">
+    <div class="wrapper">
+        <header class="section-header" data-aos="fade-up">
+            <h2 id="demo-heading">Leveraging AI to handle 1000s of calls per day</h2>
+            <p>Take a listen to how our AI voice agents handle real-world scenarios</p>
+        </header>
+
+        <div class="demo-container">
+            <div class="demo-call" data-aos="fade-up" data-aos-delay="100">
+                <div class="call-header">
+                    <Icon icon="microphone-stage" size="1.5rem" />
+                    <h3>Appointment Scheduling</h3>
+                </div>
+                <div class="call-player">
+                    <audio controls>
+                        <source src="/assets/demo-call-1.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <p class="call-description">Listen to Zip effortlessly schedule an appointment while collecting customer information and sending confirmation details.</p>
+            </div>
+
+            <div class="demo-call" data-aos="fade-up" data-aos-delay="200">
+                <div class="call-header">
+                    <Icon icon="microphone-stage" size="1.5rem" />
+                    <h3>Product Inquiry</h3>
+                </div>
+                <div class="call-player">
+                    <audio controls>
+                        <source src="/assets/demo-call-2.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <p class="call-description">Hear how Zip handles detailed product questions while capturing lead information for your sales team.</p>
+            </div>
+
+            <div class="demo-call" data-aos="fade-up" data-aos-delay="300">
+                <div class="call-header">
+                    <Icon icon="microphone-stage" size="1.5rem" />
+                    <h3>Customer Support</h3>
+                </div>
+                <div class="call-player">
+                    <audio controls>
+                        <source src="/assets/demo-call-3.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <p class="call-description">Experience how Zip resolves customer issues, updates account information, and creates support tickets when needed.</p>
+            </div>
+        </div>
+
+        <div class="demo-cta" data-aos="fade-up" data-aos-delay="400">
+            <h3>Ready to see how AI voice agents can transform your business?</h3>
+            <div class="cta-buttons">
+                <CallToAction href="#contact">
+                    Request a Custom Demo
+                    <Icon icon="paper-plane-tilt" size="1.2em" />
+                </CallToAction>
+                <a href="/voice-agents/" class="secondary-button">
+                    Learn More About Voice Agents
+                    <Icon icon="arrow-right" size="1.2em" />
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .demo-section {
+        padding: 4rem 0;
+        background-color: var(--gray-999_40);
+        border-radius: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+        margin-bottom: 0.5rem;
+    }
+
+    .section-header p {
+        font-size: var(--text-lg);
+        color: var(--gray-300);
+    }
+
+    .demo-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .demo-call {
+        background-color: var(--gray-999_20);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        border: 1px solid var(--gray-800);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .demo-call:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .call-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .call-header h3 {
+        font-size: var(--text-lg);
+        color: var(--gray-0);
+        margin: 0;
+    }
+
+    .call-header :global(svg) {
+        color: var(--accent-regular);
+    }
+
+    .call-player {
+        margin-bottom: 1.5rem;
+    }
+
+    .call-player audio {
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+
+    .call-description {
+        font-size: var(--text-md);
+        color: var(--gray-300);
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    .demo-cta {
+        text-align: center;
+        background-color: var(--gray-999_20);
+        border-radius: 1rem;
+        padding: 2rem;
+        border: 1px solid var(--gray-800);
+        margin-top: 3rem;
+    }
+
+    .demo-cta h3 {
+        font-size: var(--text-xl);
+        color: var(--gray-0);
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secondary-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.56em 1em;
+        color: var(--gray-0);
+        text-decoration: none;
+        font-size: var(--text-md);
+        border: 1px solid var(--gray-800);
+        border-radius: 999rem;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    .secondary-button:hover {
+        background-color: var(--gray-800);
+        transform: translateY(-3px);
+    }
+
+    @media (min-width: 50em) {
+        .section-header h2 {
+            font-size: var(--text-3xl);
+        }
+
+        .demo-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .cta-buttons {
+            flex-direction: row;
+        }
+
+        .demo-cta {
+            padding: 3rem;
+        }
+    }
+</style> 

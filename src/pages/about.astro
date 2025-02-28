@@ -1,8 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
-import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
+import Icon from '../components/Icon.astro';
+
+// Import AOS CSS for animations
+import 'aos/dist/aos.css';
 ---
 
 <BaseLayout title="About | Waboom" description="Learn about Waboom's mission to transform businesses through AI-powered automation">
@@ -21,8 +23,8 @@ import Hero from '../components/Hero.astro';
 			</Hero>
 
 			<section>
-				<h2 class="section-title">Our Mission</h2>
-				<div class="content">
+				<h2 class="section-title" data-aos="fade-up">Our Mission</h2>
+				<div class="content" data-aos="fade-up" data-aos-delay="100">
 					<p>
 						At Waboom, we're on a mission to revolutionize how businesses operate through intelligent automation. We specialize in building end-to-end AI-powered solutions that streamline processes, reduce errors, and free up valuable human resources for strategic tasks.
 					</p>
@@ -34,56 +36,183 @@ import Hero from '../components/Hero.astro';
 					</p>
 				</div>
 			</section>
+
+			<!-- Team Section -->
+			<section class="team-section">
+				<h2 class="section-title" data-aos="fade-up">Our Founders</h2>
+				<div class="team-grid">
+					<div class="team-member" data-aos="fade-up" data-aos-delay="100">
+						<div class="member-image">
+							<img src="/assets/adam-profile.webp" alt="Adam Holt - Founder & AI Engineer" />
+						</div>
+						<div class="member-info">
+							<h3>Adam Holt</h3>
+							<p class="member-title">Founder / AI Engineer</p>
+							<div class="member-bio">
+								<p>
+									With over a decade of experience in system integration and software development, I've witnessed firsthand the rapid evolution of technology. Every day, I've been at the forefront of this transformation, seeing the incredible potential it holds for businesses.
+								</p>
+								<p>
+									Then came my "WaBOOM moment" – a realization that while the software development industry has undergone remarkable changes, many businesses haven't yet embarked on this transformative journey. This insight sparked the creation of Waboom.
+								</p>
+								<p>
+									Today, I'm combining my extensive experience and network to help businesses harness the power of modern automation and AI. It's an exciting time to bridge the gap between cutting-edge technology and practical business solutions.
+								</p>
+							</div>
+							<div class="social-links">
+								<a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+									<Icon icon="linkedin-logo" size="1.5rem" />
+								</a>
+								<a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+									<Icon icon="twitter-logo" size="1.5rem" />
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="team-member" data-aos="fade-up" data-aos-delay="200">
+						<div class="member-image">
+							<img src="/assets/stock-2.jpg" alt="Leonardo Garcia-Curtis - Founder & AI Growth Strategist" />
+						</div>
+						<div class="member-info">
+							<h3>Leonardo Garcia-Curtis</h3>
+							<p class="member-title">Founder / AI Growth Strategist</p>
+							<div class="member-bio">
+								<p>
+									Throughout my career in eCommerce, I've had the privilege of leading Zyber, one of New Zealand's premier Shopify Plus agencies.
+								</p>
+								<p>
+									As the CEO I managed over 30+ staff and I collaborated with esteemed brands such as BedsRus in both New Zealand and Australia, G-Shock, Bargain Chemist, and the global entities like Real Pet Food, Happy Healthy You and Storm Digital in surpassing $60 million in revenue within their inaugural year.
+								</p>
+								<p>
+									Working with these leading brands I witnessed the rapid emergence of AI, I recognized its potential to drive business growth with lean teams, advanced technology and endless growth opportunities. AI is no longer for the Silicone Valley businesses, it's for every business, this realisation led me to co-found Waboom.ai with Adam, aiming to empower businesses through innovative AI-driven solutions.
+								</p>
+							</div>
+							<div class="social-links">
+								<a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+									<Icon icon="linkedin-logo" size="1.5rem" />
+								</a>
+								<a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+									<Icon icon="twitter-logo" size="1.5rem" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<section>
-				<h2 class="section-title">Our Expertise</h2>
-				<div class="content">
-					<ul>
-						<li>AI-Powered Process Automation</li>
-						<li>Custom AI Module Development</li>
-						<li>ERP System Integration</li>
-						<li>Workflow Optimization</li>
-						<li>Strategic AI Consulting</li>
-						<li>Implementation & Support</li>
+				<h2 class="section-title" data-aos="fade-up">Our Expertise</h2>
+				<div class="content" data-aos="fade-up" data-aos-delay="100">
+					<ul class="expertise-grid">
+						<li>
+							<Icon icon="microphone-stage" size="1.5rem" />
+							<span>AI-Powered Process Automation</span>
+						</li>
+						<li>
+							<Icon icon="code" size="1.5rem" />
+							<span>Custom AI Module Development</span>
+						</li>
+						<li>
+							<Icon icon="paper-plane-tilt" size="1.5rem" />
+							<span>ERP System Integration</span>
+						</li>
+						<li>
+							<Icon icon="strategy" size="1.5rem" />
+							<span>Workflow Optimization</span>
+						</li>
+						<li>
+							<Icon icon="trophy" size="1.5rem" />
+							<span>Strategic AI Consulting</span>
+						</li>
+						<li>
+							<Icon icon="heart" size="1.5rem" />
+							<span>Implementation & Support</span>
+						</li>
 					</ul>
 				</div>
 			</section>
+
 			<section>
-				<h2 class="section-title">Why Choose Waboom</h2>
-				<div class="content">
-					<p>
-						<strong>Proven Track Record:</strong> We've successfully implemented AI solutions that have reduced manual processing times consistently and essentially eliminated errors.
-					</p>
-					<p>
-						<strong>End-to-End Partnership:</strong> From initial consultation to implementation and ongoing support, we're with you every step of the way.
-					</p>
-					<p>
-						<strong>Custom Solutions:</strong> We build modular, scalable solutions that adapt to your specific business needs and integrate seamlessly with your existing systems.
-					</p>
+				<h2 class="section-title" data-aos="fade-up">Why Choose Waboom</h2>
+				<div class="content" data-aos="fade-up" data-aos-delay="100">
+					<div class="why-choose-grid">
+						<div class="why-choose-item">
+							<div class="icon-container">
+								<Icon icon="trophy" size="2rem" gradient />
+							</div>
+							<h3>Proven Track Record</h3>
+							<p>We've successfully implemented AI solutions that have reduced manual processing times consistently and essentially eliminated errors.</p>
+						</div>
+						<div class="why-choose-item">
+							<div class="icon-container">
+								<Icon icon="paper-plane-tilt" size="2rem" gradient />
+							</div>
+							<h3>End-to-End Partnership</h3>
+							<p>From initial consultation to implementation and ongoing support, we're with you every step of the way.</p>
+						</div>
+						<div class="why-choose-item">
+							<div class="icon-container">
+								<Icon icon="rocket-launch" size="2rem" gradient />
+							</div>
+							<h3>Custom Solutions</h3>
+							<p>We build modular, scalable solutions that adapt to your specific business needs and integrate seamlessly with your existing systems.</p>
+						</div>
+					</div>
 				</div>
 			</section>
-			<section>
-				<h2 class="section-title">Startup Programs</h2>
-				<div class="content">
-	
 
-						<div  data-aos="fade-up" data-aos-delay="200">
-							<a href="https://elevenlabs.io/text-to-speech" target="_blank"  data-aos="fade-up" data-aos-delay="100">
-								<img src="https://storage.googleapis.com/eleven-public-cdn/images/elevenlabs-grants-logo.png" class="grants-logo"  alt="Text to Speech" >
-							</a>
-						</div>
-				
+			<section>
+				<h2 class="section-title" data-aos="fade-up">Startup Programs</h2>
+				<div class="content" data-aos="fade-up" data-aos-delay="100">
+					<div class="startup-programs">
+						<a href="https://elevenlabs.io/text-to-speech" target="_blank" class="program-logo">
+							<img src="https://storage.googleapis.com/eleven-public-cdn/images/elevenlabs-grants-logo.png" class="grants-logo" alt="Text to Speech" >
+						</a>
+					</div>
+				</div>
 			</section>
 		</main>
-
-		<ContactCTA />
 	</div>
 </BaseLayout>
+
+<script>
+    // Import and initialize AOS
+    import AOS from 'aos';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initialize AOS with optimized settings
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            offset: 120,
+            disable: window.innerWidth < 768 ? true : false,
+            mirror: false,
+            anchorPlacement: 'top-bottom',
+        });
+
+        // Add hover effect to team members
+        const teamMembers = document.querySelectorAll('.team-member');
+        teamMembers.forEach((member: Element) => {
+            member.addEventListener('mouseenter', () => {
+                (member as HTMLElement).style.transform = 'translateY(-10px)';
+                (member as HTMLElement).style.boxShadow = 'var(--shadow-lg)';
+            });
+            
+            member.addEventListener('mouseleave', () => {
+                (member as HTMLElement).style.transform = 'translateY(0)';
+                (member as HTMLElement).style.boxShadow = 'var(--shadow-md)';
+            });
+        });
+    });
+</script>
 
 <style>
 	.about {
 		display: flex;
 		flex-direction: column;
-		gap: 3.5rem;
+		gap: 5rem;
 	}
 
 	img {
@@ -93,21 +222,34 @@ import Hero from '../components/Hero.astro';
 	}
 	
 	.grants-logo {
-		width:250px;
-		border-radius: 0rem;
+		width: 250px;
+		border-radius: 0;
 	}
 
 	section {
 		display: flex;
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: 1.5rem;
 		color: var(--gray-200);
 	}
 
 	.section-title {
 		grid-column-start: 1;
-		font-size: var(--text-xl);
+		font-size: var(--text-2xl);
 		color: var(--gray-0);
+		position: relative;
+		padding-bottom: 1rem;
+	}
+
+	.section-title::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 60px;
+		height: 3px;
+		background: var(--gradient-accent-orange);
+		border-radius: 3px;
 	}
 
 	.content {
@@ -116,6 +258,7 @@ import Hero from '../components/Hero.astro';
 
 	p {
 		margin-bottom: 1.5rem;
+		line-height: 1.6;
 	}
 
 	.content :global(a) {
@@ -129,25 +272,181 @@ import Hero from '../components/Hero.astro';
 		text-decoration-color: currentColor;
 	}
 
-	.content ul {
+	/* Team Section Styles */
+	.team-section {
+		margin: 2rem 0;
+		position: relative;
+		padding: 3rem 0;
+		overflow: hidden;
+	}
+
+	.team-section::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to bottom, rgba(79, 57, 250, 0.05), rgba(0, 0, 0, 0));
+		z-index: -1;
+		transform: skewY(-3deg);
+		transform-origin: top left;
+	}
+
+	.team-grid {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+
+	.team-member {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		background: var(--gradient-subtle);
+		border-radius: 1.5rem;
+		padding: 2rem;
+		border: 1px solid var(--gray-800);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.team-member:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-md);
+	}
+
+	.member-image {
+		width: 100%;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.member-image img {
+		width: 100%;
+		height: auto;
+		border-radius: 1rem;
+		object-fit: cover;
+		aspect-ratio: 1/1;
+	}
+
+	.member-info {
+		flex: 1;
+	}
+
+	.member-info h3 {
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+		margin-bottom: 0.5rem;
+	}
+
+	.member-title {
+		font-size: var(--text-md);
+		color: var(--accent-regular);
+		margin-bottom: 1.5rem;
+		font-weight: 500;
+	}
+
+	.member-bio p {
+		margin-bottom: 1rem;
+		font-size: var(--text-md);
+		line-height: 1.6;
+	}
+
+	.social-links {
+		display: flex;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.social-links a {
+		color: var(--gray-300);
+		transition: color 0.2s ease;
+	}
+
+	.social-links a:hover {
+		color: var(--accent-regular);
+	}
+
+	/* Expertise Grid Styles */
+	.expertise-grid {
 		list-style-type: none;
 		padding: 0;
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr;
 		gap: 1rem;
 	}
 
-	.content ul li {
+	.expertise-grid li {
 		background: var(--gradient-subtle);
-		padding: 1rem;
+		padding: 1.5rem;
 		border-radius: 0.75rem;
 		border: 1px solid var(--gray-800);
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.expertise-grid li:hover {
+		transform: translateY(-3px);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.expertise-grid li span {
+		font-size: var(--text-md);
+	}
+
+	/* Why Choose Section Styles */
+	.why-choose-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.why-choose-item {
+		background: var(--gradient-subtle);
+		padding: 2rem;
+		border-radius: 1rem;
+		border: 1px solid var(--gray-800);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+
+	.why-choose-item:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-md);
+	}
+
+	.icon-container {
+		margin-bottom: 1rem;
+		color: var(--accent-regular);
+	}
+
+	.why-choose-item h3 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin-bottom: 1rem;
+	}
+
+	.startup-programs {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 2rem;
+	}
+
+	.program-logo {
+		transition: transform 0.3s ease;
+	}
+
+	.program-logo:hover {
+		transform: translateY(-5px);
 	}
 
 	@media (min-width: 50em) {
 		.about {
 			display: grid;
 			grid-template-columns: 1fr 60% 1fr;
+			gap: 6rem;
 		}
 
 		.about > :global(:first-child) {
@@ -157,6 +456,36 @@ import Hero from '../components/Hero.astro';
 		section {
 			display: contents;
 			font-size: var(--text-lg);
+		}
+
+		.team-grid {
+			grid-column: 2;
+		}
+
+		.team-member {
+			flex-direction: row;
+			align-items: flex-start;
+		}
+
+		.member-image {
+			flex: 0 0 250px;
+			margin: 0;
+		}
+
+		.expertise-grid {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.5rem;
+		}
+
+		.why-choose-grid {
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2rem;
+		}
+	}
+
+	@media (min-width: 80em) {
+		.expertise-grid {
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 </style>

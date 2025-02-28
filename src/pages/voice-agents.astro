@@ -1,291 +1,1821 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
+import CallToAction from '../components/CallToAction.astro';
 import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
-import Grid from '../components/Grid.astro';
 import ContactCTA from '../components/ContactCTA.astro';
+
+// Page metadata
+const title = "AI Voice Agents | Waboom";
+const description = "Transform your customer service with Waboom's AI voice agents. Our intelligent voice assistants handle customer inquiries, appointments, and technical support 24/7.";
 ---
 
-<BaseLayout title="Voice Agents | Waboom" description="Transform your customer service with AI-powered voice agents">
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="AI Voice Agents"
-				tagline="Intelligent, scalable, and human-like voice interactions for your business"
-				align="start"
-			>
-				<div class="roles">
-					<Pill><Icon icon="microphone-stage" size="1.33em" /> Natural Language</Pill>
-					<Pill><Icon icon="strategy" size="1.33em" /> Context Aware</Pill>
-					<Pill><Icon icon="code" size="1.33em" /> System Integration</Pill>
+<BaseLayout title={title} description={description}>
+    <div class="voice-agents-page">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="fade-in">AI Voice Agents</h1>
+                <p class="tagline fade-in-delay-1">
+                    Intelligent voice assistants that transform customer interactions
+                </p>
+                <div class="hero-cta fade-in-delay-2">
+                    <CallToAction href="https://calendly.com/waboom/30min">
+                        Book a Demo
+                        <Icon icon="arrow-right" size="1.2em" />
+                    </CallToAction>
+                </div>
 				</div>
-			</Hero>
+        </section>
 
-			<section class="section with-background">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Transform Your Customer Service</h3>
-					<p>
-						Our AI voice agents provide natural, context-aware conversations that seamlessly handle customer inquiries 24/7.
-					</p>
-				</header>
+        <!-- What Are Voice Agents Section -->
+        <section class="what-are-section">
+            <div class="container">
+                <h2 class="section-title slide-in-left">What Are AI Voice Agents?</h2>
+                
+                <!-- Text content first (full width) -->
+                <div class="text-content slide-in-left-delay-1">
+                    <p>
+                        AI Voice Agents are intelligent virtual assistants that use natural language processing and machine learning to have human-like conversations with your customers over the phone or through digital channels.
+                    </p>
+                    <p>
+                        Unlike traditional chatbots or IVR systems, our voice agents understand context, respond naturally to questions, and can handle complex conversations without human intervention.
+                    </p>
+                </div>
+                
 
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							[
-								{
-									title: 'Natural Conversations',
-									description: 'Advanced language models enable human-like interactions with context awareness and emotional intelligence.'
-								},
-								{
-									title: 'Multilingual Support',
-									description: 'Support customers in multiple languages with natural accent handling and cultural awareness.'
-								},
-								{
-									title: 'System Integration',
-									description: 'Seamlessly connect with your CRM, scheduling, and payment systems for end-to-end automation.'
-								},
-								{
-									title: 'Smart Analytics',
-									description: 'Gain insights from every interaction with detailed analytics and continuous improvement.'
-								}
-							].map((feature) => (
-								<li class="feature-card">
-									<h4>{feature.title}</h4>
-									<p>{feature.description}</p>
-								</li>
-							))
-						}
-					</Grid>
+            </div>
+        </section>
+
+        <!-- Key Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title fade-in">Key Benefits</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card fade-in-delay-1">
+                        <div class="icon-wrapper">
+                            <Icon icon="clock" size="2.5em" gradient />
+                        </div>
+                        <h3>24/7 Availability</h3>
+                        <p>Provide round-the-clock customer service without staffing concerns or overtime costs.</p>
+                    </div>
+                    <div class="benefit-card fade-in-delay-2">
+                        <div class="icon-wrapper">
+                            <Icon icon="lightning" size="2.5em" gradient />
+                        </div>
+                        <h3>Instant Response</h3>
+                        <p>Eliminate wait times with immediate responses to customer inquiries, improving satisfaction.</p>
+                    </div>
+                    <div class="benefit-card fade-in-delay-3">
+                        <div class="icon-wrapper">
+                            <Icon icon="trophy" size="2.5em" gradient />
+                        </div>
+                        <h3>Scalable Solution</h3>
+                        <p>Handle hundreds of simultaneous conversations without additional resources or costs.</p>
+                    </div>
+                    <div class="benefit-card fade-in-delay-4">
+                        <div class="icon-wrapper">
+                            <Icon icon="strategy" size="2.5em" gradient />
+                        </div>
+                        <h3>Consistent Experience</h3>
+                        <p>Deliver the same high-quality customer experience with every interaction, every time.</p>
+                    </div>
+                    <div class="benefit-card fade-in-delay-5">
+                        <div class="icon-wrapper">
+                            <Icon icon="list" size="2.5em" gradient />
+                        </div>
+                        <h3>Data Insights</h3>
+                        <p>Gain valuable insights from customer conversations to improve products and services.</p>
+                    </div>
+                    <div class="benefit-card fade-in-delay-6">
+                        <div class="icon-wrapper">
+                            <Icon icon="heart" size="2.5em" gradient />
+                        </div>
+                        <h3>Cost Reduction</h3>
+                        <p>Reduce operational costs by up to 60% compared to traditional call centers.</p>
+                    </div>
+                </div>
 				</div>
 			</section>
 
-			<section class="section with-background bg-variant">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Key Benefits</h3>
-				</header>
 
-				<div class="content">
-					<div class="benefit-grid">
-						<div class="benefit">
-							<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-							<h4>70% Cost Reduction</h4>
-							<p>Significantly reduce operational costs while maintaining service quality</p>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-section">
+            <div class="container">
+                <h2 class="section-title fade-in">How It Works</h2>
+
+                <div class="steps-container">
+                    <div class="step fade-in-delay-1">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>We Build Your Agent</h3>
+                            <p>We design and develop a custom AI voice agent tailored to your specific business needs and brand voice.</p>
+                        </div>
+                    </div>
+                    <div class="step fade-in-delay-2">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Integration & Training</h3>
+                            <p>We integrate the voice agent with your existing systems and train it on your specific products, services, and processes.</p>
 						</div>
-						<div class="benefit">
-							<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-							<h4>24/7 Availability</h4>
-							<p>Provide consistent support around the clock without additional staffing</p>
 						</div>
-						<div class="benefit">
-							<Icon icon="rocket-launch" color="var(--accent-regular)" size="2.5rem" gradient />
-							<h4>Instant Scalability</h4>
-							<p>Handle peak demand effortlessly without compromising service quality</p>
+                    <div class="step fade-in-delay-3">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Launch & Optimize</h3>
+                            <p>We deploy your voice agent and continuously optimize its performance based on real-world interactions and feedback.</p>
 						</div>
-						<div class="benefit">
-							<Icon icon="code" color="var(--accent-regular)" size="2.5rem" gradient />
-							<h4>Smart Learning</h4>
-							<p>Continuously improve through machine learning and conversation analysis</p>
+						</div>
+					</div>
+									                <!-- Visualizer (full width) -->
+													<div class="visualizer-wrapper fade-in ">
+														<div class="voice-agent-visualizer">
+															<div class="simulation-header">
+																<div class="simulation-title">Voice Agent Interaction Simulation</div>
+																<div class="simulation-subtitle">Courier Tracking Example</div>
+															</div>
+															
+															<div class="voice-process-container">
+																<!-- Voice Input Section -->
+																<div class="process-section voice-input">
+																	<div class="section-label">Customer Voice Input</div>
+																	<div class="voice-waveform">
+																		<div class="waveform-container">
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																			<div class="wave-bar"></div>
+																		</div>
+																		<div class="input-icon">
+																			<Icon icon="microphone-stage" size="1.5em" />
+																		</div>
+																	</div>
+																	<div class="voice-text">
+																		"Where is my package with tracking number ABC12345?"
+																	</div>
+																</div>
+																
+																<!-- Processing Pipeline -->
+																<div class="process-flow">
+																	<div class="flow-arrow">→</div>
+																	<div class="data-particle"></div>
+																</div>
+																
+																<!-- AI Processing Section -->
+																<div class="process-section ai-processing">
+																	<div class="section-label">AI Processing</div>
+																	<div class="processing-steps">
+																		<div class="process-step speech-to-text">
+																			<div class="step-label">Speech-to-Text</div>
+																			<div class="step-visual">
+																				<div class="speech-text">"Where is my package with tracking number ABC12345?"</div>
+																			</div>
+																		</div>
+																		<div class="process-step nlp">
+																			<div class="step-label">NLP</div>
+																			<div class="step-visual">
+																				<div class="entity intent">INTENT: Track Package</div>
+																				<div class="entity service">ENTITY: Package</div>
+																				<div class="entity time">ID: ABC12345</div>
+																			</div>
+																		</div>
+																		<div class="process-step reasoning">
+																			<div class="step-label">Reasoning</div>
+																			<div class="step-visual">
+																				<div class="reasoning-flow">
+																					<div class="reasoning-node">Context</div>
+																					<div class="reasoning-node">Knowledge</div>
+																					<div class="reasoning-node">Decision</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																
+																<!-- Processing Pipeline -->
+																<div class="process-flow">
+																	<div class="flow-arrow">→</div>
+																	<div class="data-particle"></div>
+																</div>
+																
+																<!-- Data Retrieval Section -->
+																<div class="process-section data-retrieval">
+																	<div class="section-label">Courier Data Retrieval</div>
+																	<div class="retrieval-visual">
+																		<div class="api-call">
+																			<div class="api-label">API REQUEST</div>
+																			<div class="api-code">GET /tracking/ABC12345</div>
+																		</div>
+																		<div class="courier-data">
+																			<div class="courier-header">
+																				<div class="courier-icon">📦</div>
+																				<div class="courier-title">Package Data</div>
+																			</div>
+																			<div class="data-item">
+																				<span class="data-key">Status:</span>
+																				<span class="data-value">In Transit</span>
+																			</div>
+																			<div class="data-item">
+																				<span class="data-key">Location:</span>
+																				<span class="data-value">Auckland Hub</span>
+																			</div>
+																			<div class="data-item">
+																				<span class="data-key">ETA:</span>
+																				<span class="data-value">Tomorrow, 2pm</span>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+																
+																<!-- Processing Pipeline -->
+																<div class="process-flow">
+																	<div class="flow-arrow">→</div>
+																	<div class="data-particle"></div>
+																</div>
+																
+																<!-- Business Integration Section -->
+																<div class="process-section business-integration">
+																	<div class="section-label">Business Systems</div>
+																	<div class="integration-points">
+																		<div class="integration-item courier">
+																			<div class="integration-icon">🚚</div>
+																			<div class="integration-label">Courier API</div>
+																			<div class="integration-status">Connected</div>
+																		</div>
+																		<div class="integration-item crm">
+																			<div class="integration-icon">👥</div>
+																			<div class="integration-label">CRM</div>
+																			<div class="integration-status">Updated</div>
+																		</div>
+																		<div class="integration-item analytics">
+																			<div class="integration-icon">📊</div>
+																			<div class="integration-label">Analytics</div>
+																			<div class="integration-status">Recording</div>
+																		</div>
+																	</div>
+																</div>
+																
+																<!-- Processing Pipeline -->
+																<div class="process-flow">
+																	<div class="flow-arrow">→</div>
+																	<div class="data-particle"></div>
+																</div>
+																
+																<!-- Voice Response Section -->
+																<div class="process-section voice-output">
+																	<div class="section-label">AI Voice Response</div>
+																	<div class="response-waveform">
+																		<div class="response-voice-icon">
+																			<Icon icon="paper-plane-tilt" size="1.5em" />
+																		</div>
+																		<div class="response-waveform-container">
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																			<div class="response-bar"></div>
+																		</div>
+																	</div>
+																	<div class="response-text">
+																		"Your package ABC12345 is currently in transit through our Auckland Hub and is scheduled for delivery tomorrow by 2pm. Is there anything else you need help with?"
+																	</div>
+																</div>
+																
+																<!-- Processing Pipeline -->
+																<div class="process-flow">
+																	<div class="flow-arrow">→</div>
+																	<div class="data-particle"></div>
+																</div>
+																
+																<!-- Follow-up Actions Section -->
+																<div class="process-section follow-up-actions">
+																	<div class="section-label">Follow-up Actions</div>
+																	<div class="decision-tree">
+																		<div class="conversation-item ai-question">
+																			<div class="conversation-icon">
+																				<Icon icon="microphone-stage" size="1.2em" />
+																			</div>
+																			<div class="conversation-text">
+																				"Would you like to receive tracking updates via text message or email?"
+																			</div>
+																		</div>
+																		<div class="conversation-item customer-response">
+																			<div class="conversation-icon">
+																				<Icon icon="heart" size="1.2em" />
+																			</div>
+																			<div class="conversation-text">
+																				"Both, please."
+																			</div>
+																		</div>
+																		<div class="conversation-item ai-confirmation">
+																			<div class="conversation-icon">
+																				<Icon icon="microphone-stage" size="1.2em" />
+																			</div>
+																			<div class="conversation-text">
+																				"I've set up both text and email notifications for your package. You'll receive updates when your package status changes."
+																			</div>
+																		</div>
+																	</div>
+																	<div class="notifications-sent">
+																		<div class="notification-item sms">
+																			<div class="notification-icon">
+																				<Icon icon="paper-plane-tilt" size="1.2em" />
+																			</div>
+																			<div class="notification-content">
+																				<div class="notification-type">SMS Notification</div>
+																				<div class="notification-preview">Package ABC12345 is in transit. Est. delivery: Tomorrow, 2pm. Track at courier.com/track</div>
+																			</div>
+																			<div class="status-indicator">Sent</div>
+																		</div>
+																		<div class="notification-item email">
+																			<div class="notification-icon">
+																				<Icon icon="paper-plane-tilt" size="1.2em" />
+																			</div>
+																			<div class="notification-content">
+																				<div class="notification-type">Email Notification</div>
+																				<div class="notification-preview">Your package ABC12345 is on its way with detailed tracking information and delivery instructions.</div>
+																			</div>
+																			<div class="status-indicator">Sent</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="outcomes-display">
+																<div class="outcome-header">Business Outcomes</div>
+																<div class="outcomes-metrics">
+																	<div class="outcome-metric calls">
+																		<div class="metric-value">24/7</div>
+																		<div class="metric-label">Availability</div>
+																	</div>
+																	<div class="outcome-metric time">
+																		<div class="metric-value">-85%</div>
+																		<div class="metric-label">Wait Times</div>
+																	</div>
+																	<div class="outcome-metric cost">
+																		<div class="metric-value">-60%</div>
+																		<div class="metric-label">Op. Costs</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+				</div>
+				
+			</section>
+
+			        <!-- Use Cases Section -->
+					<section class="use-cases-section">
+						<div class="container">
+							<h2 class="section-title slide-in-left">Common Use Cases</h2>
+							<div class="use-cases-grid">
+								<div class="use-case slide-in-left-delay-1">
+									<h3><Icon icon="paper-plane-tilt" size="1.2em" /> Appointment Scheduling</h3>
+									<p>Automate the booking, rescheduling, and cancellation of appointments while integrating with your existing calendar systems.</p>
+								</div>
+								<div class="use-case slide-in-left-delay-2">
+									<h3><Icon icon="list" size="1.2em" /> Customer Support</h3>
+									<p>Answer common questions, troubleshoot issues, and escalate complex problems to human agents when necessary.</p>
+								</div>
+								<div class="use-case slide-in-left-delay-3">
+									<h3><Icon icon="code" size="1.2em" /> Order Processing</h3>
+									<p>Take orders, process payments, and provide order status updates without human intervention.</p>
+								</div>
+								<div class="use-case slide-in-left-delay-4">
+									<h3><Icon icon="microphone-stage" size="1.2em" /> Lead Qualification</h3>
+									<p>Engage with potential customers, qualify leads, and schedule follow-ups with sales representatives.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+        <!-- Demo Section -->
+        <section class="demo-section">
+            <div class="container">
+                <h2 class="section-title slide-in-left">Hear It In Action</h2>
+                <div class="demo-content">
+                    <div class="demo-text slide-in-left-delay-1">
+                        <p>Listen to our AI voice agent handling a real customer conversation. Notice the natural flow, understanding of context, and ability to provide helpful responses.</p>
+                        <div class="demo-cta">
+                            <CallToAction href="https://calendly.com/waboom/30min">
+                                Schedule Your Custom Demo
+                                <Icon icon="arrow-right" size="1.2em" />
+                            </CallToAction>
+                        </div>
+                    </div>
+                    <div class="demo-player slide-in-right">
+                        <div class="audio-player">
+                            <audio controls>
+                                <source src="/assets/demo-voice-agent.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="section with-background">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Try It Out</h3>
-					<p>Experience our voice agent technology with a live demo</p>
-				</header>
-
-				<div class="content">
-					<div class="demo-container">
-						<div class="demo-box">
-							<h4>Interactive Demo</h4>
-							<p>Click to start a conversation with our demo voice agent</p>
-							<button class="demo-button">
-								<Icon icon="microphone-stage" size="1.5em" /> Start Demo
-							</button>
-						</div>
-					</div>
-				</div>
-			</section>
-		</main>
-
-		<ContactCTA />
 	</div>
 </BaseLayout>
 
 <style>
-	.roles {
-		display: flex;
-		gap: 0.5rem;
-		margin-top: 0.5rem;
-	}
+    /* Base Styles */
+    .voice-agents-page {
+        --animation-duration: 0.8s;
+        --animation-timing: cubic-bezier(0.16, 1, 0.3, 1);
+        --delay-increment: 0.15s;
+    }
 
-	.feature-card {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .section-title {
+        font-size: var(--text-2xl);
+        color: var(--gray-0);
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 0rem 0 4rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .hero-section h1 {
+        font-size: var(--text-4xl);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+    }
+
+    .hero-section .tagline {
+        font-size: var(--text-xl);
+        color: var(--gray-200);
+        max-width: 50ch;
+        margin: 0 auto 2.5rem;
+    }
+
+    .hero-cta {
+        margin-top: 2rem;
+    }
+
+    /* What Are Voice Agents Section */
+    .what-are-section {
+        padding: 2rem 0;
+        background-color: var(--gray-999_40);
+        backdrop-filter: blur(8px);
+    }
+
+    .text-content {
+        margin-bottom: 3rem;
+    }
+
+    .text-content p {
+        color: var(--gray-300);
+        font-size: var(--text-lg);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        max-width: 70ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .visualizer-wrapper {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .voice-agent-visualizer {
+        background: rgba(10, 10, 30, 0.8);
+        border-radius: 1rem;
+        box-shadow: var(--shadow-md);
+        overflow: hidden;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        border: 1px solid rgba(100, 100, 255, 0.1);
+        box-shadow: inset 0 0 15px rgba(100, 100, 255, 0.1), var(--shadow-md);
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .simulation-header {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .simulation-title {
+        font-size: var(--text-lg);
+        font-weight: bold;
+        color: white;
+        margin-bottom: 0.25rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .simulation-subtitle {
+        font-size: var(--text-sm);
+        color: var(--gray-300);
+    }
+
+    .voice-process-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        flex-grow: 1;
+    }
+
+    .process-section {
+        background-color: rgba(30, 30, 50, 0.6);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .section-label {
+        font-size: var(--text-sm);
+        font-weight: bold;
+        color: white;
+        margin-bottom: 0.75rem;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Voice Input Styles */
+    .voice-input {
+        height: auto;
+    }
+
+    .voice-waveform {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .voice-text {
+        font-size: var(--text-sm);
+        color: white;
+        font-style: italic;
+        text-align: center;
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+
+    .waveform-container {
+        flex-grow: 1;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.25rem;
+    }
+
+    .wave-bar {
+        width: 3px;
+        background: linear-gradient(to top, rgba(46, 204, 113, 0.3), rgba(46, 204, 113, 1));
+        border-radius: 1px;
+        height: 10px;
+    }
+
+    .input-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background: var(--gradient-accent-orange);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: 0 0 10px rgba(255, 150, 50, 0.5);
+    }
+
+    /* Process Flow Styles */
+    .process-flow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1.5rem;
+        position: relative;
+    }
+
+    .flow-arrow {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 1.5rem;
+        animation: pulseArrow 2s infinite;
+    }
+
+    .data-particle {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        background-color: #ffaa44;
+        border-radius: 50%;
+        box-shadow: 0 0 8px rgba(255, 170, 68, 0.8);
+        animation: moveParticle 2s linear infinite;
+    }
+
+    @keyframes moveParticle {
+        0% { 
+            left: 20%; 
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% { 
+            left: 80%; 
+            opacity: 0;
+        }
+    }
+
+    @keyframes pulseArrow {
+        0%, 100% { opacity: 0.5; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.2); }
+    }
+
+    /* AI Processing Styles */
+    .ai-processing {
+        height: auto;
+    }
+
+    /* Data Retrieval Styles */
+    .data-retrieval {
+        height: auto;
+    }
+
+    .retrieval-visual {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .api-call {
+        background-color: rgba(20, 20, 40, 0.6);
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .api-label {
+        font-size: var(--text-xs);
+        color: white;
+        margin-bottom: 0.25rem;
+        font-weight: bold;
+    }
+
+    .api-code {
+        font-family: monospace;
+        font-size: var(--text-sm);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+    }
+
+    .courier-data {
+        background-color: rgba(20, 20, 40, 0.6);
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .courier-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .courier-icon {
+        font-size: 1.25rem;
+    }
+
+    .courier-title {
+        font-size: var(--text-sm);
+        font-weight: bold;
+        color: white;
+    }
+
+    .data-item {
+        font-size: var(--text-xs);
+        margin-bottom: 0.25rem;
+        display: flex;
+    }
+
+    .data-key {
+        color: white;
+        width: 80px;
+    }
+
+    .data-value {
+        color: #5dade2;
+        font-weight: bold;
+    }
+
+    /* Business Integration Styles */
+    .business-integration {
+        height: auto;
+    }
+
+    /* Voice Output Styles */
+    .voice-output {
+        height: auto;
+    }
+
+    .response-waveform {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.75rem;
+        flex-direction: row-reverse;
+    }
+
+    .response-voice-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    }
+
+    .response-waveform-container {
+        flex-grow: 1;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.25rem;
+    }
+
+    .response-bar {
+        width: 3px;
+        background: linear-gradient(to top, rgba(52, 152, 219, 0.3), rgba(52, 152, 219, 1));
+        border-radius: 1px;
+        height: 10px;
+    }
+
+    .response-text {
+        font-size: var(--text-sm);
+        color: white;
+        font-style: italic;
+        text-align: center;
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+
+    /* Outcomes Display Styles */
+    .outcomes-display {
+        background-color: rgba(30, 30, 50, 0.6);
+        border-radius: 0.75rem;
+        padding: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .outcome-header {
+        font-size: var(--text-sm);
+        font-weight: bold;
+        color: white;
+        margin-bottom: 0.75rem;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .outcomes-metrics {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    .outcome-metric {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .outcome-metric:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 20%;
+        height: 60%;
+        width: 1px;
+        background-color: rgba(46, 204, 113, 0.5);
+    }
+
+    .metric-value {
+        font-size: var(--text-lg);
+        font-weight: bold;
+        margin-bottom: 0.25rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .calls .metric-value {
+        color: #f39c12;
+    }
+
+    .time .metric-value {
+        color: #3498db;
+    }
+
+    .cost .metric-value {
+        color: #2ecc71;
+    }
+
+    .metric-label {
+        font-size: var(--text-xs);
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .voice-wave {
+        width: 60px;
+        height: 60px;
+        background: var(--gradient-accent-orange);
+        border-radius: 50%;
+        opacity: 0.2;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0.8);
+            opacity: 0.2;
+        }
+        50% {
+            transform: scale(1.2);
+            opacity: 0.4;
+        }
+        100% {
+            transform: scale(0.8);
+            opacity: 0.2;
+        }
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+        padding: 1rem 0;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 2rem;
+    }
+
+    .benefit-card {
+        background-color: var(--gray-999_40);
+        backdrop-filter: blur(8px);
+        border-radius: 0.75rem;
 		padding: 2rem;
-		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-	}
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-	.feature-card h4 {
+    .benefit-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+
+    .icon-wrapper {
+        margin-bottom: 1rem;
+    }
+
+    .benefit-card h3 {
 		font-size: var(--text-lg);
-		font-weight: 600;
+        color: var(--gray-0);
 		margin-bottom: 1rem;
 	}
 
-	.feature-card p {
+    .benefit-card p {
 		color: var(--gray-300);
-	}
+        font-size: var(--text-md);
+        line-height: 1.6;
+    }
 
-	.section {
+    /* Use Cases Section */
+    .use-cases-section {
+        padding: 6rem 0;
+        background-color: var(--gray-999_40);
+        backdrop-filter: blur(8px);
+    }
+
+    .use-cases-grid {
 		display: grid;
+        grid-template-columns: 1fr;
 		gap: 2rem;
 	}
 
-	.with-background {
-		position: relative;
-	}
+    .use-case {
+        background-color: var(--gray-999_20);
+        border-radius: 0.75rem;
+        padding: 2rem;
+        box-shadow: var(--shadow-sm);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-	.with-background::before {
-		--hero-bg: var(--bg-image-subtle-2);
-		content: '';
-		position: absolute;
-		pointer-events: none;
-		left: 50%;
-		width: 100vw;
-		aspect-ratio: calc(2.25 / var(--bg-scale));
-		top: 0;
-		transform: translateY(-75%) translateX(-50%);
-		background: url('/assets/backgrounds/noise.png') top center/220px repeat,
-			var(--hero-bg) center center / var(--bg-gradient-size) no-repeat, var(--gray-999);
-		background-blend-mode: overlay, normal, normal, normal;
-		mix-blend-mode: var(--bg-blend-mode);
-		z-index: -1;
-	}
+    .use-case h3 {
+        font-size: var(--text-lg);
+        color: var(--gray-0);
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
 
-	.section-header {
-		justify-self: center;
-		text-align: center;
-		max-width: 50ch;
+    .use-case p {
+        color: var(--gray-300);
 		font-size: var(--text-md);
-		color: var(--gray-300);
+        line-height: 1.6;
 	}
 
-	.section-header h3 {
-		font-size: var(--text-2xl);
+    /* How It Works Section */
+    .how-it-works-section {
+        padding: 6rem 0;
 	}
 
-	.benefit-grid {
-		display: grid;
+    .steps-container {
+        display: flex;
+        flex-direction: column;
 		gap: 2rem;
-		grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-	}
+        max-width: 800px;
+        margin: 0 auto;
+    }
 
-	.benefit {
+    .step {
+        display: flex;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+
+    .step-number {
+        background: var(--gradient-accent-orange);
+        color: white;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
 		display: flex;
-		flex-direction: column;
 		align-items: center;
-		text-align: center;
-		gap: 1rem;
-		padding: 2rem;
+        justify-content: center;
+        font-weight: bold;
+        font-size: var(--text-xl);
+        flex-shrink: 0;
+    }
+
+    .step-content h3 {
+        font-size: var(--text-lg);
+        color: var(--gray-0);
+        margin-bottom: 0.5rem;
+    }
+
+    .step-content p {
+        color: var(--gray-300);
+        font-size: var(--text-md);
+        line-height: 1.6;
+    }
+
+    /* Demo Section */
+    .demo-section {
+        padding: 6rem 0;
 		background-color: var(--gray-999_40);
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-	}
+        backdrop-filter: blur(8px);
+    }
 
-	.benefit h4 {
-		font-size: var(--text-lg);
-		font-weight: 600;
-	}
+    .demo-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 
-	.benefit p {
+    .demo-text p {
 		color: var(--gray-300);
-	}
+        font-size: var(--text-lg);
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
 
-	.demo-container {
-		display: flex;
-		justify-content: center;
+    .demo-player {
+        background-color: var(--gray-999_20);
+        border-radius: 0.75rem;
 		padding: 2rem;
-	}
+        box-shadow: var(--shadow-sm);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
 
-	.demo-box {
-		text-align: center;
-		padding: 3rem;
-		background-color: var(--gray-999_40);
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		max-width: 500px;
-	}
+    .audio-player {
+        width: 100%;
+    }
 
-	.demo-box h4 {
-		font-size: var(--text-xl);
-		margin-bottom: 1rem;
-	}
+    .audio-player audio {
+        width: 100%;
+    }
 
-	.demo-button {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		background-color: var(--accent-regular);
-		color: var(--accent-text-over);
-		padding: 0.75rem 1.5rem;
-		border-radius: 0.5rem;
-		border: none;
-		font-size: var(--text-md);
-		cursor: pointer;
-		margin-top: 1.5rem;
-		transition: background-color 150ms;
-	}
+    /* Animation Classes */
+    .fade-in {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        will-change: opacity, transform;
+    }
 
-	.demo-button:hover {
-		background-color: var(--accent-dark);
-	}
+    .fade-in-delay-1 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(1 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-	@media (min-width: 50em) {
-		.section {
-			grid-template-columns: repeat(4, 1fr);
-			grid-template-areas: 'header header header header' 'gallery gallery gallery gallery';
-			gap: 5rem;
-		}
+    .fade-in-delay-2 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(2 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-		.section.with-cta {
-			grid-template-areas: 'header header header cta' 'gallery gallery gallery gallery';
-		}
+    .fade-in-delay-3 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(3 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-		.section-header {
-			grid-area: header;
-			font-size: var(--text-lg);
-		}
+    .fade-in-delay-4 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(4 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-		.section-header h3 {
-			font-size: var(--text-4xl);
-		}
+    .fade-in-delay-5 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(5 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-		.with-cta .section-header {
-			justify-self: flex-start;
-			text-align: left;
-		}
+    .fade-in-delay-6 {
+        opacity: 0;
+        animation: fadeIn var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(6 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
 
-		.gallery {
-			grid-area: gallery;
-		}
+    .slide-in-left {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft var(--animation-duration) var(--animation-timing) forwards;
+        will-change: opacity, transform;
+    }
 
-		.cta {
-			grid-area: cta;
-		}
-	}
+    .slide-in-left-delay-1 {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(1 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
+
+    .slide-in-left-delay-2 {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(2 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
+
+    .slide-in-left-delay-3 {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(3 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
+
+    .slide-in-left-delay-4 {
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft var(--animation-duration) var(--animation-timing) forwards;
+        animation-delay: calc(4 * var(--delay-increment));
+        will-change: opacity, transform;
+    }
+
+    .slide-in-right {
+        opacity: 0;
+        transform: translateX(30px);
+        animation: slideInRight var(--animation-duration) var(--animation-timing) forwards;
+        will-change: opacity, transform;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Responsive Styles */
+    @media (min-width: 50em) {
+        .section-title {
+            font-size: var(--text-3xl);
+            margin-bottom: 3rem;
+        }
+
+        .hero-section h1 {
+            font-size: var(--text-5xl);
+        }
+
+        .hero-section .tagline {
+            font-size: var(--text-2xl);
+        }
+
+        .voice-process-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+        
+        .process-section {
+            flex: 1 1 30%;
+            min-width: 250px;
+        }
+        
+        .voice-input, .voice-output, .follow-up-actions {
+            flex: 1 1 45%;
+        }
+        
+        .ai-processing {
+            flex: 2 1 45%;
+        }
+        
+        .data-retrieval, .business-integration {
+            flex: 1 1 45%;
+        }
+        
+        .process-flow {
+            width: 3rem;
+            height: auto;
+            flex: 0 0 auto;
+        }
+        
+        .flow-arrow {
+            transform: rotate(0);
+        }
+        
+        .speech-text, .response-text, .conversation-text {
+            font-size: var(--text-md);
+        }
+        
+        .metric-value {
+            font-size: var(--text-xl);
+        }
+
+        .outcomes-display {
+            padding: 1.5rem;
+        }
+        
+        .outcomes-metrics {
+            gap: 2rem;
+        }
+        
+        .courier-data {
+            padding: 1rem;
+        }
+        
+        .decision-tree {
+            padding: 1rem;
+        }
+        
+        .notifications-sent {
+            flex-direction: row;
+            align-items: stretch;
+        }
+        
+        .notification-item {
+            flex: 1;
+        }
+    }
+
+    /* Process Steps Styling */
+    .process-step {
+        margin-bottom: 0.75rem;
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+    
+    .step-label {
+        color: white;
+        font-weight: bold;
+        font-size: var(--text-xs);
+        margin-bottom: 0.5rem;
+    }
+    
+    .entity {
+        color: white;
+        margin-bottom: 0.25rem;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .intent {
+        border-left: 3px solid #f39c12;
+    }
+    
+    .service {
+        border-left: 3px solid #3498db;
+    }
+    
+    .time {
+        border-left: 3px solid #2ecc71;
+    }
+    
+    .reasoning-flow {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+    }
+    
+    .reasoning-node {
+        color: white;
+        padding: 0.25rem 0.5rem;
+        margin: 0 0.25rem;
+        border-radius: 0.25rem;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .speech-text {
+        color: white;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .integration-label {
+        font-size: var(--text-sm);
+        color: white;
+        margin: 0.25rem 0;
+    }
+
+    .integration-status {
+        font-size: var(--text-xs);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Follow-up Actions Styles */
+    .follow-up-actions {
+        height: auto;
+    }
+    
+    .decision-tree {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+        padding: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0.5rem;
+    }
+    
+    .conversation-item {
+        display: flex;
+        gap: 0.75rem;
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .ai-question, .ai-confirmation {
+        align-self: flex-start;
+        margin-right: 15%;
+        border-left: 3px solid #3498db;
+    }
+    
+    .customer-response {
+        align-self: flex-end;
+        margin-left: 15%;
+        border-left: 3px solid #f39c12;
+    }
+    
+    .conversation-icon {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+    
+    .ai-question .conversation-icon, .ai-confirmation .conversation-icon {
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: white;
+    }
+    
+    .customer-response .conversation-icon {
+        background: var(--gradient-accent-orange);
+        color: white;
+    }
+    
+    .conversation-text {
+        color: white;
+        font-size: var(--text-sm);
+    }
+    
+    .notifications-sent {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .notification-item {
+        display: flex;
+        gap: 0.75rem;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        background-color: rgba(0, 0, 0, 0.2);
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .notification-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.05);
+        z-index: 0;
+        transition: width 0.5s ease-in-out;
+    }
+    
+    .notification-item.active::before {
+        width: 100%;
+    }
+    
+    .notification-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        z-index: 1;
+    }
+    
+    .sms .notification-icon {
+        background: linear-gradient(135deg, #27ae60, #2ecc71);
+        color: white;
+    }
+    
+    .email .notification-icon {
+        background: linear-gradient(135deg, #8e44ad, #9b59b6);
+        color: white;
+    }
+    
+    .notification-content {
+        flex-grow: 1;
+        z-index: 1;
+    }
+    
+    .notification-type {
+        font-size: var(--text-sm);
+        font-weight: bold;
+        color: white;
+        margin-bottom: 0.25rem;
+    }
+    
+    .notification-preview {
+        font-size: var(--text-xs);
+        color: white;
+    }
+    
+    .status-indicator {
+        background-color: rgba(46, 204, 113, 0.2);
+        color: #2ecc71;
+        font-size: var(--text-xs);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid rgba(46, 204, 113, 0.3);
+        z-index: 1;
+    }
+
+    .fade-in-active {
+        animation: fadeIn 0.3s ease-in-out forwards;
+    }
+    
+    .notification-item {
+        opacity: 0.8;
+        transform: translateY(5px);
+    }
+    
+    .notification-item.active {
+        animation: slideUpFade 0.4s ease-in-out forwards;
+    }
+    
+    @keyframes slideUpFade {
+        0% {
+            opacity: 0.8;
+            transform: translateY(5px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Additional Animation Styles */
+    .pulse-node {
+        animation: pulseNode 1s ease-in-out;
+    }
+    
+    @keyframes pulseNode {
+        0%, 100% { background-color: rgba(0, 0, 0, 0.3); }
+        50% { background-color: rgba(46, 204, 113, 0.7); }
+    }
+    
+    .highlight-integration {
+        animation: highlightItem 1s ease-in-out;
+    }
+    
+    @keyframes highlightItem {
+        0%, 100% { background-color: rgba(50, 50, 70, 0.4); }
+        50% { background-color: rgba(52, 152, 219, 0.7); }
+    }
+    
+    .highlight-data {
+        animation: glowEffect 1.5s ease-in-out;
+    }
+    
+    @keyframes glowEffect {
+        0%, 100% { box-shadow: 0 0 0 rgba(52, 152, 219, 0); }
+        50% { box-shadow: 0 0 15px rgba(52, 152, 219, 0.8); }
+    }
+    
+    .flash-api {
+        animation: apiFlash 0.8s ease-in-out;
+    }
+    
+    @keyframes apiFlash {
+        0%, 100% { background-color: rgba(0, 0, 0, 0.3); }
+        50% { background-color: rgba(255, 170, 68, 0.4); }
+    }
+    
+    .typing-effect {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 4s steps(60, end);
+        width: 100%;
+    }
+    
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+    
+    .active-particle {
+        animation: moveParticle 2s linear;
+    }
+    
+    @keyframes moveParticle {
+        0% {
+            opacity: 0;
+            transform: translateX(0);
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+    }
+
 </style>
 
 <script>
-	document.querySelector('.demo-button')?.addEventListener('click', () => {
-		// Add your demo functionality here
-		alert('Demo voice agent functionality coming soon!');
+    // This script ensures animations only play when elements are in the viewport
+    document.addEventListener('DOMContentLoaded', () => {
+        const animatedElements = document.querySelectorAll(
+            '.fade-in, .fade-in-delay-1, .fade-in-delay-2, .fade-in-delay-3, .fade-in-delay-4, .fade-in-delay-5, .fade-in-delay-6, ' +
+            '.slide-in-left, .slide-in-left-delay-1, .slide-in-left-delay-2, .slide-in-left-delay-3, .slide-in-left-delay-4, ' +
+            '.slide-in-right'
+        );
+
+        // Add special handling for notification items
+        const notificationItems = document.querySelectorAll('.notification-item');
+        
+        // Initial check for elements in viewport
+        checkElementsInViewport();
+        checkNotificationsInViewport();
+
+        // Check elements on scroll
+        window.addEventListener('scroll', () => {
+            checkElementsInViewport();
+            checkNotificationsInViewport();
+        }, { passive: true });
+
+        function checkElementsInViewport() {
+            animatedElements.forEach((element: Element) => {
+                if (isElementInViewport(element)) {
+                    // Add a class to trigger the animation
+                    (element as HTMLElement).style.visibility = 'visible';
+                } else {
+                    // Hide elements that are not in viewport
+                    (element as HTMLElement).style.visibility = 'hidden';
+                }
+            });
+        }
+        
+        // Special function to handle notifications visibility and animation
+        function checkNotificationsInViewport() {
+            notificationItems.forEach((item: Element) => {
+                if (isElementInViewport(item)) {
+                    // Make notification visible immediately
+                    (item as HTMLElement).style.visibility = 'visible';
+                    // Add active class with minimal delay
+                    setTimeout(() => {
+                        item.classList.add('active');
+                    }, 50);
+                }
+            });
+        }
+
+        function isElementInViewport(el: Element): boolean {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+        
+        // Voice agent visualizer animations
+        const initVoiceAgentVisualizer = () => {
+            // Animation timing variables
+            const timings = {
+                initialDelay: 1000,
+                processingDelay: 2000,
+                responseDelay: 3000,
+                notificationDelay: 500
+            };
+            
+            // Reuse the isElementInViewport function from the outer scope
+            const checkIfInViewport = (el: Element | null): boolean => {
+                if (!el) return false;
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.bottom >= 0
+                );
+            };
+            
+            const animateVoiceInput = () => {
+                // Animate input waveform bars 
+                const waveBars = document.querySelectorAll('.wave-bar');
+                waveBars.forEach((bar) => {
+                    const height = Math.random() * 30 + 5; // Random height between 5px and 35px
+                    (bar as HTMLElement).style.height = `${height}px`;
+                    
+                    // Set up continuous animation
+                    setInterval(() => {
+                        const newHeight = Math.random() * 30 + 5;
+                        (bar as HTMLElement).style.height = `${newHeight}px`;
+                    }, 200);
+                });
+            };
+            
+            const animateProcessing = () => {
+                // Animate the reasoning nodes
+                const reasoningNodes = document.querySelectorAll('.reasoning-node');
+                reasoningNodes.forEach((node, index) => {
+                    // Add a delay for each node to create a sequential effect
+                    setTimeout(() => {
+                        node.classList.add('pulse-node');
+                        setTimeout(() => node.classList.remove('pulse-node'), 1000);
+                    }, index * 1000);
+                    
+                    // Repeat the animation
+                    setInterval(() => {
+                        node.classList.add('pulse-node');
+                        setTimeout(() => node.classList.remove('pulse-node'), 1000);
+                    }, 3000);
+                });
+                
+                // Simulate API call with a flash effect
+                const apiCode = document.querySelector('.api-code');
+                setTimeout(() => {
+                    apiCode?.classList.add('flash-api');
+                    setTimeout(() => apiCode?.classList.remove('flash-api'), 800);
+                }, timings.processingDelay);
+            };
+            
+            const animateDataRetrieval = () => {
+                // Animate the courier data retrieval
+                const courierData = document.querySelector('.courier-data');
+                setTimeout(() => {
+                    courierData?.classList.add('highlight-data');
+                    setTimeout(() => courierData?.classList.remove('highlight-data'), 1500);
+                }, timings.processingDelay + 1000);
+            };
+            
+            const animateIntegrations = () => {
+                // Animate integration items
+                const integrationItems = document.querySelectorAll('.integration-item');
+                integrationItems.forEach((item, index) => {
+                    // Staggered animation
+                    setTimeout(() => {
+                        item.classList.add('highlight-integration');
+                        setTimeout(() => item.classList.remove('highlight-integration'), 1000);
+                    }, timings.processingDelay + index * 800);
+                    
+                    // Repeat 
+                    setInterval(() => {
+                        item.classList.add('highlight-integration');
+                        setTimeout(() => item.classList.remove('highlight-integration'), 1000);
+                    }, 4000 + index * 500);
+                });
+                
+                // Cycle through integration statuses
+                const statuses = ['Connected', 'Updated', 'Processing', 'Active'];
+                const integrationStatuses = document.querySelectorAll('.integration-status');
+                
+                integrationStatuses.forEach((status, index) => {
+                    let currentStatus = 0;
+                    
+                    // Start the status cycling after some delay
+                    setTimeout(() => {
+                        setInterval(() => {
+                            currentStatus = (currentStatus + 1) % statuses.length;
+                            status.textContent = statuses[currentStatus];
+                        }, 3000 + index * 500);
+                    }, timings.processingDelay + 1000);
+                });
+            };
+            
+            const animateVoiceOutput = () => {
+                // Animate output waveform bars with slight delay
+                const responseBars = document.querySelectorAll('.response-bar');
+                responseBars.forEach((bar) => {
+                    // Initial inactive state
+                    (bar as HTMLElement).style.height = "2px";
+                    (bar as HTMLElement).style.opacity = "0.3";
+                    
+                    // Start animation after a delay to simulate processing time
+                    setTimeout(() => {
+                        setInterval(() => {
+                            const newHeight = Math.random() * 30 + 5;
+                            (bar as HTMLElement).style.height = `${newHeight}px`;
+                            (bar as HTMLElement).style.opacity = "1";
+                        }, 200);
+                    }, timings.responseDelay);
+                });
+                
+                // Show response text with typing effect
+                const responseText = document.querySelector('.response-text');
+                setTimeout(() => {
+                    responseText?.classList.add('typing-effect');
+                }, timings.responseDelay + 1000);
+            };
+            
+            const animateDataFlow = () => {
+                // Animate data particles in flow
+                setInterval(() => {
+                    const particles = document.querySelectorAll('.data-particle');
+                    particles.forEach((particle, index) => {
+                        setTimeout(() => {
+                            particle.classList.remove('active-particle');
+                            const htmlParticle = particle as HTMLElement;
+                            void htmlParticle.offsetWidth; // Force reflow to restart animation
+                            particle.classList.add('active-particle');
+                        }, index * 2000); // Stagger the particles
+                    });
+                }, 500);
+            };
+            
+            const animateFollowUpActions = () => {
+                // Get all notification items
+                const notifications = document.querySelectorAll('.notification-item');
+                
+                // Check if the visualizer is in the viewport
+                const visualizer = document.querySelector('.voice-agent-visualizer');
+                if (visualizer && checkIfInViewport(visualizer)) {
+                    // If visualizer is in viewport, show notifications immediately
+                    notifications.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('active');
+                        }, index * 100); // Very small staggered delay
+                    });
+                } else {
+                    // If not in viewport yet, use the original animation with reduced delays
+                    setTimeout(() => {
+                        const conversations = document.querySelectorAll('.conversation-item');
+                        conversations.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('fade-in-active');
+                            }, index * 300);
+                        });
+                        
+                        // Animate the notifications immediately after the conversation
+                        setTimeout(() => {
+                            notifications.forEach((item, index) => {
+                                setTimeout(() => {
+                                    item.classList.add('active');
+                                }, index * 200);
+                            });
+                        }, 300);
+                    }, timings.notificationDelay);
+                }
+            };
+            
+            // Initialize all animations
+            animateVoiceInput();
+            animateProcessing();
+            animateDataRetrieval();
+            animateIntegrations();
+            animateVoiceOutput();
+            animateDataFlow();
+            animateFollowUpActions();
+            
+            // Add scroll event listener to check for notifications in viewport
+            window.addEventListener('scroll', () => {
+                const notifications = document.querySelectorAll('.notification-item:not(.active)');
+                const visualizer = document.querySelector('.voice-agent-visualizer');
+                
+                if (visualizer && checkIfInViewport(visualizer)) {
+                    notifications.forEach((item, index) => {
+                        setTimeout(() => {
+                            item.classList.add('active');
+                        }, index * 100);
+                    });
+                }
+            }, { passive: true });
+        };
+        
+        // Initialize visualizer when the page is loaded
+        initVoiceAgentVisualizer();
 	});
 </script> 
